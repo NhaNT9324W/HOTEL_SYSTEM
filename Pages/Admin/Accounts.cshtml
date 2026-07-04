@@ -1,0 +1,227 @@
+﻿@page
+@model Hotel_System.Pages.Admin.AccountsModel
+@{
+    ViewData["Title"] = "Accounts Management";
+}
+
+<div class="container-fluid py-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4 class="mb-0">Staff Accounts Management</h4>
+        <button class="btn btn-primary" onclick="openCreateModal()">
+            <i class="bi bi-plus-circle"></i> Add New Account
+        </button>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="mb-3">
+        <div class="input-group" style="max-width: 400px;">
+            <input type="text" id="searchInput" class="form-control"
+                   placeholder="Search by name, username, email..." />
+            <button class="btn btn-outline-secondary" onclick="searchAccounts()">
+                <i class="bi bi-search"></i> Search
+            </button>
+            <button class="btn btn-outline-danger" onclick="clearSearch()">
+                Clear
+            </button>
+        </div>
+    </div>
+
+    <!-- Alert -->
+    <div id="alertBox" class="alert d-none" role="alert"></div>
+
+    <!-- Table -->
+    <div class="card shadow-sm">
+        <div class="card-body p-0">
+            <table class="table table-hover table-bordered mb-0">
+                <thead class="table-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Full Name</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="accountTableBody">
+                    <tr>
+                        <td colspan="9" class="text-center">Loading...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- ===== CREATE MODAL ===== -->
+<div class="modal fade" id="createModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">Add New Account</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label">Full Name <span class="text-danger">*</span></label>
+                    <input type="text" id="create_fullName" class="form-control" placeholder="Enter full name" />
+                    <div id="create_fullName_error" class="text-danger small"></div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Username <span class="text-danger">*</span></label>
+                    <input type="text" id="create_username" class="form-control" placeholder="Enter username" />
+                    <div id="create_username_error" class="text-danger small"></div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Password <span class="text-danger">*</span></label>
+                    <input type="password" id="create_password" class="form-control" placeholder="Min 6 characters" />
+                    <div id="create_password_error" class="text-danger small"></div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email <span class="text-danger">*</span></label>
+                    <input type="email" id="create_email" class="form-control" placeholder="Enter email" />
+                    <div id="create_email_error" class="text-danger small"></div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Phone</label>
+                    <input type="text" id="create_phone" class="form-control" placeholder="Enter phone number" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Role <span class="text-danger">*</span></label>
+                    <select id="create_role" class="form-select">
+                        <option value="0">Admin</option>
+                        <option value="1">HotelManager</option>
+                        <option value="2" selected>Receptionist</option>
+                        <option value="3">RoomStaff</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-primary" onclick="submitCreate()">Create</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== EDIT MODAL ===== -->
+<div class="modal fade" id="editModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-warning">
+                <h5 class="modal-title">Edit Account</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="edit_id" />
+                <div class="mb-3">
+                    <label class="form-label">Full Name <span class="text-danger">*</span></label>
+                    <input type="text" id="edit_fullName" class="form-control" />
+                    <div id="edit_fullName_error" class="text-danger small"></div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email <span class="text-danger">*</span></label>
+                    <input type="email" id="edit_email" class="form-control" />
+                    <div id="edit_email_error" class="text-danger small"></div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Phone</label>
+                    <input type="text" id="edit_phone" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Role <span class="text-danger">*</span></label>
+                    <select id="edit_role" class="form-select">
+                        <option value="0">Admin</option>
+                        <option value="1">HotelManager</option>
+                        <option value="2">Receptionist</option>
+                        <option value="3">RoomStaff</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Status <span class="text-danger">*</span></label>
+                    <select id="edit_status" class="form-select">
+                        <option value="0">Active</option>
+                        <option value="1">Inactive</option>
+                        <option value="2">Locked</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-warning" onclick="submitEdit()">Save Changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== DELETE MODAL ===== -->
+<div class="modal fade" id="deleteModal" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title">Confirm Delete</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="delete_id" />
+                <p>Are you sure you want to delete account <strong id="delete_name"></strong>?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-danger" onclick="submitDelete()">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/account.js"></script>
+}
+
+<!-- ===== DETAIL MODAL ===== -->
+<div class="modal fade" id="detailModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-info text-white">
+                <h5 class="modal-title">
+                    <i class="bi bi-person-circle"></i> Account Detail
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-borderless">
+                    <tr>
+                        <th width="35%">Full Name</th>
+                        <td id="detail_fullName"></td>
+                    </tr>
+                    <tr>
+                        <th>Username</th>
+                        <td id="detail_username"></td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td id="detail_email"></td>
+                    </tr>
+                    <tr>
+                        <th>Phone</th>
+                        <td id="detail_phone"></td>
+                    </tr>
+                    <tr>
+                        <th>Role</th>
+                        <td id="detail_role"></td>
+                    </tr>
+                    <tr>
+                        <th>Status</th>
+                        <td id="detail_status"></td>
+                    </tr>
+                    <tr>
+                        <th>Created At</th>
+                        <td id="detail_createdAt"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
