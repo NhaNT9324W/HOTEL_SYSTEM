@@ -1,0 +1,26 @@
+﻿@page
+@model Hotel_System.Pages.Receptionist.ReservationsModel
+@{
+    ViewData["Title"] = "Quản lý đặt phòng";
+}
+
+<h2>Quản lý đặt phòng</h2>
+
+<input type="text" id="searchBox" class="form-control mb-3" placeholder="Tìm theo số phòng, tên khách, SĐT..." />
+
+<table class="table table-hover" id="reservationTable">
+    <thead>
+        <tr><th>Phòng</th><th>Khách</th><th>Check-in</th><th>Check-out</th><th>Trạng thái</th></tr>
+    </thead>
+    <tbody><!-- render bằng JS --></tbody>
+</table>
+
+<!-- Card chi tiết - chỉ hiện khi bấm vào row -->
+<div id="detailCard" class="card" style="display:none; position:fixed; top:10%; left:30%; width:40%; z-index:999;">
+    <div class="card-body" id="detailCardBody"></div>
+    <button class="btn btn-secondary" onclick="closeDetailCard()">Đóng</button>
+</div>
+
+@section Scripts {
+    <script src="~/js/reservation.js"></script>
+}

@@ -1,8 +1,10 @@
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\js\account.js
+wwwroot\js\guest.js
 wwwroot\js\hotelinfo.js
-wwwroot\js\roomtype.js
+wwwroot\js\reservation.js
+wwwroot\js\room.js
 wwwroot\js\service.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
@@ -62,4 +64,4 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\js\room.js
+wwwroot\js\roomtype.js

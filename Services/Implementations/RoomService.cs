@@ -91,6 +91,7 @@ namespace Hotel_System.Services.Implementations
             RoomTypeId = r.RoomTypeId,
             RoomTypeName = r.RoomType?.Name ?? "",
             BasePrice = r.RoomType?.BasePrice ?? 0,
+            MaxOccupancy = r.RoomType?.MaxOccupancy ?? 0,
             BookingStatus = r.BookingStatus,
             HousekeepingStatus = r.HousekeepingStatus
         };
