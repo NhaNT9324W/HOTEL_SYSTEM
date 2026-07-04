@@ -1,14 +1,148 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\MonHoc\\HOTEL_SYSTEM\\",
+  "WorkspaceRootPath": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\hotel_system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\wwwroot\\js\\room.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:wwwroot\\js\\room.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\pages\\manager\\rooms.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:pages\\manager\\rooms.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\pages\\manager\\rooms.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:pages\\manager\\rooms.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Migrations\\20260704055010_AddRoomTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260704055010_AddRoomTable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\hotel_system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\controllers\\roomscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:controllers\\roomscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\services\\implementations\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:services\\implementations\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\services\\interfaces\\iroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:services\\interfaces\\iroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\repositories\\implementations\\roomrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:repositories\\implementations\\roomrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\repositories\\interfaces\\iroomrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:repositories\\interfaces\\iroomrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\dtos\\roomdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:dtos\\roomdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\wwwroot\\js\\roomtype.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:wwwroot\\js\\roomtype.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\pages\\manager\\roomtypes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:pages\\manager\\roomtypes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\entities\\roomtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:entities\\roomtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\controllers\\roomtypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:controllers\\roomtypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\services\\implementations\\roomtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:services\\implementations\\roomtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\services\\interfaces\\iroomtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:services\\interfaces\\iroomtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\repositories\\implementations\\roomtyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:repositories\\implementations\\roomtyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\repositories\\interfaces\\iroomtyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:repositories\\interfaces\\iroomtyperepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\dtos\\roomtypedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:dtos\\roomtypedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\entities\\enums\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:entities\\enums\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\entities\\enums\\accountstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:entities\\enums\\accountstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\entities\\enums\\reservationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:entities\\enums\\reservationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\entities\\enums\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:entities\\enums\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\entities\\enums\\roombookingstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:entities\\enums\\roombookingstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\entities\\enums\\roomhousekeepingstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:entities\\enums\\roomhousekeepingstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\hotel_system.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:hotel_system.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\PRN222 v2.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|MarkdownPreview"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\PRN222 v2.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\migrations\\20260704051101_initialcreate_room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:migrations\\20260704051101_initialcreate_room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\monhoc\\prn222\\hotel_system\\migrations\\20260704050818_initialcreate_roomtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:migrations\\20260704050818_initialcreate_roomtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +152,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 295,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -33,33 +167,455 @@
               "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "room.js",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\wwwroot\\js\\room.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\room.js",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\wwwroot\\js\\room.js",
+              "RelativeToolTip": "wwwroot\\js\\room.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-07-04T05:52:20.572Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\MonHoc\\HOTEL_SYSTEM\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\MonHoc\\HOTEL_SYSTEM\\Program.cs",
-              "RelativeToolTip": "Program.cs",
+              "DocumentIndex": 1,
+              "Title": "Rooms.cshtml.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Pages\\Manager\\Rooms.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Manager\\Rooms.cshtml.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Pages\\Manager\\Rooms.cshtml.cs",
+              "RelativeToolTip": "Pages\\Manager\\Rooms.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T05:52:00.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Rooms.cshtml",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Pages\\Manager\\Rooms.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Manager\\Rooms.cshtml",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Pages\\Manager\\Rooms.cshtml",
+              "RelativeToolTip": "Pages\\Manager\\Rooms.cshtml",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAAAFYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-04T05:51:39.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20260704055010_AddRoomTable.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Migrations\\20260704055010_AddRoomTable.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260704055010_AddRoomTable.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Migrations\\20260704055010_AddRoomTable.cs",
+              "RelativeToolTip": "Migrations\\20260704055010_AddRoomTable.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T05:50:10.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RoomsController.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Controllers\\RoomsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RoomsController.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Controllers\\RoomsController.cs",
+              "RelativeToolTip": "Controllers\\RoomsController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAwwC4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T05:49:18.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RoomService.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Services\\Implementations\\RoomService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\RoomService.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Services\\Implementations\\RoomService.cs",
+              "RelativeToolTip": "Services\\Implementations\\RoomService.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAwwGEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T05:48:56.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IRoomService.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Services\\Interfaces\\IRoomService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IRoomService.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Services\\Interfaces\\IRoomService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IRoomService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T05:48:41.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RoomRepository.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Repositories\\Implementations\\RoomRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\RoomRepository.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Repositories\\Implementations\\RoomRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\RoomRepository.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAwwCYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T05:48:18.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IRoomRepository.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Repositories\\Interfaces\\IRoomRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IRoomRepository.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Repositories\\Interfaces\\IRoomRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IRoomRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T05:47:58.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RoomDTOs.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\DTOs\\RoomDTOs.cs",
+              "RelativeDocumentMoniker": "DTOs\\RoomDTOs.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\DTOs\\RoomDTOs.cs",
+              "RelativeToolTip": "DTOs\\RoomDTOs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T05:47:26.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACgAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-04T05:11:52.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "roomtype.js",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\wwwroot\\js\\roomtype.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\roomtype.js",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\wwwroot\\js\\roomtype.js",
+              "RelativeToolTip": "wwwroot\\js\\roomtype.js",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAkwF8AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-07-04T05:15:31.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RoomTypes.cshtml",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Pages\\Manager\\RoomTypes.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Manager\\RoomTypes.cshtml",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Pages\\Manager\\RoomTypes.cshtml",
+              "RelativeToolTip": "Pages\\Manager\\RoomTypes.cshtml",
+              "ViewState": "AgIAADsAAAAAAAAAAAAuwEYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-04T05:11:34.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAowB8AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-03T13:53:10.861Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 34,
+              "Title": "20260704051101_InitialCreate_Room.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Migrations\\20260704051101_InitialCreate_Room.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260704051101_InitialCreate_Room.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Migrations\\20260704051101_InitialCreate_Room.cs",
+              "RelativeToolTip": "Migrations\\20260704051101_InitialCreate_Room.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T05:11:01.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "20260704050818_InitialCreate_RoomType.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Migrations\\20260704050818_InitialCreate_RoomType.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260704050818_InitialCreate_RoomType.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Migrations\\20260704050818_InitialCreate_RoomType.cs",
+              "RelativeToolTip": "Migrations\\20260704050818_InitialCreate_RoomType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T05:08:18.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Room.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Entities\\Room.cs",
+              "RelativeDocumentMoniker": "Entities\\Room.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Entities\\Room.cs",
+              "RelativeToolTip": "Entities\\Room.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T05:03:59.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "RoomTypesController.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Controllers\\RoomTypesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RoomTypesController.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Controllers\\RoomTypesController.cs",
+              "RelativeToolTip": "Controllers\\RoomTypesController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAswCwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T05:02:09.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "RoomTypeService.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Services\\Implementations\\RoomTypeService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\RoomTypeService.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Services\\Implementations\\RoomTypeService.cs",
+              "RelativeToolTip": "Services\\Implementations\\RoomTypeService.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAswEsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T05:01:38.428Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwDYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T04:59:04.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IRoomTypeService.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Services\\Interfaces\\IRoomTypeService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IRoomTypeService.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Services\\Interfaces\\IRoomTypeService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IRoomTypeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T05:01:20.449Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "RoomTypeRepository.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Repositories\\Implementations\\RoomTypeRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\RoomTypeRepository.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Repositories\\Implementations\\RoomTypeRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\RoomTypeRepository.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAswB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T05:00:59.204Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IRoomTypeRepository.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Repositories\\Interfaces\\IRoomTypeRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IRoomTypeRepository.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Repositories\\Interfaces\\IRoomTypeRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IRoomTypeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T05:00:38.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "RoomType.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Entities\\RoomType.cs",
+              "RelativeDocumentMoniker": "Entities\\RoomType.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Entities\\RoomType.cs",
+              "RelativeToolTip": "Entities\\RoomType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T04:58:42.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "RoomTypeDTOs.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\DTOs\\RoomTypeDTOs.cs",
+              "RelativeDocumentMoniker": "DTOs\\RoomTypeDTOs.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\DTOs\\RoomTypeDTOs.cs",
+              "RelativeToolTip": "DTOs\\RoomTypeDTOs.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAswBwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T05:00:17.703Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "PaymentMethod.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Entities\\Enums\\PaymentMethod.cs",
+              "RelativeDocumentMoniker": "Entities\\Enums\\PaymentMethod.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Entities\\Enums\\PaymentMethod.cs",
+              "RelativeToolTip": "Entities\\Enums\\PaymentMethod.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T02:11:23.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ReservationStatus.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Entities\\Enums\\ReservationStatus.cs",
+              "RelativeDocumentMoniker": "Entities\\Enums\\ReservationStatus.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Entities\\Enums\\ReservationStatus.cs",
+              "RelativeToolTip": "Entities\\Enums\\ReservationStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T02:11:07.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "RoomHousekeepingStatus.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Entities\\Enums\\RoomHousekeepingStatus.cs",
+              "RelativeDocumentMoniker": "Entities\\Enums\\RoomHousekeepingStatus.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Entities\\Enums\\RoomHousekeepingStatus.cs",
+              "RelativeToolTip": "Entities\\Enums\\RoomHousekeepingStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T02:10:51.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "RoomBookingStatus.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Entities\\Enums\\RoomBookingStatus.cs",
+              "RelativeDocumentMoniker": "Entities\\Enums\\RoomBookingStatus.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Entities\\Enums\\RoomBookingStatus.cs",
+              "RelativeToolTip": "Entities\\Enums\\RoomBookingStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T02:10:31.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AccountStatus.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Entities\\Enums\\AccountStatus.cs",
+              "RelativeDocumentMoniker": "Entities\\Enums\\AccountStatus.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Entities\\Enums\\AccountStatus.cs",
+              "RelativeToolTip": "Entities\\Enums\\AccountStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T02:10:14.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Role.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Entities\\Enums\\Role.cs",
+              "RelativeDocumentMoniker": "Entities\\Enums\\Role.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Entities\\Enums\\Role.cs",
+              "RelativeToolTip": "Entities\\Enums\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T02:09:55.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Entities\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Entities\\BaseEntity.cs",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Entities\\BaseEntity.cs",
+              "RelativeToolTip": "Entities\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T02:09:16.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Hotel_System.csproj",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Hotel_System.csproj",
+              "RelativeDocumentMoniker": "Hotel_System.csproj",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\Hotel_System.csproj",
+              "RelativeToolTip": "Hotel_System.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-07-04T02:08:35.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "PRN222 v2.md [Preview]",
+              "DocumentMoniker": "D:\\PRN222 v2.md",
+              "RelativeDocumentMoniker": "..\\..\\..\\PRN222 v2.md",
+              "ToolTip": "D:\\PRN222 v2.md [Preview]",
+              "RelativeToolTip": "..\\..\\..\\PRN222 v2.md [Preview]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-07-04T01:48:24.601Z",
+              "EditorCaption": " [Preview]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "PRN222 v2.md",
+              "DocumentMoniker": "D:\\PRN222 v2.md",
+              "RelativeDocumentMoniker": "..\\..\\..\\PRN222 v2.md",
+              "ToolTip": "D:\\PRN222 v2.md",
+              "RelativeToolTip": "..\\..\\..\\PRN222 v2.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-07-04T01:48:22.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
               "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\MonHoc\\HOTEL_SYSTEM\\appsettings.json",
+              "DocumentMoniker": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\MonHoc\\HOTEL_SYSTEM\\appsettings.json",
+              "ToolTip": "D:\\MonHoc\\PRN222\\HOTEL_SYSTEM\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-07-03T11:35:10.735Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             }
           ]
         },

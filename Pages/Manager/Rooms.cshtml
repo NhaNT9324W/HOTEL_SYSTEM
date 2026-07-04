@@ -1,0 +1,87 @@
+﻿@page
+@model Hotel_System.Pages.Manager.RoomsModel
+@{
+    ViewData["Title"] = "Room Management";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h3><i class="bi bi-door-open"></i> Quản lý Phòng</h3>
+    <button class="btn btn-primary" onclick="openCreateModal()">
+        <i class="bi bi-plus-circle"></i> Thêm phòng
+    </button>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <table class="table table-hover align-middle" id="roomTable">
+            <thead class="table-light">
+                <tr>
+                    <th>Số phòng</th>
+                    <th>Tầng</th>
+                    <th>Loại phòng</th>
+                    <th>Giá</th>
+                    <th>Trạng thái đặt phòng</th>
+                    <th>Trạng thái vệ sinh</th>
+                    <th class="text-end">Hành động</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal Thêm/Sửa -->
+<div class="modal fade" id="roomModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="modalTitle">Thêm phòng</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="roomId" />
+                <div class="mb-3">
+                    <label class="form-label">Số phòng</label>
+                    <input class="form-control" id="roomNumber" placeholder="VD: 101, 202..." />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Tầng</label>
+                    <input type="number" class="form-control" id="roomFloor" min="0" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Loại phòng</label>
+                    <select class="form-select" id="roomTypeId"></select>
+                </div>
+                <div class="row" id="statusWrapper" style="display:none">
+                    <div class="col mb-3">
+                        <label class="form-label">Trạng thái đặt phòng</label>
+                        <select class="form-select" id="bookingStatus">
+                            <option value="0">AVAILABLE</option>
+                            <option value="1">RESERVED</option>
+                            <option value="2">OCCUPIED</option>
+                            <option value="3">MAINTENANCE</option>
+                        </select>
+                    </div>
+                    <div class="col mb-3">
+                        <label class="form-label">Trạng thái vệ sinh</label>
+                        <select class="form-select" id="housekeepingStatus">
+                            <option value="0">DIRTY</option>
+                            <option value="1">CLEAN</option>
+                            <option value="2">READY</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button class="btn btn-success" onclick="saveRoom()">
+                    <i class="bi bi-check-circle"></i> Lưu
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/room.js"></script>
+}
