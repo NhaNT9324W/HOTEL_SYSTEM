@@ -11,6 +11,10 @@ namespace Hotel_System.Data
 
         public DbSet<HotelInfo> HotelInfos { get; set; }
 
+        public DbSet<RoomType> RoomTypes { get; set; }
+
+        public DbSet<Room> Rooms { get; set; }
+
         public DbSet<Service> Services { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -42,6 +46,17 @@ namespace Hotel_System.Data
                 e.Property(s => s.Price).HasColumnType("decimal(18,2)");
             });
 
+            modelBuilder.Entity<Room>()
+            .HasOne(r => r.RoomType)
+            .WithMany(rt => rt.Rooms)
+            .HasForeignKey(r => r.RoomTypeId)
+             .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Room>()
+                .HasIndex(r => r.RoomNumber)
+                .IsUnique();
+
+            modelBuilder.Entity<RoomType>().Property(r => r.BasePrice).HasColumnType("decimal(18,2)");
 
         }
     }

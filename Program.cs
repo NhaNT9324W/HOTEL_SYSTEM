@@ -22,6 +22,13 @@ builder.Services.AddScoped<IHotelInfoService, HotelInfoService>();
 builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
 builder.Services.AddScoped<IServiceManager, ServiceManager>();
 
+builder.Services.AddScoped<IRoomTypeRepository, RoomTypeRepository>();
+builder.Services.AddScoped<IRoomTypeService, RoomTypeService>();
+
+// Room Management
+builder.Services.AddScoped<IRoomRepository, RoomRepository>();
+builder.Services.AddScoped<IRoomService, RoomService>();
+
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
