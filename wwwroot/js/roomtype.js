@@ -4,15 +4,13 @@
     const tbody = document.querySelector('#roomTypeTable tbody');
 
     if (data.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="6" class="text-center text-muted py-4">Chưa có loại phòng nào</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="4" class="text-center text-muted py-4">Chưa có loại phòng nào</td></tr>`;
         return;
     }
 
     tbody.innerHTML = data.map(rt => `
         <tr>
             <td class="fw-semibold">${rt.name}</td>
-            <td>${rt.description ?? ''}</td>
-            <td>${formatCurrency(rt.basePrice)}</td>
             <td>${rt.maxOccupancy} người</td>
             <td>
                 <span class="badge ${rt.isActive ? 'bg-success' : 'bg-secondary'}">
@@ -20,6 +18,9 @@
                 </span>
             </td>
             <td class="text-end">
+                <button class="btn btn-sm btn-outline-info" onclick='viewRoomTypeDetail(${JSON.stringify(rt)})'>
+                    <i class="bi bi-eye"></i>
+                </button>
                 <button class="btn btn-sm btn-outline-warning" onclick='editRoomType(${JSON.stringify(rt)})'>
                     <i class="bi bi-pencil"></i>
                 </button>
@@ -28,6 +29,21 @@
                 </button>
             </td>
         </tr>`).join('');
+}
+
+function viewRoomTypeDetail(rt) {
+    document.getElementById('roomTypeDetailBody').innerHTML = `
+        <p><b>Tên loại phòng:</b> ${rt.name}</p>
+        <p><b>Mô tả:</b> ${rt.description ?? '-'}</p>
+        <p><b>Giá cơ bản:</b> ${formatCurrency(rt.basePrice)}</p>
+        <p><b>Sức chứa:</b> ${rt.maxOccupancy} người</p>
+        <p><b>Trạng thái:</b>
+            <span class="badge ${rt.isActive ? 'bg-success' : 'bg-secondary'}">
+                ${rt.isActive ? 'Active' : 'Inactive'}
+            </span>
+        </p>
+    `;
+    new bootstrap.Modal(document.getElementById('roomTypeDetailModal')).show();
 }
 
 function formatCurrency(value) {

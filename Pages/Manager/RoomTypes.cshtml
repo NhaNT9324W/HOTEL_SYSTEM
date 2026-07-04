@@ -17,8 +17,6 @@
             <thead class="table-light">
                 <tr>
                     <th>Tên loại phòng</th>
-                    <th>Mô tả</th>
-                    <th>Giá cơ bản</th>
                     <th>Sức chứa</th>
                     <th>Trạng thái</th>
                     <th class="text-end">Hành động</th>
@@ -72,6 +70,24 @@
                 <button class="btn btn-success" onclick="saveRoomType()">
                     <i class="bi bi-check-circle"></i> Lưu
                 </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal View Detail -->
+<div class="modal fade" id="roomTypeDetailModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-info text-white">
+                <h5 class="modal-title"><i class="bi bi-eye"></i> Chi tiết loại phòng</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="roomTypeDetailBody">
+                <!-- render bằng JS -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
             </div>
         </div>
     </div>

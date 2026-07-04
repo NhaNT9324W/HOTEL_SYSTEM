@@ -19,19 +19,21 @@ async function loadRooms() {
     const tbody = document.querySelector('#roomTable tbody');
 
     if (data.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="7" class="text-center text-muted py-4">Chưa có phòng nào</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="4" class="text-center text-muted py-4">Chưa có phòng nào</td></tr>`;
         return;
     }
 
+    // Ghi chú Root Cause: field "capacity" chưa có trong API response hiện tại
+    // (Room.cs / RoomTypeDto chưa expose Capacity) -> tạm hiển thị "-" chờ xác nhận schema
     tbody.innerHTML = data.map(r => `
         <tr>
             <td class="fw-semibold">${r.roomNumber}</td>
-            <td>${r.floor}</td>
-            <td>${r.roomTypeName}</td>
-            <td>${formatCurrency(r.basePrice)}</td>
+            <td>${r.maxOccupancy ?? '-'}${r.maxOccupancy ? ' người' : ''}</td>
             <td><span class="badge bg-${bookingStatusColor[r.bookingStatus]}">${bookingStatusText[r.bookingStatus]}</span></td>
-            <td><span class="badge bg-${housekeepingStatusColor[r.housekeepingStatus]}">${housekeepingStatusText[r.housekeepingStatus]}</span></td>
             <td class="text-end">
+                <button class="btn btn-sm btn-outline-info" onclick='viewRoomDetail(${JSON.stringify(r)})'>
+                    <i class="bi bi-eye"></i>
+                </button>
                 <button class="btn btn-sm btn-outline-warning" onclick='editRoom(${JSON.stringify(r)})'>
                     <i class="bi bi-pencil"></i>
                 </button>
@@ -40,6 +42,19 @@ async function loadRooms() {
                 </button>
             </td>
         </tr>`).join('');
+}
+
+function viewRoomDetail(r) {
+    document.getElementById('roomDetailBody').innerHTML = `
+        <p><b>Số phòng:</b> ${r.roomNumber}</p>
+        <p><b>Tầng:</b> ${r.floor}</p>
+        <p><b>Loại phòng:</b> ${r.roomTypeName}</p>
+        <p><b>Sức chứa:</b> ${r.maxOccupancy ?? '- (chưa có dữ liệu)'} người</p>
+        <p><b>Giá:</b> ${formatCurrency(r.basePrice)}</p>
+        <p><b>Trạng thái đặt phòng:</b> <span class="badge bg-${bookingStatusColor[r.bookingStatus]}">${bookingStatusText[r.bookingStatus]}</span></p>
+        <p><b>Trạng thái vệ sinh:</b> <span class="badge bg-${housekeepingStatusColor[r.housekeepingStatus]}">${housekeepingStatusText[r.housekeepingStatus]}</span></p>
+    `;
+    new bootstrap.Modal(document.getElementById('roomDetailModal')).show();
 }
 
 function formatCurrency(value) {

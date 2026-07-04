@@ -16,6 +16,9 @@ namespace Hotel_System.Data
         public DbSet<Room> Rooms { get; set; }
 
         public DbSet<Service> Services { get; set; }
+        public DbSet<Guest> Guests { get; set; } = null!;
+        public DbSet<Reservation> Reservations { get; set; } = null!;
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -55,6 +58,22 @@ namespace Hotel_System.Data
             modelBuilder.Entity<Room>()
                 .HasIndex(r => r.RoomNumber)
                 .IsUnique();
+
+            modelBuilder.Entity<Reservation>(e =>
+            {
+                e.HasKey(r => r.Id);
+                e.HasOne(r => r.Room).WithMany().HasForeignKey(r => r.RoomId).OnDelete(DeleteBehavior.Restrict);
+                e.HasOne(r => r.Guest).WithMany(g => g.Reservations).HasForeignKey(r => r.GuestId).OnDelete(DeleteBehavior.Restrict);
+            });
+
+
+            modelBuilder.Entity<Guest>(e =>
+            {
+                e.HasKey(g => g.Id);
+                e.Property(g => g.FullName).IsRequired().HasMaxLength(150);
+                e.Property(g => g.Phone).IsRequired().HasMaxLength(20);
+                e.Property(g => g.IsDeleted).HasDefaultValue(false); // MỚI
+            });
 
             modelBuilder.Entity<RoomType>().Property(r => r.BasePrice).HasColumnType("decimal(18,2)");
 

@@ -10,6 +10,7 @@ namespace Hotel_System.DTOs
         public int RoomTypeId { get; set; }
         public string RoomTypeName { get; set; } = null!;
         public decimal BasePrice { get; set; }
+        public int MaxOccupancy { get; set; } // MỚI - Sức chứa, lấy từ RoomType
         public RoomBookingStatus BookingStatus { get; set; }
         public RoomHousekeepingStatus HousekeepingStatus { get; set; }
     }

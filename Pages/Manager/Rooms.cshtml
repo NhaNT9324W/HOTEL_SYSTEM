@@ -16,12 +16,9 @@
         <table class="table table-hover align-middle" id="roomTable">
             <thead class="table-light">
                 <tr>
-                    <th>Số phòng</th>
-                    <th>Tầng</th>
-                    <th>Loại phòng</th>
-                    <th>Giá</th>
-                    <th>Trạng thái đặt phòng</th>
-                    <th>Trạng thái vệ sinh</th>
+                    <th>Tên (Số phòng)</th>
+                    <th>Sức chứa</th>
+                    <th>Trạng thái</th>
                     <th class="text-end">Hành động</th>
                 </tr>
             </thead>
@@ -77,6 +74,24 @@
                 <button class="btn btn-success" onclick="saveRoom()">
                     <i class="bi bi-check-circle"></i> Lưu
                 </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal View Detail -->
+<div class="modal fade" id="roomDetailModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-info text-white">
+                <h5 class="modal-title"><i class="bi bi-eye"></i> Chi tiết phòng</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="roomDetailBody">
+                <!-- render bằng JS -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
             </div>
         </div>
     </div>
