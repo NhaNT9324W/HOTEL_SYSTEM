@@ -7,60 +7,68 @@
       "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\wwwroot\\js\\service.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:wwwroot\\js\\service.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\wwwroot\\js\\task.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:wwwroot\\js\\task.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\pages\\manager\\services.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:pages\\manager\\services.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\controllers\\roomscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:controllers\\roomscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Migrations\\20260704041639_AddService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20260704041639_AddService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\pages\\manager\\tasks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:pages\\manager\\tasks.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\controllers\\servicescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:controllers\\servicescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\services\\implementations\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:services\\implementations\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\services\\implementations\\servicemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:services\\implementations\\servicemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\services\\interfaces\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:services\\interfaces\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\services\\interfaces\\iservicemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:services\\interfaces\\iservicemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\services\\implementations\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:services\\implementations\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\repositories\\implementations\\servicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:repositories\\implementations\\servicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\repositories\\implementations\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:repositories\\implementations\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\repositories\\interfaces\\iservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:repositories\\interfaces\\iservicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\repositories\\interfaces\\itaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:repositories\\interfaces\\itaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\dtos\\servicedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:dtos\\servicedtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\dtos\\taskdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:dtos\\taskdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\entities\\enums\\servicestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:entities\\enums\\servicestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\entities\\housekeepingtask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:entities\\housekeepingtask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\entities\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:entities\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\entities\\enums\\housekeepingtaskstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:entities\\enums\\housekeepingtaskstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\entities\\enums\\taskpriority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:entities\\enums\\taskpriority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -88,8 +96,25 @@
         },
         {
           "DockedHeight": 78,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-04T12:51:31.379Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -103,202 +128,211 @@
               "Name": "ST:11:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACAAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-04T04:23:43.077Z",
+              "DocumentIndex": 2,
+              "Title": "RoomsController.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\RoomsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RoomsController.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\RoomsController.cs",
+              "RelativeToolTip": "Controllers\\RoomsController.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAuwDoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T12:49:22.784Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "service.js",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\service.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\service.js",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\service.js",
-              "RelativeToolTip": "wwwroot\\js\\service.js",
-              "ViewState": "AgIAAMAAAAAAAAAAAAAQwOEAAABEAAAAAAAAAA==",
+              "Title": "task.js",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\task.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\task.js",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\task.js",
+              "RelativeToolTip": "wwwroot\\js\\task.js",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAQwEYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-07-04T04:23:06.428Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Services.cshtml",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Manager\\Services.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Manager\\Services.cshtml",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Manager\\Services.cshtml",
-              "RelativeToolTip": "Pages\\Manager\\Services.cshtml",
-              "ViewState": "AgIAAKUAAAAAAAAAAAAQwMYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-04T04:22:34.203Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "20260704041639_AddService.cs",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Migrations\\20260704041639_AddService.cs",
-              "RelativeDocumentMoniker": "Migrations\\20260704041639_AddService.cs",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Migrations\\20260704041639_AddService.cs",
-              "RelativeToolTip": "Migrations\\20260704041639_AddService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-04T04:16:39.664Z",
+              "WhenOpened": "2026-07-04T12:48:34.697Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA+AAAAAAAAAA==",
+              "Title": "TasksController.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\TasksController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TasksController.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\TasksController.cs",
+              "RelativeToolTip": "Controllers\\TasksController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAiwGcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-04T04:15:41.224Z",
+              "WhenOpened": "2026-07-04T12:46:24.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AccountsController.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\AccountsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountsController.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\AccountsController.cs",
+              "RelativeToolTip": "Controllers\\AccountsController.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAA/wGcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T12:47:40.535Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ServicesController.cs",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\ServicesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ServicesController.cs",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\ServicesController.cs",
-              "RelativeToolTip": "Controllers\\ServicesController.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAzwF8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-04T04:15:24.903Z",
+              "Title": "Tasks.cshtml",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Manager\\Tasks.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Manager\\Tasks.cshtml",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Manager\\Tasks.cshtml",
+              "RelativeToolTip": "Pages\\Manager\\Tasks.cshtml",
+              "ViewState": "AgIAAOcAAAAAAAAAAAAiwAQBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-04T12:48:10.428Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ServiceManager.cs",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Services\\Implementations\\ServiceManager.cs",
-              "RelativeDocumentMoniker": "Services\\Implementations\\ServiceManager.cs",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Services\\Implementations\\ServiceManager.cs",
-              "RelativeToolTip": "Services\\Implementations\\ServiceManager.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAQwFcAAAABAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-04T04:15:05.097Z",
+              "WhenOpened": "2026-07-04T12:46:37.751Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "IServiceManager.cs",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Services\\Interfaces\\IServiceManager.cs",
-              "RelativeDocumentMoniker": "Services\\Interfaces\\IServiceManager.cs",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Services\\Interfaces\\IServiceManager.cs",
-              "RelativeToolTip": "Services\\Interfaces\\IServiceManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Title": "TaskService.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Services\\Implementations\\TaskService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\TaskService.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Services\\Implementations\\TaskService.cs",
+              "RelativeToolTip": "Services\\Implementations\\TaskService.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAiwE8AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-04T04:14:48.951Z",
+              "WhenOpened": "2026-07-04T12:45:44.559Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "ServiceRepository.cs",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Repositories\\Implementations\\ServiceRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\Implementations\\ServiceRepository.cs",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Repositories\\Implementations\\ServiceRepository.cs",
-              "RelativeToolTip": "Repositories\\Implementations\\ServiceRepository.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAQwDgAAAABAAAAAAAAAA==",
+              "Title": "ITaskService.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Services\\Interfaces\\ITaskService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\ITaskService.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Services\\Interfaces\\ITaskService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\ITaskService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-04T04:14:23.471Z",
+              "WhenOpened": "2026-07-04T12:45:29.218Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "IServiceRepository.cs",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Repositories\\Interfaces\\IServiceRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IServiceRepository.cs",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Repositories\\Interfaces\\IServiceRepository.cs",
-              "RelativeToolTip": "Repositories\\Interfaces\\IServiceRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Services\\Implementations\\AccountService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\AccountService.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Services\\Implementations\\AccountService.cs",
+              "RelativeToolTip": "Services\\Implementations\\AccountService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-04T04:14:00.233Z",
+              "WhenOpened": "2026-07-04T12:45:21.518Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "SeedData.cs",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Data\\SeedData.cs",
-              "RelativeDocumentMoniker": "Data\\SeedData.cs",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Data\\SeedData.cs",
-              "RelativeToolTip": "Data\\SeedData.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAkwFIAAAAxAAAAAAAAAA==",
+              "Title": "TaskRepository.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Repositories\\Implementations\\TaskRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\TaskRepository.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Repositories\\Implementations\\TaskRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\TaskRepository.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwEYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-04T04:11:32.521Z",
+              "WhenOpened": "2026-07-04T12:44:49.463Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "Data\\AppDbContext.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAA7wCwAAAAAAAAAAAAAAA==",
+              "Title": "ITaskRepository.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Repositories\\Interfaces\\ITaskRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\ITaskRepository.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Repositories\\Interfaces\\ITaskRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\ITaskRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-04T04:10:56.079Z",
+              "WhenOpened": "2026-07-04T12:44:32.718Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "ServiceDTOs.cs",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\DTOs\\ServiceDTOs.cs",
-              "RelativeDocumentMoniker": "DTOs\\ServiceDTOs.cs",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\DTOs\\ServiceDTOs.cs",
-              "RelativeToolTip": "DTOs\\ServiceDTOs.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwC8AAAABAAAAAAAAAA==",
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAwwF8AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-04T04:10:37.954Z",
+              "WhenOpened": "2026-07-04T12:43:59.562Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "ServiceStatus.cs",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Entities\\Enums\\ServiceStatus.cs",
-              "RelativeDocumentMoniker": "Entities\\Enums\\ServiceStatus.cs",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Entities\\Enums\\ServiceStatus.cs",
-              "RelativeToolTip": "Entities\\Enums\\ServiceStatus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Title": "TaskDTOs.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\DTOs\\TaskDTOs.cs",
+              "RelativeDocumentMoniker": "DTOs\\TaskDTOs.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\DTOs\\TaskDTOs.cs",
+              "RelativeToolTip": "DTOs\\TaskDTOs.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAwwA8AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-04T04:10:20.851Z",
+              "WhenOpened": "2026-07-04T12:43:23.013Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "Service.cs",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Entities\\Service.cs",
-              "RelativeDocumentMoniker": "Entities\\Service.cs",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Entities\\Service.cs",
-              "RelativeToolTip": "Entities\\Service.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Title": "HousekeepingTask.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Entities\\HousekeepingTask.cs",
+              "RelativeDocumentMoniker": "Entities\\HousekeepingTask.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Entities\\HousekeepingTask.cs",
+              "RelativeToolTip": "Entities\\HousekeepingTask.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-04T04:08:49.985Z",
+              "WhenOpened": "2026-07-04T12:42:36.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "HousekeepingTaskStatus.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Entities\\Enums\\HousekeepingTaskStatus.cs",
+              "RelativeDocumentMoniker": "Entities\\Enums\\HousekeepingTaskStatus.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Entities\\Enums\\HousekeepingTaskStatus.cs",
+              "RelativeToolTip": "Entities\\Enums\\HousekeepingTaskStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T12:42:10.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TaskPriority.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Entities\\Enums\\TaskPriority.cs",
+              "RelativeDocumentMoniker": "Entities\\Enums\\TaskPriority.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Entities\\Enums\\TaskPriority.cs",
+              "RelativeToolTip": "Entities\\Enums\\TaskPriority.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T12:41:36.765Z",
               "EditorCaption": ""
             }
           ]

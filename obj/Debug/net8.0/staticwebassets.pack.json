@@ -17,8 +17,24 @@
       "PackagePath": "staticwebassets\\js\\account.js"
     },
     {
+      "Id": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\guest.js",
+      "PackagePath": "staticwebassets\\js\\guest.js"
+    },
+    {
       "Id": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\hotelinfo.js",
       "PackagePath": "staticwebassets\\js\\hotelinfo.js"
+    },
+    {
+      "Id": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\reservation.js",
+      "PackagePath": "staticwebassets\\js\\reservation.js"
+    },
+    {
+      "Id": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\room.js",
+      "PackagePath": "staticwebassets\\js\\room.js"
+    },
+    {
+      "Id": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\roomtype.js",
+      "PackagePath": "staticwebassets\\js\\roomtype.js"
     },
     {
       "Id": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\service.js",
@@ -27,6 +43,10 @@
     {
       "Id": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\task.js",
+      "PackagePath": "staticwebassets\\js\\task.js"
     },
     {
       "Id": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\lib\\bootstrap\\LICENSE",

@@ -19,6 +19,8 @@ namespace Hotel_System.Data
         public DbSet<Guest> Guests { get; set; } = null!;
         public DbSet<Reservation> Reservations { get; set; } = null!;
 
+        public DbSet<HousekeepingTask> HousekeepingTasks { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -77,6 +79,21 @@ namespace Hotel_System.Data
 
             modelBuilder.Entity<RoomType>().Property(r => r.BasePrice).HasColumnType("decimal(18,2)");
 
+            modelBuilder.Entity<HousekeepingTask>(e => {
+                e.HasKey(t => t.Id);
+                e.HasOne(t => t.Room)
+                 .WithMany()
+                 .HasForeignKey(t => t.RoomId)
+                 .OnDelete(DeleteBehavior.Restrict);
+                e.HasOne(t => t.AssignedTo)
+                 .WithMany()
+                 .HasForeignKey(t => t.AssignedToId)
+                 .OnDelete(DeleteBehavior.Restrict);
+                e.HasOne(t => t.CreatedBy)
+                 .WithMany()
+                 .HasForeignKey(t => t.CreatedById)
+                 .OnDelete(DeleteBehavior.Restrict);
+            });
         }
     }
 }

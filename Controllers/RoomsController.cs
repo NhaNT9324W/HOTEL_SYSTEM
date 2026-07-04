@@ -43,5 +43,19 @@ namespace Hotel_System.Controllers
             var success = await _service.DeleteAsync(id);
             return success ? NoContent() : NotFound();
         }
+
+        [HttpGet("dropdown")]
+        public async Task<IActionResult> GetDropdown()
+        {
+            var rooms = await _service.GetAllAsync();
+            var result = rooms.Select(r => new
+            {
+                r.Id,
+                r.RoomNumber,
+                r.RoomTypeName,
+                r.Floor
+            });
+            return Ok(result);
+        }
     }
 }

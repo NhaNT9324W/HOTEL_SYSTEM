@@ -5,22 +5,22 @@ using Microsoft.AspNetCore.Mvc;
 namespace Hotel_System.Controllers
 {
     [ApiController]
-    [Route("api/accounts")]
-    public class AccountsController : ControllerBase
+    [Route("api/tasks")]
+    public class TasksController : ControllerBase
     {
-        private readonly IAccountService _service;
+        private readonly ITaskService _service;
 
-        public AccountsController(IAccountService service) => _service = service;
+        public TasksController(ITaskService service) => _service = service;
 
-        // GET /api/accounts
+        // GET /api/tasks
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var accounts = await _service.GetAllAsync();
-            return Ok(accounts);
+            var tasks = await _service.GetAllAsync();
+            return Ok(tasks);
         }
 
-        // GET /api/accounts/search?keyword=...
+        // GET /api/tasks/search?keyword=...
         [HttpGet("search")]
         public async Task<IActionResult> Search([FromQuery] string keyword)
         {
@@ -31,18 +31,26 @@ namespace Hotel_System.Controllers
             return Ok(results);
         }
 
-        // GET /api/accounts/{id}
+        // GET /api/tasks/{id}
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var account = await _service.GetByIdAsync(id);
-            if (account == null) return NotFound(new { message = "Account not found" });
-            return Ok(account);
+            var task = await _service.GetByIdAsync(id);
+            if (task == null) return NotFound(new { message = "Task not found" });
+            return Ok(task);
         }
 
-        // POST /api/accounts
+        // GET /api/tasks/staff/{staffId}
+        [HttpGet("staff/{staffId}")]
+        public async Task<IActionResult> GetByStaff(int staffId)
+        {
+            var tasks = await _service.GetByStaffIdAsync(staffId);
+            return Ok(tasks);
+        }
+
+        // POST /api/tasks
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CreateAccountDto dto)
+        public async Task<IActionResult> Create([FromBody] CreateTaskDto dto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -50,7 +58,7 @@ namespace Hotel_System.Controllers
             try
             {
                 await _service.CreateAsync(dto);
-                return Ok(new { message = "Account created successfully" });
+                return Ok(new { message = "Task created successfully" });
             }
             catch (Exception ex)
             {
@@ -58,9 +66,9 @@ namespace Hotel_System.Controllers
             }
         }
 
-        // PUT /api/accounts/{id}
+        // PUT /api/tasks/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromBody] UpdateAccountDto dto)
+        public async Task<IActionResult> Update(int id, [FromBody] UpdateTaskDto dto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -70,7 +78,7 @@ namespace Hotel_System.Controllers
             try
             {
                 await _service.UpdateAsync(dto);
-                return Ok(new { message = "Account updated successfully" });
+                return Ok(new { message = "Task updated successfully" });
             }
             catch (Exception ex)
             {
@@ -78,29 +86,19 @@ namespace Hotel_System.Controllers
             }
         }
 
-        // DELETE /api/accounts/{id}
+        // DELETE /api/tasks/{id}
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             try
             {
                 await _service.DeleteAsync(id);
-                return Ok(new { message = "Account deleted successfully" });
+                return Ok(new { message = "Task deleted successfully" });
             }
             catch (Exception ex)
             {
                 return BadRequest(new { message = ex.Message });
             }
-        }
-
-        [HttpGet("staff")]
-        public async Task<IActionResult> GetStaff()
-        {
-            var staffList = await _service.GetAllAsync();
-            var result = staffList
-                .Where(a => a.Role == Hotel_System.Entities.Enums.Role.RoomStaff)
-                .Select(a => new { a.Id, a.FullName });
-            return Ok(result);
         }
     }
 }
