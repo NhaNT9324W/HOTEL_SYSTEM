@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ujK4D8HQHj2CPifyryv+/iJw51lRytKpdeX7379BYCE=",
+  "Hash": "WVYy+vxS5bDgnu4aTrBI961jVhfzAIz/Gz16iy+hKhU=",
   "Source": "Hotel_System",
   "BasePath": "_content/Hotel_System",
   "Mode": "Default",
@@ -120,6 +120,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\account.js"
+    },
+    {
+      "Identity": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\hotelinfo.js",
+      "SourceId": "Hotel_System",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\",
+      "BasePath": "_content/Hotel_System",
+      "RelativePath": "js/hotelinfo#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "i37yb2a0bb",
+      "Integrity": "biuVSGesjSBUBleCmiUmhevEgQokr6ZxJClYP7chNr8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\hotelinfo.js"
+    },
+    {
+      "Identity": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\service.js",
+      "SourceId": "Hotel_System",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\",
+      "BasePath": "_content/Hotel_System",
+      "RelativePath": "js/service#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dnc1t4hlo3",
+      "Integrity": "t+zduFzRbqS2X2C1HCbIesxCXHmXVaTNT+2BNj78g38=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\service.js"
     },
     {
       "Identity": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\site.js",
@@ -1748,6 +1790,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-Tn/inJlAO1WUE5bp4DxqHIF6r2e5/fr1J5BcKgFFh74="
+        }
+      ]
+    },
+    {
+      "Route": "js/hotelinfo.i37yb2a0bb.js",
+      "AssetFile": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\hotelinfo.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4025"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"biuVSGesjSBUBleCmiUmhevEgQokr6ZxJClYP7chNr8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 04 Jul 2026 03:41:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i37yb2a0bb"
+        },
+        {
+          "Name": "label",
+          "Value": "js/hotelinfo.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-biuVSGesjSBUBleCmiUmhevEgQokr6ZxJClYP7chNr8="
+        }
+      ]
+    },
+    {
+      "Route": "js/hotelinfo.js",
+      "AssetFile": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\hotelinfo.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4025"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"biuVSGesjSBUBleCmiUmhevEgQokr6ZxJClYP7chNr8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 04 Jul 2026 03:41:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-biuVSGesjSBUBleCmiUmhevEgQokr6ZxJClYP7chNr8="
+        }
+      ]
+    },
+    {
+      "Route": "js/service.dnc1t4hlo3.js",
+      "AssetFile": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\service.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8084"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"t+zduFzRbqS2X2C1HCbIesxCXHmXVaTNT+2BNj78g38=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 04 Jul 2026 04:23:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dnc1t4hlo3"
+        },
+        {
+          "Name": "label",
+          "Value": "js/service.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-t+zduFzRbqS2X2C1HCbIesxCXHmXVaTNT+2BNj78g38="
+        }
+      ]
+    },
+    {
+      "Route": "js/service.js",
+      "AssetFile": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\service.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8084"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"t+zduFzRbqS2X2C1HCbIesxCXHmXVaTNT+2BNj78g38=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 04 Jul 2026 04:23:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-t+zduFzRbqS2X2C1HCbIesxCXHmXVaTNT+2BNj78g38="
         }
       ]
     },

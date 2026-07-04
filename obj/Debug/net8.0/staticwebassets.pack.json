@@ -17,6 +17,14 @@
       "PackagePath": "staticwebassets\\js\\account.js"
     },
     {
+      "Id": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\hotelinfo.js",
+      "PackagePath": "staticwebassets\\js\\hotelinfo.js"
+    },
+    {
+      "Id": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\service.js",
+      "PackagePath": "staticwebassets\\js\\service.js"
+    },
+    {
       "Id": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

@@ -9,11 +9,16 @@ namespace Hotel_System.Data
 
         public DbSet<Account> Accounts { get; set; }
 
+        public DbSet<HotelInfo> HotelInfos { get; set; }
+
+        public DbSet<Service> Services { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Account>(e => {
+            modelBuilder.Entity<Account>(e => 
+            {
                 e.HasKey(u => u.Id);
                 e.Property(u => u.Username).IsRequired().HasMaxLength(50);
                 e.Property(u => u.Email).IsRequired().HasMaxLength(100);
@@ -21,6 +26,23 @@ namespace Hotel_System.Data
                 e.HasIndex(u => u.Username).IsUnique();
                 e.HasIndex(u => u.Email).IsUnique();
             });
+
+            modelBuilder.Entity<HotelInfo>(e => 
+            {
+                e.HasKey(h => h.Id);
+                e.Property(h => h.HotelName).IsRequired().HasMaxLength(200);
+                e.Property(h => h.Email).HasMaxLength(100);
+                e.Property(h => h.Phone).HasMaxLength(20);
+            });
+
+            modelBuilder.Entity<Service>(e => 
+            {
+                e.HasKey(s => s.Id);
+                e.Property(s => s.ServiceName).IsRequired().HasMaxLength(200);
+                e.Property(s => s.Price).HasColumnType("decimal(18,2)");
+            });
+
+
         }
     }
 }

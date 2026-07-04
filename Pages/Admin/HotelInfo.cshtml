@@ -1,0 +1,108 @@
+﻿@page
+@model Hotel_System.Pages.Admin.HotelInfoModel
+@{
+    ViewData["Title"] = "Hotel Information";
+}
+
+<div class="container py-4" style="max-width: 700px;">
+    <h4 class="mb-4">
+        <i class="bi bi-building"></i> Hotel Information
+    </h4>
+
+    <!-- Alert -->
+    <div id="alertBox" class="alert d-none" role="alert"></div>
+
+    <!-- Info Card -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span class="fw-bold">Current Information</span>
+            <button class="btn btn-warning btn-sm" onclick="openEditModal()">
+                <i class="bi bi-pencil"></i> Edit
+            </button>
+        </div>
+        <div class="card-body">
+            <table class="table table-borderless mb-0">
+                <tr>
+                    <th width="30%">Hotel Name</th>
+                    <td id="info_hotelName">Loading...</td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td id="info_address"></td>
+                </tr>
+                <tr>
+                    <th>Phone</th>
+                    <td id="info_phone"></td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td id="info_email"></td>
+                </tr>
+                <tr>
+                    <th>Website</th>
+                    <td id="info_website"></td>
+                </tr>
+                <tr>
+                    <th>Description</th>
+                    <td id="info_description"></td>
+                </tr>
+                <tr>
+                    <th>Last Updated</th>
+                    <td id="info_updatedAt"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- ===== EDIT MODAL ===== -->
+<div class="modal fade" id="editModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-warning">
+                <h5 class="modal-title">
+                    <i class="bi bi-pencil"></i> Edit Hotel Information
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label">Hotel Name <span class="text-danger">*</span></label>
+                    <input type="text" id="edit_hotelName" class="form-control" />
+                    <div id="edit_hotelName_error" class="text-danger small"></div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Address <span class="text-danger">*</span></label>
+                    <input type="text" id="edit_address" class="form-control" />
+                    <div id="edit_address_error" class="text-danger small"></div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Phone <span class="text-danger">*</span></label>
+                    <input type="text" id="edit_phone" class="form-control" />
+                    <div id="edit_phone_error" class="text-danger small"></div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email <span class="text-danger">*</span></label>
+                    <input type="email" id="edit_email" class="form-control" />
+                    <div id="edit_email_error" class="text-danger small"></div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Website</label>
+                    <input type="url" id="edit_website" class="form-control" placeholder="https://..." />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Description</label>
+                    <textarea id="edit_description" class="form-control" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-warning" onclick="submitEdit()">Save Changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/hotelinfo.js"></script>
+}

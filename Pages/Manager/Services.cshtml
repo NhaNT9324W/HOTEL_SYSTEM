@@ -1,0 +1,199 @@
+﻿@page
+@model Hotel_System.Pages.Manager.ServicesModel
+@{
+    ViewData["Title"] = "Service Management";
+}
+
+<div class="container-fluid py-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4 class="mb-0">
+            <i class="bi bi-gear"></i> Service Management
+        </h4>
+        <button class="btn btn-primary" onclick="openCreateModal()">
+            <i class="bi bi-plus-circle"></i> Add New Service
+        </button>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="mb-3">
+        <div class="input-group" style="max-width: 400px;">
+            <input type="text" id="searchInput" class="form-control"
+                   placeholder="Search by name, description..." />
+            <button class="btn btn-outline-secondary" onclick="searchServices()">
+                <i class="bi bi-search"></i> Search
+            </button>
+            <button class="btn btn-outline-danger" onclick="clearSearch()">
+                Clear
+            </button>
+        </div>
+    </div>
+
+    <!-- Alert -->
+    <div id="alertBox" class="alert d-none" role="alert"></div>
+
+    <!-- Table -->
+    <div class="card shadow-sm">
+        <div class="card-body p-0">
+            <table class="table table-hover table-bordered mb-0">
+                <thead class="table-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Service Name</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="serviceTableBody">
+                    <tr>
+                        <td colspan="5" class="text-center">Loading...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- ===== DETAIL MODAL ===== -->
+<div class="modal fade" id="detailModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-info text-white">
+                <h5 class="modal-title">
+                    <i class="bi bi-gear"></i> Service Detail
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-borderless mb-0">
+                    <tr>
+                        <th width="35%">Service Name</th>
+                        <td id="detail_serviceName"></td>
+                    </tr>
+                    <tr>
+                        <th>Description</th>
+                        <td id="detail_description"></td>
+                    </tr>
+                    <tr>
+                        <th>Price</th>
+                        <td id="detail_price"></td>
+                    </tr>
+                    <tr>
+                        <th>Status</th>
+                        <td id="detail_status"></td>
+                    </tr>
+                    <tr>
+                        <th>Created At</th>
+                        <td id="detail_createdAt"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== CREATE MODAL ===== -->
+<div class="modal fade" id="createModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">
+                    <i class="bi bi-plus-circle"></i> Add New Service
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label">Service Name <span class="text-danger">*</span></label>
+                    <input type="text" id="create_serviceName" class="form-control"
+                           placeholder="Enter service name" />
+                    <div id="create_serviceName_error" class="text-danger small"></div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Description</label>
+                    <textarea id="create_description" class="form-control" rows="3"
+                              placeholder="Enter description"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Price (VND) <span class="text-danger">*</span></label>
+                    <input type="number" id="create_price" class="form-control"
+                           placeholder="Enter price" min="0" />
+                    <div id="create_price_error" class="text-danger small"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-primary" onclick="submitCreate()">Create</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== EDIT MODAL ===== -->
+<div class="modal fade" id="editModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-warning">
+                <h5 class="modal-title">
+                    <i class="bi bi-pencil"></i> Edit Service
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="edit_id" />
+                <div class="mb-3">
+                    <label class="form-label">Service Name <span class="text-danger">*</span></label>
+                    <input type="text" id="edit_serviceName" class="form-control" />
+                    <div id="edit_serviceName_error" class="text-danger small"></div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Description</label>
+                    <textarea id="edit_description" class="form-control" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Price (VND) <span class="text-danger">*</span></label>
+                    <input type="number" id="edit_price" class="form-control" min="0" />
+                    <div id="edit_price_error" class="text-danger small"></div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Status <span class="text-danger">*</span></label>
+                    <select id="edit_status" class="form-select">
+                        <option value="0">Active</option>
+                        <option value="1">Inactive</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-warning" onclick="submitEdit()">Save Changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== DELETE MODAL ===== -->
+<div class="modal fade" id="deleteModal" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title">Confirm Delete</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="delete_id" />
+                <p>Are you sure you want to delete <strong id="delete_name"></strong>?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-danger" onclick="submitDelete()">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/service.js"></script>
+}

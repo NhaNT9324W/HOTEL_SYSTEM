@@ -54,6 +54,35 @@ namespace Hotel_System.Data
 
             await context.Accounts.AddRangeAsync(users);
             await context.SaveChangesAsync();
+
+
+            if (!await context.HotelInfos.AnyAsync())
+            {
+                await context.HotelInfos.AddAsync(new HotelInfo
+                {
+                    HotelName = "FPT Uni Hotel",
+                    Address = "123 Nguyen Van Cu, Ninh Kieu, Can Tho City",
+                    Phone = "0352859392",
+                    Email = "fpt@hotel.com",
+                    Website = "https://hotel.com",
+                    Description = "A luxury hotel in the heart of Can Tho City"
+                });
+                await context.SaveChangesAsync();
+            }
+
+            if (!await context.Services.AnyAsync())
+            {
+                var services = new List<Service>
+                {
+                    new() { ServiceName = "Airport Transfer", Description = "Pick up from airport", Price = 200000, Status = ServiceStatus.Active },
+                    new() { ServiceName = "Breakfast", Description = "Daily breakfast buffet", Price = 150000, Status = ServiceStatus.Active },
+                    new() { ServiceName = "Laundry", Description = "Laundry service per kg", Price = 50000, Status = ServiceStatus.Active },
+                    new() { ServiceName = "Spa", Description = "Full body massage 60 minutes", Price = 500000, Status = ServiceStatus.Active }
+                };
+                await context.Services.AddRangeAsync(services);
+                await context.SaveChangesAsync();
+            }
+
         }
 
         public static string HashPassword(string password)
