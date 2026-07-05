@@ -350,3 +350,9 @@ D:\MonHoc\PRN222\HOTEL_SYSTEM\obj\Debug\net8.0\refint\Hotel_System.dll
 D:\MonHoc\PRN222\HOTEL_SYSTEM\obj\Debug\net8.0\Hotel_System.pdb
 D:\MonHoc\PRN222\HOTEL_SYSTEM\obj\Debug\net8.0\Hotel_System.genruntimeconfig.cache
 D:\MonHoc\PRN222\HOTEL_SYSTEM\obj\Debug\net8.0\ref\Hotel_System.dll
+D:\Ky7\PRN222\Final Project\HOTEL_SYSTEM\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll
+D:\Ky7\PRN222\Final Project\HOTEL_SYSTEM\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+D:\Ky7\PRN222\Final Project\HOTEL_SYSTEM\bin\Debug\net8.0\MailKit.dll
+D:\Ky7\PRN222\Final Project\HOTEL_SYSTEM\bin\Debug\net8.0\MimeKit.dll
+D:\Ky7\PRN222\Final Project\HOTEL_SYSTEM\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+D:\Ky7\PRN222\Final Project\HOTEL_SYSTEM\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

@@ -80,17 +80,113 @@
                     </ul>
 
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">
-                                <i class="bi bi-person-circle"></i> Admin
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#"
+                               data-bs-toggle="dropdown">
+                                <i class="bi bi-person-circle"></i>
+                                <span id="navFullName"></span>
                             </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">
-                                <i class="bi bi-box-arrow-right"></i> Logout
-                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                    <h6 class="dropdown-header" id="dropdownRole"></h6>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="openProfileModal()">
+                                        <i class="bi bi-person"></i> Edit Profile
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                       onclick="openChangePasswordModal()">
+                                        <i class="bi bi-key"></i> Change Password
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <a class="dropdown-item text-danger" href="#"
+                                       onclick="logout()">
+                                        <i class="bi bi-box-arrow-right"></i> Logout
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
+
+                    <!-- ===== EDIT PROFILE MODAL ===== -->
+                    <div class="modal fade" id="profileModal" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header bg-primary text-white">
+                                    <h5 class="modal-title">
+                                        <i class="bi bi-person"></i> Edit Profile
+                                    </h5>
+                                    <button type="button" class="btn-close btn-close-white"
+                                            data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="profileAlert" class="alert d-none"></div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Full Name <span class="text-danger">*</span></label>
+                                        <input type="text" id="profile_fullName" class="form-control" />
+                                        <div id="profile_fullName_error" class="text-danger small"></div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Email <span class="text-danger">*</span></label>
+                                        <input type="email" id="profile_email" class="form-control" />
+                                        <div id="profile_email_error" class="text-danger small"></div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Phone</label>
+                                        <input type="text" id="profile_phone" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                    <button class="btn btn-primary" onclick="submitEditProfile()">Save Changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ===== CHANGE PASSWORD MODAL ===== -->
+                    <div class="modal fade" id="changePasswordModal" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header bg-warning">
+                                    <h5 class="modal-title">
+                                        <i class="bi bi-key"></i> Change Password
+                                    </h5>
+                                    <button type="button" class="btn-close"
+                                            data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="changePassAlert" class="alert d-none"></div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Current Password <span class="text-danger">*</span></label>
+                                        <input type="password" id="cp_current" class="form-control" />
+                                        <div id="cp_current_error" class="text-danger small"></div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">New Password <span class="text-danger">*</span></label>
+                                        <input type="password" id="cp_new" class="form-control"
+                                               placeholder="Min 6 characters" />
+                                        <div id="cp_new_error" class="text-danger small"></div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Confirm Password <span class="text-danger">*</span></label>
+                                        <input type="password" id="cp_confirm" class="form-control" />
+                                        <div id="cp_confirm_error" class="text-danger small"></div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                    <button class="btn btn-warning" onclick="submitChangePassword()">Change Password</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -112,5 +208,153 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+
+    <script>
+        // Hiện thông tin user
+        const fullName = sessionStorage.getItem('fullName');
+        const role = sessionStorage.getItem('role');
+
+        if (fullName) document.getElementById('navFullName').textContent = fullName;
+        if (role) document.getElementById('dropdownRole').textContent = role;
+
+        // Logout
+        async function logout() {
+            await fetch('/api/auth/logout', { method: 'POST' });
+            document.cookie = 'jwt_token=; path=/; max-age=0';
+            sessionStorage.clear();
+            window.location.href = '/Login';
+        }
+
+        // Edit Profile
+        function openProfileModal() {
+            document.getElementById('profile_fullName').value = sessionStorage.getItem('fullName') || '';
+            document.getElementById('profile_email').value = '';
+            document.getElementById('profile_phone').value = '';
+            document.getElementById('profile_fullName_error').textContent = '';
+            document.getElementById('profile_email_error').textContent = '';
+            document.getElementById('profileAlert').classList.add('d-none');
+            new bootstrap.Modal(document.getElementById('profileModal')).show();
+        }
+
+        async function submitEditProfile() {
+            const fullName = document.getElementById('profile_fullName').value.trim();
+            const email = document.getElementById('profile_email').value.trim();
+            const phone = document.getElementById('profile_phone').value.trim();
+
+            let isValid = true;
+            if (!fullName) {
+                document.getElementById('profile_fullName_error').textContent = 'Full name is required';
+                isValid = false;
+            } else {
+                document.getElementById('profile_fullName_error').textContent = '';
+            }
+
+            if (!email) {
+                document.getElementById('profile_email_error').textContent = 'Email is required';
+                isValid = false;
+            } else {
+                document.getElementById('profile_email_error').textContent = '';
+            }
+
+            if (!isValid) return;
+
+            const response = await fetch('/api/auth/edit-profile', {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ fullName, email, phone })
+            });
+
+            const result = await response.json();
+            const alertBox = document.getElementById('profileAlert');
+
+            if (response.ok) {
+                // Cập nhật sessionStorage
+                sessionStorage.setItem('fullName', fullName);
+                document.getElementById('navFullName').textContent = fullName;
+
+                alertBox.className = 'alert alert-success';
+                alertBox.textContent = result.message;
+                alertBox.classList.remove('d-none');
+                setTimeout(() => {
+                    bootstrap.Modal.getInstance(
+                        document.getElementById('profileModal')).hide();
+                }, 1500);
+            } else {
+                alertBox.className = 'alert alert-danger';
+                alertBox.textContent = result.message;
+                alertBox.classList.remove('d-none');
+            }
+        }
+
+        // Change Password
+        function openChangePasswordModal() {
+            document.getElementById('cp_current').value = '';
+            document.getElementById('cp_new').value = '';
+            document.getElementById('cp_confirm').value = '';
+            ['current', 'new', 'confirm'].forEach(f => {
+                document.getElementById(`cp_${f}_error`).textContent = '';
+            });
+            document.getElementById('changePassAlert').classList.add('d-none');
+            new bootstrap.Modal(document.getElementById('changePasswordModal')).show();
+        }
+
+        async function submitChangePassword() {
+            const currentPassword = document.getElementById('cp_current').value.trim();
+            const newPassword = document.getElementById('cp_new').value.trim();
+            const confirmPassword = document.getElementById('cp_confirm').value.trim();
+
+            let isValid = true;
+
+            if (!currentPassword) {
+                document.getElementById('cp_current_error').textContent = 'Current password is required';
+                isValid = false;
+            } else {
+                document.getElementById('cp_current_error').textContent = '';
+            }
+
+            if (!newPassword || newPassword.length < 6) {
+                document.getElementById('cp_new_error').textContent = 'Password must be at least 6 characters';
+                isValid = false;
+            } else {
+                document.getElementById('cp_new_error').textContent = '';
+            }
+
+            if (!confirmPassword) {
+                document.getElementById('cp_confirm_error').textContent = 'Please confirm your password';
+                isValid = false;
+            } else if (newPassword !== confirmPassword) {
+                document.getElementById('cp_confirm_error').textContent = 'Passwords do not match';
+                isValid = false;
+            } else {
+                document.getElementById('cp_confirm_error').textContent = '';
+            }
+
+            if (!isValid) return;
+
+            const response = await fetch('/api/auth/change-password', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ currentPassword, newPassword, confirmPassword })
+            });
+
+            const result = await response.json();
+            const alertBox = document.getElementById('changePassAlert');
+
+            if (response.ok) {
+                alertBox.className = 'alert alert-success';
+                alertBox.textContent = result.message;
+                alertBox.classList.remove('d-none');
+                setTimeout(() => {
+                    bootstrap.Modal.getInstance(
+                        document.getElementById('changePasswordModal')).hide();
+                }, 1500);
+            } else {
+                alertBox.className = 'alert alert-danger';
+                alertBox.textContent = result.message;
+                alertBox.classList.remove('d-none');
+            }
+        }
+    </script>
 </body>
 </html>

@@ -66,8 +66,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6n39aj12pa</Fingerprint>
-      <Integrity>Tn/inJlAO1WUE5bp4DxqHIF6r2e5/fr1J5BcKgFFh74=</Integrity>
+      <Fingerprint>0u8l398x67</Fingerprint>
+      <Integrity>+IbsfLsPisl5lJJlxvQWers9Eoo9d5XFj8tZF2TE1Is=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\account.js'))</OriginalItemSpec>
@@ -210,8 +210,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>uohj7il2f2</Fingerprint>
-      <Integrity>Tp8AkghuSWQEgFZw4OoKpy/JGpBZX0ZKT2YWDV99vw4=</Integrity>
+      <Fingerprint>b66m4ahsbl</Fingerprint>
+      <Integrity>PTuBmFzs37KuZyFnoovHeB5XmImyxWI5C3ML1NEEEw0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\task.js'))</OriginalItemSpec>

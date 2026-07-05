@@ -11,5 +11,8 @@ namespace Hotel_System.Entities
         public string Phone { get; set; } = string.Empty;
         public Role Role { get; set; }
         public AccountStatus Status { get; set; } = AccountStatus.Active;
+        public string? ResetToken { get; set; }
+        public DateTime? ResetTokenExpiry { get; set; }
+
     }
 }

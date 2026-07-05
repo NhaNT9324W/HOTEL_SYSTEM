@@ -177,6 +177,35 @@
     <script src="~/js/account.js"></script>
 }
 
+<!-- ===== RESET PASSWORD MODAL ===== -->
+<div class="modal fade" id="resetPasswordModal" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title">
+                    <i class="bi bi-key"></i> Reset Password
+                </h5>
+                <button type="button" class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="reset_userId" />
+                <p>Reset password for <strong id="reset_userName"></strong>?</p>
+                <div class="mb-3">
+                    <label class="form-label">New Password <span class="text-danger">*</span></label>
+                    <input type="password" id="reset_newPassword" class="form-control"
+                           placeholder="Min 6 characters" />
+                    <div id="reset_newPassword_error" class="text-danger small"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-danger" onclick="submitResetPassword()">Reset</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- ===== DETAIL MODAL ===== -->
 <div class="modal fade" id="detailModal" tabindex="-1">
     <div class="modal-dialog">
@@ -219,7 +248,10 @@
                     </tr>
                 </table>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer justify-content-between">
+                <button class="btn btn-danger btn-sm" onclick="openResetPasswordModal()">
+                    <i class="bi bi-key"></i> Reset Password
+                </button>
                 <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
         </div>

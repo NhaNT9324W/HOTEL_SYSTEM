@@ -194,7 +194,45 @@ async function openDetailModal(id) {
     document.getElementById('detail_status').innerHTML = getStatusBadge(account.status);
     document.getElementById('detail_createdAt').textContent = new Date(account.createdAt).toLocaleDateString('vi-VN');
 
+    // Set ID cho reset password
+    document.getElementById('reset_userId').value = account.id;
+    document.getElementById('reset_userName').textContent = account.fullName;
+
     new bootstrap.Modal(document.getElementById('detailModal')).show();
+}
+
+// ===== RESET PASSWORD BY ADMIN =====
+function openResetPasswordModal() {
+    bootstrap.Modal.getInstance(document.getElementById('detailModal')).hide();
+    document.getElementById('reset_newPassword').value = '';
+    document.getElementById('reset_newPassword_error').textContent = '';
+    new bootstrap.Modal(document.getElementById('resetPasswordModal')).show();
+}
+
+async function submitResetPassword() {
+    const userId = document.getElementById('reset_userId').value;
+    const newPassword = document.getElementById('reset_newPassword').value.trim();
+
+    if (!newPassword || newPassword.length < 6) {
+        document.getElementById('reset_newPassword_error').textContent = 'Password must be at least 6 characters';
+        return;
+    }
+    document.getElementById('reset_newPassword_error').textContent = '';
+
+    const response = await fetch(`/api/auth/reset-password-admin/${userId}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ newPassword })
+    });
+
+    const result = await response.json();
+
+    if (response.ok) {
+        bootstrap.Modal.getInstance(document.getElementById('resetPasswordModal')).hide();
+        showAlert('success', result.message);
+    } else {
+        showAlert('danger', result.message);
+    }
 }
 
 

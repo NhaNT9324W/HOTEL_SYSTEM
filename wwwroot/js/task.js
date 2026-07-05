@@ -155,7 +155,7 @@ async function submitCreate() {
         body: JSON.stringify({
             roomId: parseInt(roomId),
             assignedToId: parseInt(staffId),
-            createdById: 1, // TODO: thay bằng ID user đang đăng nhập
+            createdById: parseInt(sessionStorage.getItem('userId') || '1'),
             taskType,
             priority,
             description,

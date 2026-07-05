@@ -56,5 +56,13 @@ namespace Hotel_System.Repositories.Implementations
                 await _context.SaveChangesAsync();
             }
         }
+
+        public async Task<Account?> GetByEmailAsync(string email) =>
+    await _context.Accounts
+        .FirstOrDefaultAsync(a => a.Email == email);
+
+        public async Task<Account?> GetByResetTokenAsync(string token) =>
+            await _context.Accounts
+                .FirstOrDefaultAsync(a => a.ResetToken == token);
     }
 }
