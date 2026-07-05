@@ -1,24 +1,302 @@
 ﻿@page
 @model Hotel_System.Pages.Receptionist.ReservationsModel
 @{
-    ViewData["Title"] = "Quản lý đặt phòng";
+    ViewData["Title"] = "Reservation Management";
 }
 
-<h2>Quản lý đặt phòng</h2>
+<div class="container-fluid py-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4 class="mb-0">
+            <i class="bi bi-calendar-check"></i> Reservation Management
+        </h4>
+        <button class="btn btn-primary" onclick="openCreateModal()">
+            <i class="bi bi-plus-circle"></i> New Reservation
+        </button>
+    </div>
 
-<input type="text" id="searchBox" class="form-control mb-3" placeholder="Tìm theo số phòng, tên khách, SĐT..." />
+    <!-- Search Bar -->
+    <div class="mb-3">
+        <div class="input-group" style="max-width: 400px;">
+            <input type="text" id="searchInput" class="form-control"
+                   placeholder="Search by guest name, phone, room..." />
+            <button class="btn btn-outline-secondary" onclick="searchReservations()">
+                <i class="bi bi-search"></i> Search
+            </button>
+            <button class="btn btn-outline-danger" onclick="clearSearch()">
+                Clear
+            </button>
+        </div>
+    </div>
 
-<table class="table table-hover" id="reservationTable">
-    <thead>
-        <tr><th>Phòng</th><th>Khách</th><th>Check-in</th><th>Check-out</th><th>Trạng thái</th></tr>
-    </thead>
-    <tbody><!-- render bằng JS --></tbody>
-</table>
+    <!-- Alert -->
+    <div id="alertBox" class="alert d-none" role="alert"></div>
 
-<!-- Card chi tiết - chỉ hiện khi bấm vào row -->
-<div id="detailCard" class="card" style="display:none; position:fixed; top:10%; left:30%; width:40%; z-index:999;">
-    <div class="card-body" id="detailCardBody"></div>
-    <button class="btn btn-secondary" onclick="closeDetailCard()">Đóng</button>
+    <!-- Table -->
+    <div class="card shadow-sm">
+        <div class="card-body p-0">
+            <table class="table table-hover table-bordered mb-0">
+                <thead class="table-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Guest Name</th>
+                        <th>Phone</th>
+                        <th>Room</th>
+                        <th>Check-in</th>
+                        <th>Check-out</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="reservationTableBody">
+                    <tr>
+                        <td colspan="8" class="text-center">Loading...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- ===== DETAIL MODAL ===== -->
+<div class="modal fade" id="detailModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-info text-white">
+                <h5 class="modal-title">
+                    <i class="bi bi-calendar-check"></i> Reservation Detail
+                </h5>
+                <button type="button" class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="fw-bold text-primary mb-3">
+                            <i class="bi bi-person"></i> Guest Information
+                        </h6>
+                        <table class="table table-borderless table-sm">
+                            <tr>
+                                <th width="40%">Full Name</th>
+                                <td id="detail_guestName"></td>
+                            </tr>
+                            <tr>
+                                <th>Phone</th>
+                                <td id="detail_guestPhone"></td>
+                            </tr>
+                            <tr>
+                                <th>ID Number</th>
+                                <td id="detail_guestIdNumber"></td>
+                            </tr>
+                            <tr>
+                                <th>Email</th>
+                                <td id="detail_guestEmail"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="fw-bold text-primary mb-3">
+                            <i class="bi bi-door-open"></i> Room Information
+                        </h6>
+                        <table class="table table-borderless table-sm">
+                            <tr>
+                                <th width="40%">Room Number</th>
+                                <td id="detail_roomNumber"></td>
+                            </tr>
+                            <tr>
+                                <th>Room Type</th>
+                                <td id="detail_roomType"></td>
+                            </tr>
+                            <tr>
+                                <th>Floor</th>
+                                <td id="detail_floor"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6 class="fw-bold text-primary mb-3">
+                            <i class="bi bi-calendar"></i> Booking Information
+                        </h6>
+                        <table class="table table-borderless table-sm">
+                            <tr>
+                                <th width="40%">Check-in</th>
+                                <td id="detail_checkIn"></td>
+                            </tr>
+                            <tr>
+                                <th>Check-out</th>
+                                <td id="detail_checkOut"></td>
+                            </tr>
+                            <tr>
+                                <th>Status</th>
+                                <td id="detail_status"></td>
+                            </tr>
+                            <tr>
+                                <th>Created At</th>
+                                <td id="detail_createdAt"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== CREATE MODAL ===== -->
+<div class="modal fade" id="createModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">
+                    <i class="bi bi-plus-circle"></i> New Reservation
+                </h5>
+                <button type="button" class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <!-- Guest Info -->
+                    <div class="col-md-6">
+                        <h6 class="fw-bold text-primary mb-3">
+                            <i class="bi bi-person"></i> Guest Information
+                        </h6>
+                        <div class="mb-3">
+                            <label class="form-label">Full Name <span class="text-danger">*</span></label>
+                            <input type="text" id="create_guestName" class="form-control"
+                                   placeholder="Enter guest full name" />
+                            <div id="create_guestName_error" class="text-danger small"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Phone <span class="text-danger">*</span></label>
+                            <input type="text" id="create_guestPhone" class="form-control"
+                                   placeholder="Enter phone number" />
+                            <div id="create_guestPhone_error" class="text-danger small"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">ID Number (CCCD) <span class="text-danger">*</span></label>
+                            <input type="text" id="create_guestIdNumber" class="form-control"
+                                   placeholder="Enter ID number" />
+                            <div id="create_guestIdNumber_error" class="text-danger small"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" id="create_guestEmail" class="form-control"
+                                   placeholder="Enter email (optional)" />
+                        </div>
+                    </div>
+
+                    <!-- Booking Info -->
+                    <div class="col-md-6">
+                        <h6 class="fw-bold text-primary mb-3">
+                            <i class="bi bi-calendar"></i> Booking Information
+                        </h6>
+                        <div class="mb-3">
+                            <label class="form-label">Check-in Date <span class="text-danger">*</span></label>
+                            <input type="date" id="create_checkIn" class="form-control" />
+                            <div id="create_checkIn_error" class="text-danger small"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Check-out Date <span class="text-danger">*</span></label>
+                            <input type="date" id="create_checkOut" class="form-control" />
+                            <div id="create_checkOut_error" class="text-danger small"></div>
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-outline-primary w-100"
+                                    onclick="checkAvailability()">
+                                <i class="bi bi-search"></i> Check Available Rooms
+                            </button>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Select Room <span class="text-danger">*</span></label>
+                            <select id="create_roomId" class="form-select" disabled>
+                                <option value="">-- Check availability first --</option>
+                            </select>
+                            <div id="create_roomId_error" class="text-danger small"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-primary" onclick="submitCreate()">
+                    Create Reservation
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== EDIT MODAL ===== -->
+<div class="modal fade" id="editModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-warning">
+                <h5 class="modal-title">
+                    <i class="bi bi-pencil"></i> Edit Reservation
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="edit_id" />
+                <div class="mb-3">
+                    <label class="form-label">Check-in Date <span class="text-danger">*</span></label>
+                    <input type="date" id="edit_checkIn" class="form-control" />
+                    <div id="edit_checkIn_error" class="text-danger small"></div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Check-out Date <span class="text-danger">*</span></label>
+                    <input type="date" id="edit_checkOut" class="form-control" />
+                    <div id="edit_checkOut_error" class="text-danger small"></div>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-outline-primary w-100"
+                            onclick="checkAvailabilityEdit()">
+                        <i class="bi bi-search"></i> Check Available Rooms
+                    </button>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Select Room <span class="text-danger">*</span></label>
+                    <select id="edit_roomId" class="form-select" disabled>
+                        <option value="">-- Check availability first --</option>
+                    </select>
+                    <div id="edit_roomId_error" class="text-danger small"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-warning" onclick="submitEdit()">Save Changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== CANCEL MODAL ===== -->
+<div class="modal fade" id="cancelModal" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title">Confirm Cancel</h5>
+                <button type="button" class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="cancel_id" />
+                <p>
+                    Are you sure you want to cancel reservation for
+                    <strong id="cancel_guestName"></strong>?
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                <button class="btn btn-danger" onclick="submitCancel()">Yes, Cancel</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 @section Scripts {

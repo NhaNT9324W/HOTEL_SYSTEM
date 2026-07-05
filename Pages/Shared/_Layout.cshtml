@@ -22,61 +22,46 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-
-                        @* Menu Admin *@
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-page="/Admin/Accounts">
                                 <i class="bi bi-people"></i> Accounts
                             </a>
                         </li>
-
-                        @* Menu Hotel Manager *@
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-page="/Manager/RoomTypes">
                                 <i class="bi bi-door-closed"></i> Room Types
                             </a>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-page="/Manager/Rooms">
                                 <i class="bi bi-door-open"></i> Rooms
                             </a>
                         </li>
-
-                        @* Hotel Infor *@
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-page="/Admin/HotelInfo">
                                 <i class="bi bi-building-gear"></i> Hotel Info
                             </a>
                         </li>
-
-                        @* Service *@
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-page="/Manager/Services">
                                 <i class="bi bi-gear"></i> Services
                             </a>
                         </li>
-
-                        @* Menu Receptionist - Reservations *@
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-page="/Receptionist/Reservations">
                                 <i class="bi bi-calendar-check"></i> Reservations
                             </a>
                         </li>
-
-                        @* Menu Receptionist - Guests *@
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-page="/Receptionist/Guests">
                                 <i class="bi bi-person-lines-fill"></i> Guests
                             </a>
                         </li>
-                        @* Task *@
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-page="/Manager/Tasks">
                                 <i class="bi bi-clipboard-check"></i> Tasks
                             </a>
                         </li>
-
                     </ul>
 
                     <ul class="navbar-nav">
@@ -94,7 +79,7 @@
                                 <li>
                                     <a class="dropdown-item" href="#"
                                        onclick="openProfileModal()">
-                                        <i class="bi bi-person"></i> Edit Profile
+                                        <i class="bi bi-person"></i> My Profile
                                     </a>
                                 </li>
                                 <li>
@@ -113,80 +98,6 @@
                             </ul>
                         </li>
                     </ul>
-
-                    <!-- ===== EDIT PROFILE MODAL ===== -->
-                    <div class="modal fade" id="profileModal" tabindex="-1">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header bg-primary text-white">
-                                    <h5 class="modal-title">
-                                        <i class="bi bi-person"></i> Edit Profile
-                                    </h5>
-                                    <button type="button" class="btn-close btn-close-white"
-                                            data-bs-dismiss="modal"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div id="profileAlert" class="alert d-none"></div>
-                                    <div class="mb-3">
-                                        <label class="form-label">Full Name <span class="text-danger">*</span></label>
-                                        <input type="text" id="profile_fullName" class="form-control" />
-                                        <div id="profile_fullName_error" class="text-danger small"></div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">Email <span class="text-danger">*</span></label>
-                                        <input type="email" id="profile_email" class="form-control" />
-                                        <div id="profile_email_error" class="text-danger small"></div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">Phone</label>
-                                        <input type="text" id="profile_phone" class="form-control" />
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                    <button class="btn btn-primary" onclick="submitEditProfile()">Save Changes</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ===== CHANGE PASSWORD MODAL ===== -->
-                    <div class="modal fade" id="changePasswordModal" tabindex="-1">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header bg-warning">
-                                    <h5 class="modal-title">
-                                        <i class="bi bi-key"></i> Change Password
-                                    </h5>
-                                    <button type="button" class="btn-close"
-                                            data-bs-dismiss="modal"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div id="changePassAlert" class="alert d-none"></div>
-                                    <div class="mb-3">
-                                        <label class="form-label">Current Password <span class="text-danger">*</span></label>
-                                        <input type="password" id="cp_current" class="form-control" />
-                                        <div id="cp_current_error" class="text-danger small"></div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">New Password <span class="text-danger">*</span></label>
-                                        <input type="password" id="cp_new" class="form-control"
-                                               placeholder="Min 6 characters" />
-                                        <div id="cp_new_error" class="text-danger small"></div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">Confirm Password <span class="text-danger">*</span></label>
-                                        <input type="password" id="cp_confirm" class="form-control" />
-                                        <div id="cp_confirm_error" class="text-danger small"></div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                    <button class="btn btn-warning" onclick="submitChangePassword()">Change Password</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </nav>
@@ -204,11 +115,117 @@
         </div>
     </footer>
 
+    <!-- ===== PROFILE MODAL ===== -->
+    <div class="modal fade" id="profileModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">
+                        <i class="bi bi-person-circle"></i> My Profile
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white"
+                            data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="profileAlert" class="alert d-none"></div>
+
+                    <!-- Thông tin hiện tại -->
+                    <div class="card bg-light mb-3">
+                        <div class="card-body py-2">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-person-circle fs-1 text-primary me-3"></i>
+                                <div>
+                                    <h6 class="mb-0" id="profile_display_name"></h6>
+                                    <small class="text-muted" id="profile_display_username"></small>
+                                </div>
+                            </div>
+                            <hr class="my-2" />
+                            <div class="row">
+                                <div class="col-6">
+                                    <small class="text-muted">Role</small>
+                                    <div id="profile_display_role"></div>
+                                </div>
+                                <div class="col-6">
+                                    <small class="text-muted">Status</small>
+                                    <div id="profile_display_status"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form edit -->
+                    <h6 class="fw-bold mb-3">
+                        <i class="bi bi-pencil"></i> Edit Information
+                    </h6>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name <span class="text-danger">*</span></label>
+                        <input type="text" id="profile_fullName" class="form-control" />
+                        <div id="profile_fullName_error" class="text-danger small"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email <span class="text-danger">*</span></label>
+                        <input type="email" id="profile_email" class="form-control" />
+                        <div id="profile_email_error" class="text-danger small"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Phone</label>
+                        <input type="text" id="profile_phone" class="form-control" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button class="btn btn-primary" onclick="submitEditProfile()">
+                        Save Changes
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== CHANGE PASSWORD MODAL ===== -->
+    <div class="modal fade" id="changePasswordModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title">
+                        <i class="bi bi-key"></i> Change Password
+                    </h5>
+                    <button type="button" class="btn-close"
+                            data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="changePassAlert" class="alert d-none"></div>
+                    <div class="mb-3">
+                        <label class="form-label">Current Password <span class="text-danger">*</span></label>
+                        <input type="password" id="cp_current" class="form-control" />
+                        <div id="cp_current_error" class="text-danger small"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">New Password <span class="text-danger">*</span></label>
+                        <input type="password" id="cp_new" class="form-control"
+                               placeholder="Min 6 characters" />
+                        <div id="cp_new_error" class="text-danger small"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Confirm Password <span class="text-danger">*</span></label>
+                        <input type="password" id="cp_confirm" class="form-control" />
+                        <div id="cp_confirm_error" class="text-danger small"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button class="btn btn-warning" onclick="submitChangePassword()">
+                        Change Password
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
-
 
     <script>
         // Hiện thông tin user
@@ -226,14 +243,30 @@
             window.location.href = '/Login';
         }
 
-        // Edit Profile
-        function openProfileModal() {
-            document.getElementById('profile_fullName').value = sessionStorage.getItem('fullName') || '';
-            document.getElementById('profile_email').value = '';
-            document.getElementById('profile_phone').value = '';
+        // ===== PROFILE =====
+        async function openProfileModal() {
+            const userId = sessionStorage.getItem('userId');
+            const response = await fetch(`/api/accounts/${userId}`);
+            const account = await response.json();
+
+            // Hiện thông tin
+            document.getElementById('profile_display_name').textContent = account.fullName;
+            document.getElementById('profile_display_username').textContent = '@@' + account.username;
+            document.getElementById('profile_display_role').innerHTML =
+                `<span class="badge bg-info">${getRoleName(account.role)}</span>`;
+            document.getElementById('profile_display_status').innerHTML =
+                account.status === 0
+                    ? '<span class="badge bg-success">Active</span>'
+                    : '<span class="badge bg-secondary">Inactive</span>';
+
+            // Fill form
+            document.getElementById('profile_fullName').value = account.fullName;
+            document.getElementById('profile_email').value = account.email;
+            document.getElementById('profile_phone').value = account.phone || '';
             document.getElementById('profile_fullName_error').textContent = '';
             document.getElementById('profile_email_error').textContent = '';
             document.getElementById('profileAlert').classList.add('d-none');
+
             new bootstrap.Modal(document.getElementById('profileModal')).show();
         }
 
@@ -269,9 +302,9 @@
             const alertBox = document.getElementById('profileAlert');
 
             if (response.ok) {
-                // Cập nhật sessionStorage
                 sessionStorage.setItem('fullName', fullName);
                 document.getElementById('navFullName').textContent = fullName;
+                document.getElementById('profile_display_name').textContent = fullName;
 
                 alertBox.className = 'alert alert-success';
                 alertBox.textContent = result.message;
@@ -287,7 +320,7 @@
             }
         }
 
-        // Change Password
+        // ===== CHANGE PASSWORD =====
         function openChangePasswordModal() {
             document.getElementById('cp_current').value = '';
             document.getElementById('cp_new').value = '';
@@ -354,6 +387,12 @@
                 alertBox.textContent = result.message;
                 alertBox.classList.remove('d-none');
             }
+        }
+
+        // ===== HELPERS =====
+        function getRoleName(role) {
+            const roles = ['Admin', 'HotelManager', 'Receptionist', 'RoomStaff'];
+            return roles[role] || 'Unknown';
         }
     </script>
 </body>

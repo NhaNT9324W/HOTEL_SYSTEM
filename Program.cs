@@ -72,6 +72,9 @@ builder.Services.AddScoped<IGuestService, GuestService>();
 builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 builder.Services.AddScoped<ITaskService, TaskService>();
 
+builder.Services.AddScoped<IReservationRepository, ReservationRepository>();
+builder.Services.AddScoped<IReservationService, ReservationService>();
+
 builder.Services.AddScoped<IEmailService, EmailService>();
 
 var app = builder.Build();

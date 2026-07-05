@@ -9,113 +9,177 @@ namespace Hotel_System.Services.Implementations
     public class ReservationService : IReservationService
     {
         private readonly IReservationRepository _repo;
-        private readonly ILogger<ReservationService> _logger;
+        private readonly IGuestRepository _guestRepo;
+        private readonly IRoomRepository _roomRepo;
 
-        public ReservationService(IReservationRepository repo, ILogger<ReservationService> logger)
+        public ReservationService(
+            IReservationRepository repo,
+            IGuestRepository guestRepo,
+            IRoomRepository roomRepo)
         {
             _repo = repo;
-            _logger = logger;
+            _guestRepo = guestRepo;
+            _roomRepo = roomRepo;
         }
 
-        public async Task<List<ReservationListDto>> GetAllAsync(string? search)
+        public async Task<IEnumerable<ReservationListDto>> GetAllAsync()
         {
-            var list = await _repo.GetAllAsync(search);
-            return list.Select(r => new ReservationListDto
-            {
-                Id = r.Id,
-                RoomNumber = r.Room!.RoomNumber,
-                GuestName = r.Guest!.FullName,
-                CheckInDate = r.CheckInDate,
-                CheckOutDate = r.CheckOutDate,
-                Status = r.Status.ToString()
-            }).ToList();
+            var reservations = await _repo.GetAllAsync();
+            return reservations.Select(ToListDto);
         }
 
-        public async Task<ReservationDetailDto?> GetDetailAsync(int id)
+        public async Task<ReservationDetailDto?> GetByIdAsync(int id)
         {
-            var r = await _repo.GetByIdAsync(id);
-            if (r == null) return null;
-
-            return new ReservationDetailDto
-            {
-                Id = r.Id,
-                RoomNumber = r.Room!.RoomNumber,
-                RoomTypeName = r.Room.RoomType?.Name ?? "N/A", // giả định RoomType có field Name
-                GuestName = r.Guest!.FullName,
-                GuestPhone = r.Guest.Phone,
-                GuestEmail = r.Guest.Email,
-                CheckInDate = r.CheckInDate,
-                CheckOutDate = r.CheckOutDate,
-                Status = r.Status.ToString(),
-                CreatedAt = r.CreatedAt
-            };
+            var reservation = await _repo.GetByIdAsync(id);
+            return reservation == null ? null : ToDetailDto(reservation);
         }
 
-        public async Task<(bool Success, string Message)> CreateAsync(CreateReservationDto dto)
+        public async Task<IEnumerable<ReservationListDto>> SearchAsync(string keyword)
         {
-            try
+            var reservations = await _repo.SearchAsync(keyword);
+            return reservations.Select(ToListDto);
+        }
+
+        public async Task<IEnumerable<object>> GetAvailableRoomsAsync(
+            DateTime checkIn, DateTime checkOut)
+        {
+            var allRooms = await _roomRepo.GetAllAsync();
+
+            var availableRooms = new List<object>();
+            foreach (var room in allRooms)
             {
-                // --- Root Cause Gate 1: Ngày hợp lệ ---
-                if (dto.CheckInDate >= dto.CheckOutDate)
+                var hasOverlap = await _repo.HasOverlappingReservationAsync(
+                    room.Id, checkIn, checkOut);
+
+                if (!hasOverlap && room.BookingStatus == RoomBookingStatus.AVAILABLE)
                 {
-                    _logger.LogWarning("Reservation rejected: invalid date range RoomId={RoomId}", dto.RoomId);
-                    return (false, "Ngày check-out phải sau ngày check-in.");
+                    availableRooms.Add(new
+                    {
+                        room.Id,
+                        room.RoomNumber,
+                        room.Floor,
+                        RoomTypeName = room.RoomType?.Name ?? "",
+                        Price = room.RoomType?.BasePrice ?? 0
+                    });
                 }
+            }
 
-                // --- Root Cause Gate 2: Trạng thái phòng - PHẢI ĐỦ CẢ 2 ĐIỀU KIỆN ---
-                var room = await _repo.GetRoomWithStatusAsync(dto.RoomId);
-                if (room == null)
+            return availableRooms;
+        }
+
+        public async Task CreateAsync(CreateReservationDto dto)
+        {
+            // Validate ngày
+            if (dto.CheckInDate >= dto.CheckOutDate)
+                throw new Exception("Check-out date must be after check-in date");
+
+            if (dto.CheckInDate < DateTime.Today)
+                throw new Exception("Check-in date cannot be in the past");
+
+            // Kiểm tra phòng có trống không
+            var hasOverlap = await _repo.HasOverlappingReservationAsync(
+                dto.RoomId, dto.CheckInDate, dto.CheckOutDate);
+            if (hasOverlap)
+                throw new Exception("Room is not available for the selected dates");
+
+            // Tìm hoặc tạo Guest theo Phone
+            var guest = await _guestRepo.GetByPhoneAsync(dto.GuestPhone);
+            if (guest == null)
+            {
+                guest = new Guest
                 {
-                    return (false, "Phòng không tồn tại.");
-                }
-
-                bool isBookable = room.BookingStatus == RoomBookingStatus.AVAILABLE
-                                   && room.HousekeepingStatus == RoomHousekeepingStatus.CLEAN;
-
-                if (!isBookable)
-                {
-                    _logger.LogWarning(
-                        "Reservation rejected: RoomId={RoomId} BookingStatus={BookingStatus} HousekeepingStatus={HousekeepingStatus}",
-                        room.Id, room.BookingStatus, room.HousekeepingStatus);
-                    return (false, $"Phòng chưa đủ điều kiện đặt (Booking: {room.BookingStatus}, Housekeeping: {room.HousekeepingStatus}). Cần AVAILABLE + CLEAN.");
-                }
-
-                // --- Root Cause Gate 3: Trùng lịch ---
-                bool overlap = await _repo.HasOverlappingReservationAsync(dto.RoomId, dto.CheckInDate, dto.CheckOutDate);
-                if (overlap)
-                {
-                    return (false, "Phòng đã có đặt phòng khác trong khoảng thời gian này.");
-                }
-
-                // --- Guest: tìm theo phone, chưa có thì tạo mới ---
-                var guest = await _repo.FindGuestByPhoneAsync(dto.GuestPhone);
-                if (guest == null)
-                {
-                    guest = new Guest { FullName = dto.GuestFullName, Phone = dto.GuestPhone, Email = dto.GuestEmail };
-                    await _repo.AddGuestAsync(guest);
-                    await _repo.SaveChangesAsync(); // cần Id của guest trước khi gán vào Reservation
-                }
-
-                var reservation = new Reservation
-                {
-                    RoomId = dto.RoomId,
-                    GuestId = guest.Id,
-                    CheckInDate = dto.CheckInDate,
-                    CheckOutDate = dto.CheckOutDate,
-                    Status = ReservationStatus.PENDING
+                    FullName = dto.GuestFullName,
+                    Phone = dto.GuestPhone,
+                    IdNumber = dto.GuestIdNumber,
+                    Email = dto.GuestEmail,
+                    CreatedAt = DateTime.UtcNow
                 };
-
-                await _repo.AddAsync(reservation);
-                await _repo.SaveChangesAsync();
-
-                return (true, "Đặt phòng thành công.");
+                await _guestRepo.AddAsync(guest);
+                await _guestRepo.SaveChangesAsync(); // Thêm dòng này
             }
-            catch (Exception ex)
+
+            // Tạo Reservation
+            var reservation = new Reservation
             {
-                // Log chi tiết để trace root cause kể cả khi IDE không hiện lỗi runtime
-                _logger.LogError(ex, "Unhandled error while creating reservation for RoomId={RoomId}", dto.RoomId);
-                return (false, "Có lỗi hệ thống xảy ra, vui lòng thử lại.");
-            }
+                GuestId = guest.Id,
+                RoomId = dto.RoomId,
+                CheckInDate = dto.CheckInDate,
+                CheckOutDate = dto.CheckOutDate,
+                Status = ReservationStatus.CONFIRMED,
+                CreatedAt = DateTime.UtcNow
+            };
+
+            await _repo.AddAsync(reservation);
         }
+
+        public async Task UpdateAsync(int id, UpdateReservationDto dto)
+        {
+            var reservation = await _repo.GetByIdAsync(id)
+                ?? throw new Exception("Reservation not found");
+
+            if (reservation.Status == ReservationStatus.CHECKED_IN ||
+                reservation.Status == ReservationStatus.CHECKED_OUT)
+                throw new Exception("Cannot update a reservation that is checked-in or checked-out");
+
+            if (dto.CheckInDate >= dto.CheckOutDate)
+                throw new Exception("Check-out date must be after check-in date");
+
+            // Kiểm tra phòng có trống không (trừ reservation hiện tại)
+            var hasOverlap = await _repo.HasOverlappingReservationAsync(
+                dto.RoomId, dto.CheckInDate, dto.CheckOutDate, id);
+            if (hasOverlap)
+                throw new Exception("Room is not available for the selected dates");
+
+            reservation.RoomId = dto.RoomId;
+            reservation.CheckInDate = dto.CheckInDate;
+            reservation.CheckOutDate = dto.CheckOutDate;
+
+            await _repo.UpdateAsync(reservation);
+        }
+
+        public async Task CancelAsync(int id)
+        {
+            var reservation = await _repo.GetByIdAsync(id)
+                ?? throw new Exception("Reservation not found");
+
+            if (reservation.Status == ReservationStatus.CHECKED_IN)
+                throw new Exception("Cannot cancel a reservation that is checked-in");
+
+            if (reservation.Status == ReservationStatus.CHECKED_OUT)
+                throw new Exception("Cannot cancel a reservation that is already checked-out");
+
+            if (reservation.Status == ReservationStatus.CANCELED)
+                throw new Exception("Reservation is already cancelled");
+
+            await _repo.UpdateStatusAsync(id, ReservationStatus.CANCELED);
+        }
+
+        // ===== MAPPERS =====
+        private static ReservationListDto ToListDto(Reservation r) => new()
+        {
+            Id = r.Id,
+            RoomNumber = r.Room?.RoomNumber ?? "",
+            GuestName = r.Guest?.FullName ?? "",
+            GuestPhone = r.Guest?.Phone ?? "",
+            CheckInDate = r.CheckInDate,
+            CheckOutDate = r.CheckOutDate,
+            Status = r.Status.ToString()
+        };
+
+        private static ReservationDetailDto ToDetailDto(Reservation r) => new()
+        {
+            Id = r.Id,
+            RoomNumber = r.Room?.RoomNumber ?? "",
+            GuestName = r.Guest?.FullName ?? "",
+            GuestPhone = r.Guest?.Phone ?? "",
+            GuestIdNumber = r.Guest?.IdNumber ?? "",
+            GuestEmail = r.Guest?.Email,
+            RoomTypeName = r.Room?.RoomType?.Name ?? "",
+            Floor = r.Room?.Floor ?? 0,
+            CheckInDate = r.CheckInDate,
+            CheckOutDate = r.CheckOutDate,
+            Status = r.Status.ToString(),
+            CreatedAt = r.CreatedAt
+        };
     }
 }

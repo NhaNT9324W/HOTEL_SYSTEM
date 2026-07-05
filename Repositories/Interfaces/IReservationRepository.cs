@@ -4,13 +4,12 @@ namespace Hotel_System.Repositories.Interfaces
 {
     public interface IReservationRepository
     {
-        Task<List<Reservation>> GetAllAsync(string? search);
+        Task<IEnumerable<Reservation>> GetAllAsync();
         Task<Reservation?> GetByIdAsync(int id);
-        Task<Room?> GetRoomWithStatusAsync(int roomId);
-        Task<bool> HasOverlappingReservationAsync(int roomId, DateTime checkIn, DateTime checkOut);
+        Task<IEnumerable<Reservation>> SearchAsync(string keyword);
+        Task<bool> HasOverlappingReservationAsync(int roomId, DateTime checkIn, DateTime checkOut, int? excludeId = null);
         Task AddAsync(Reservation reservation);
-        Task<Guest?> FindGuestByPhoneAsync(string phone);
-        Task AddGuestAsync(Guest guest);
-        Task SaveChangesAsync();
+        Task UpdateAsync(Reservation reservation);
+        Task UpdateStatusAsync(int id, Entities.Enums.ReservationStatus status);
     }
 }

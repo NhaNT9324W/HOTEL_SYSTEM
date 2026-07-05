@@ -4,8 +4,12 @@ namespace Hotel_System.Services.Interfaces
 {
     public interface IReservationService
     {
-        Task<List<ReservationListDto>> GetAllAsync(string? search);
-        Task<ReservationDetailDto?> GetDetailAsync(int id);
-        Task<(bool Success, string Message)> CreateAsync(CreateReservationDto dto);
+        Task<IEnumerable<ReservationListDto>> GetAllAsync();
+        Task<ReservationDetailDto?> GetByIdAsync(int id);
+        Task<IEnumerable<ReservationListDto>> SearchAsync(string keyword);
+        Task<IEnumerable<object>> GetAvailableRoomsAsync(DateTime checkIn, DateTime checkOut);
+        Task CreateAsync(CreateReservationDto dto);
+        Task UpdateAsync(int id, UpdateReservationDto dto);
+        Task CancelAsync(int id);
     }
 }
