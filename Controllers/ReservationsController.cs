@@ -1,9 +1,11 @@
 ﻿using Hotel_System.DTOs;
 using Hotel_System.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Hotel_System.Controllers
 {
+    [Authorize(Roles = "Admin,HotelManager,Receptionist")]
     [ApiController]
     [Route("api/reservations")]
     public class ReservationsController : ControllerBase
@@ -43,13 +45,14 @@ namespace Hotel_System.Controllers
         // GET /api/reservations/available-rooms?checkIn=...&checkOut=...
         [HttpGet("available-rooms")]
         public async Task<IActionResult> GetAvailableRooms(
-            [FromQuery] DateTime checkIn,
-            [FromQuery] DateTime checkOut)
+    [FromQuery] DateTime checkIn,
+    [FromQuery] DateTime checkOut,
+    [FromQuery] int? roomTypeId = null)
         {
             if (checkIn >= checkOut)
                 return BadRequest(new { message = "Check-out date must be after check-in date" });
 
-            var result = await _service.GetAvailableRoomsAsync(checkIn, checkOut);
+            var result = await _service.GetAvailableRoomsAsync(checkIn, checkOut, roomTypeId);
             return Ok(result);
         }
 
@@ -97,6 +100,21 @@ namespace Hotel_System.Controllers
             {
                 await _service.CancelAsync(id);
                 return Ok(new { message = "Reservation cancelled successfully" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        // PATCH /api/reservations/{id}/checkin
+        [HttpPatch("{id}/checkin")]
+        public async Task<IActionResult> CheckIn(int id)
+        {
+            try
+            {
+                await _service.CheckInAsync(id);
+                return Ok(new { message = "Check-in successful" });
             }
             catch (Exception ex)
             {

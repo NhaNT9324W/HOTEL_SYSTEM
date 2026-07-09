@@ -3,8 +3,11 @@ wwwroot\favicon.ico
 wwwroot\js\account.js
 wwwroot\js\guest.js
 wwwroot\js\hotelinfo.js
+wwwroot\js\maintenance.js
+wwwroot\js\report.js
 wwwroot\js\reservation.js
 wwwroot\js\room.js
+wwwroot\js\roomstaff.js
 wwwroot\js\roomtype.js
 wwwroot\js\service.js
 wwwroot\js\site.js

@@ -1,9 +1,11 @@
 ﻿using Hotel_System.DTOs;
 using Hotel_System.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Hotel_System.Controllers
 {
+    [Authorize(Roles = "Admin,HotelManager")]
     [ApiController]
     [Route("api/services")]
     public class ServicesController : ControllerBase

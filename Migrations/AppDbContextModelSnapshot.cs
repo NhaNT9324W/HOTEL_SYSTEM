@@ -222,6 +222,87 @@ namespace Hotel_System.Migrations
                     b.ToTable("HousekeepingTasks");
                 });
 
+            modelBuilder.Entity("Hotel_System.Entities.Invoice", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("IssuedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Nights")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ReservationId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("RoomCharge")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("ServiceCharge")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("TotalAmount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ReservationId")
+                        .IsUnique();
+
+                    b.ToTable("Invoices");
+                });
+
+            modelBuilder.Entity("Hotel_System.Entities.MaintenanceIssue", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("IssueType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ReportedById")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RoomId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ReportedById");
+
+                    b.HasIndex("RoomId");
+
+                    b.ToTable("MaintenanceIssues");
+                });
+
             modelBuilder.Entity("Hotel_System.Entities.Reservation", b =>
                 {
                     b.Property<int>("Id")
@@ -369,6 +450,47 @@ namespace Hotel_System.Migrations
                     b.ToTable("Services");
                 });
 
+            modelBuilder.Entity("Hotel_System.Entities.ServiceUsage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ReservationId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ServiceId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("TotalPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("UnitPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("UsedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ReservationId");
+
+                    b.HasIndex("ServiceId");
+
+                    b.ToTable("ServiceUsages");
+                });
+
             modelBuilder.Entity("Hotel_System.Entities.HousekeepingTask", b =>
                 {
                     b.HasOne("Hotel_System.Entities.Account", "AssignedTo")
@@ -392,6 +514,36 @@ namespace Hotel_System.Migrations
                     b.Navigation("AssignedTo");
 
                     b.Navigation("CreatedBy");
+
+                    b.Navigation("Room");
+                });
+
+            modelBuilder.Entity("Hotel_System.Entities.Invoice", b =>
+                {
+                    b.HasOne("Hotel_System.Entities.Reservation", "Reservation")
+                        .WithOne()
+                        .HasForeignKey("Hotel_System.Entities.Invoice", "ReservationId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Reservation");
+                });
+
+            modelBuilder.Entity("Hotel_System.Entities.MaintenanceIssue", b =>
+                {
+                    b.HasOne("Hotel_System.Entities.Account", "ReportedBy")
+                        .WithMany()
+                        .HasForeignKey("ReportedById")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Hotel_System.Entities.Room", "Room")
+                        .WithMany()
+                        .HasForeignKey("RoomId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("ReportedBy");
 
                     b.Navigation("Room");
                 });
@@ -424,6 +576,25 @@ namespace Hotel_System.Migrations
                         .IsRequired();
 
                     b.Navigation("RoomType");
+                });
+
+            modelBuilder.Entity("Hotel_System.Entities.ServiceUsage", b =>
+                {
+                    b.HasOne("Hotel_System.Entities.Reservation", "Reservation")
+                        .WithMany()
+                        .HasForeignKey("ReservationId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Hotel_System.Entities.Service", "Service")
+                        .WithMany()
+                        .HasForeignKey("ServiceId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Reservation");
+
+                    b.Navigation("Service");
                 });
 
             modelBuilder.Entity("Hotel_System.Entities.Guest", b =>

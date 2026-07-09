@@ -64,4 +64,46 @@ namespace Hotel_System.DTOs
 
         public DateTime? DueDate { get; set; }
     }
+
+    public class UpdateTaskStatusDto
+    {
+        public int TaskId { get; set; }
+        public string Status { get; set; } = null!; // Pending, InProgress, Completed
+    }
+
+    public class UpdateRoomStatusDto
+    {
+        public int RoomId { get; set; }
+        public string HousekeepingStatus { get; set; } = null!; // DIRTY, CLEAN, READY
+    }
+
+    public class ReportMaintenanceDto
+    {
+        [Required(ErrorMessage = "Room is required")]
+        public int RoomId { get; set; }
+
+        [Required(ErrorMessage = "Issue type is required")]
+        public string IssueType { get; set; } = null!;
+
+        [Required(ErrorMessage = "Description is required")]
+        public string Description { get; set; } = null!;
+
+        public int ReportedById { get; set; }
+    }
+
+    public class MaintenanceIssueDto
+    {
+        public int Id { get; set; }
+        public string RoomNumber { get; set; } = null!;
+        public string ReportedByName { get; set; } = null!;
+        public string IssueType { get; set; } = null!;
+        public string Description { get; set; } = null!;
+        public string Status { get; set; } = null!;
+        public DateTime CreatedAt { get; set; }
+    }
+
+    public class UpdateMaintenanceStatusDto
+    {
+        public string Status { get; set; } = null!; // PENDING, IN_PROGRESS, RESOLVED
+    }
 }

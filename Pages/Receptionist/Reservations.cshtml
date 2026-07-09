@@ -206,6 +206,12 @@
                             <div id="create_checkOut_error" class="text-danger small"></div>
                         </div>
                         <div class="mb-3">
+                            <label class="form-label">Room Type</label>
+                            <select id="create_roomTypeId" class="form-select">
+                                <option value="">-- All Room Types --</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
                             <button class="btn btn-outline-primary w-100"
                                     onclick="checkAvailability()">
                                 <i class="bi bi-search"></i> Check Available Rooms
@@ -294,6 +300,171 @@
             <div class="modal-footer">
                 <button class="btn btn-secondary" data-bs-dismiss="modal">No</button>
                 <button class="btn btn-danger" onclick="submitCancel()">Yes, Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== ADD SERVICE MODAL ===== -->
+<div class="modal fade" id="addServiceModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">
+                    <i class="bi bi-plus-circle"></i> Add Service
+                </h5>
+                <button type="button" class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="addService_reservationId" />
+                <h6 class="fw-bold text-primary mb-3">
+                    Guest: <span id="addService_guestName"></span>
+                </h6>
+
+                <!-- Add Service Form -->
+                <div class="row mb-4">
+                    <div class="col-md-5">
+                        <label class="form-label">Service</label>
+                        <select id="addService_serviceId" class="form-select">
+                            <option value="">-- Select Service --</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Quantity</label>
+                        <input type="number" id="addService_quantity"
+                               class="form-control" value="1" min="1" max="100" />
+                    </div>
+                    <div class="col-md-4 d-flex align-items-end">
+                        <button class="btn btn-primary w-100"
+                                onclick="submitAddService()">
+                            <i class="bi bi-plus"></i> Add
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service List -->
+                <h6 class="fw-bold mb-2">Services Used:</h6>
+                <table class="table table-bordered table-sm">
+                    <thead class="table-secondary">
+                        <tr>
+                            <th>Service</th>
+                            <th>Qty</th>
+                            <th>Unit Price</th>
+                            <th>Total</th>
+                            <th>Used At</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="serviceUsageTableBody">
+                        <tr>
+                            <td colspan="6" class="text-center text-muted">
+                                No services added
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="table-warning fw-bold">
+                            <td colspan="3" class="text-end">Total Service Charge:</td>
+                            <td id="totalServiceCharge">0 VND</td>
+                            <td colspan="2"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== CHECK-OUT MODAL ===== -->
+<div class="modal fade" id="checkOutModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title">
+                    <i class="bi bi-box-arrow-right"></i> Check-out
+                </h5>
+                <button type="button" class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="checkout_reservationId" />
+
+                <!-- Invoice Preview -->
+                <div class="card bg-light mb-3">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="mb-1">
+                                    <strong>Guest:</strong>
+                                    <span id="co_guestName"></span>
+                                </p>
+                                <p class="mb-1">
+                                    <strong>Room:</strong>
+                                    <span id="co_roomNumber"></span>
+                                </p>
+                                <p class="mb-1">
+                                    <strong>Room Type:</strong>
+                                    <span id="co_roomType"></span>
+                                </p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="mb-1">
+                                    <strong>Check-in:</strong>
+                                    <span id="co_checkIn"></span>
+                                </p>
+                                <p class="mb-1">
+                                    <strong>Check-out:</strong>
+                                    <span id="co_checkOut"></span>
+                                </p>
+                                <p class="mb-1">
+                                    <strong>Nights:</strong>
+                                    <span id="co_nights"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charges -->
+                <table class="table table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Description</th>
+                            <th class="text-end">Amount (VND)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="co_serviceDetails"></tbody>
+                    <tfoot>
+                        <tr class="table-secondary">
+                            <td>
+                                <strong>Room Charge</strong>
+                                (<span id="co_nights2"></span> nights)
+                            </td>
+                            <td class="text-end fw-bold"
+                                id="co_roomCharge"></td>
+                        </tr>
+                        <tr class="table-secondary">
+                            <td><strong>Service Charge</strong></td>
+                            <td class="text-end fw-bold"
+                                id="co_serviceCharge"></td>
+                        </tr>
+                        <tr class="table-success">
+                            <td><strong>TOTAL</strong></td>
+                            <td class="text-end fw-bold fs-5"
+                                id="co_totalAmount"></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-danger" onclick="submitCheckOut()">
+                    <i class="bi bi-box-arrow-right"></i> Confirm Check-out
+                </button>
             </div>
         </div>
     </div>

@@ -1,8 +1,10 @@
-﻿using Hotel_System.DTOs;
+﻿using Hotel_System.Data;
+using Hotel_System.DTOs;
 using Hotel_System.Entities;
 using Hotel_System.Entities.Enums;
 using Hotel_System.Repositories.Interfaces;
 using Hotel_System.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace Hotel_System.Services.Implementations
 {
@@ -11,15 +13,18 @@ namespace Hotel_System.Services.Implementations
         private readonly IReservationRepository _repo;
         private readonly IGuestRepository _guestRepo;
         private readonly IRoomRepository _roomRepo;
+        private readonly AppDbContext _context;
 
         public ReservationService(
             IReservationRepository repo,
             IGuestRepository guestRepo,
-            IRoomRepository roomRepo)
+            IRoomRepository roomRepo,
+            AppDbContext context)
         {
             _repo = repo;
             _guestRepo = guestRepo;
             _roomRepo = roomRepo;
+            _context = context;
         }
 
         public async Task<IEnumerable<ReservationListDto>> GetAllAsync()
@@ -41,17 +46,32 @@ namespace Hotel_System.Services.Implementations
         }
 
         public async Task<IEnumerable<object>> GetAvailableRoomsAsync(
-            DateTime checkIn, DateTime checkOut)
+    DateTime checkIn, DateTime checkOut, int? roomTypeId = null)
         {
             var allRooms = await _roomRepo.GetAllAsync();
+
+            if (roomTypeId.HasValue)
+                allRooms = allRooms.Where(r => r.RoomTypeId == roomTypeId.Value).ToList();
+
+            // Lấy danh sách phòng đang có maintenance issue
+            var maintenanceRoomIds = await _context.MaintenanceIssues
+                .Where(m => m.Status == "PENDING" || m.Status == "IN_PROGRESS")
+                .Select(m => m.RoomId)
+                .Distinct()
+                .ToListAsync();
 
             var availableRooms = new List<object>();
             foreach (var room in allRooms)
             {
+                // Kiểm tra overlap reservation
                 var hasOverlap = await _repo.HasOverlappingReservationAsync(
                     room.Id, checkIn, checkOut);
 
-                if (!hasOverlap && room.BookingStatus == RoomBookingStatus.AVAILABLE)
+                // Kiểm tra tất cả điều kiện
+                if (!hasOverlap
+                    && room.BookingStatus == RoomBookingStatus.AVAILABLE
+                    && room.HousekeepingStatus == RoomHousekeepingStatus.READY
+                    && !maintenanceRoomIds.Contains(room.Id))
                 {
                     availableRooms.Add(new
                     {
@@ -69,7 +89,6 @@ namespace Hotel_System.Services.Implementations
 
         public async Task CreateAsync(CreateReservationDto dto)
         {
-            // Validate ngày
             if (dto.CheckInDate >= dto.CheckOutDate)
                 throw new Exception("Check-out date must be after check-in date");
 
@@ -81,6 +100,23 @@ namespace Hotel_System.Services.Implementations
                 dto.RoomId, dto.CheckInDate, dto.CheckOutDate);
             if (hasOverlap)
                 throw new Exception("Room is not available for the selected dates");
+
+            // Kiểm tra HousekeepingStatus
+            var room = await _context.Rooms
+                .Include(r => r.RoomType)
+                .FirstOrDefaultAsync(r => r.Id == dto.RoomId)
+                ?? throw new Exception("Room not found");
+
+            if (room.HousekeepingStatus != RoomHousekeepingStatus.READY)
+                throw new Exception("Room is not ready for check-in " +
+                    $"(Current status: {room.HousekeepingStatus})");
+
+            // Kiểm tra Maintenance Issue
+            var hasMaintenance = await _context.MaintenanceIssues
+                .AnyAsync(m => m.RoomId == dto.RoomId
+                    && (m.Status == "PENDING" || m.Status == "IN_PROGRESS"));
+            if (hasMaintenance)
+                throw new Exception("Room has pending maintenance issues");
 
             // Tìm hoặc tạo Guest theo Phone
             var guest = await _guestRepo.GetByPhoneAsync(dto.GuestPhone);
@@ -95,10 +131,9 @@ namespace Hotel_System.Services.Implementations
                     CreatedAt = DateTime.UtcNow
                 };
                 await _guestRepo.AddAsync(guest);
-                await _guestRepo.SaveChangesAsync(); // Thêm dòng này
+                await _guestRepo.SaveChangesAsync();
             }
 
-            // Tạo Reservation
             var reservation = new Reservation
             {
                 GuestId = guest.Id,
@@ -181,5 +216,28 @@ namespace Hotel_System.Services.Implementations
             Status = r.Status.ToString(),
             CreatedAt = r.CreatedAt
         };
+
+        public async Task CheckInAsync(int reservationId)
+        {
+            var reservation = await _repo.GetByIdAsync(reservationId)
+                ?? throw new Exception("Reservation not found");
+
+            if (reservation.Status != ReservationStatus.CONFIRMED)
+                throw new Exception("Only confirmed reservations can be checked in");
+
+            if (reservation.CheckInDate.Date > DateTime.Today)
+                throw new Exception("Check-in date has not arrived yet");
+
+            // Cập nhật Reservation status
+            await _repo.UpdateStatusAsync(reservationId, ReservationStatus.CHECKED_IN);
+
+            // Cập nhật Room BookingStatus = OCCUPIED
+            var room = await _context.Rooms.FindAsync(reservation.RoomId)
+                ?? throw new Exception("Room not found");
+
+            room.BookingStatus = RoomBookingStatus.OCCUPIED;
+            _context.Rooms.Update(room);
+            await _context.SaveChangesAsync();
+        }
     }
 }

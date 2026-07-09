@@ -1,9 +1,11 @@
 ﻿using Hotel_System.DTOs;
 using Hotel_System.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Hotel_System.Controllers
 {
+    [Authorize(Roles = "Admin,HotelManager,RoomStaff")]
     [ApiController]
     [Route("api/tasks")]
     public class TasksController : ControllerBase
@@ -94,6 +96,90 @@ namespace Hotel_System.Controllers
             {
                 await _service.DeleteAsync(id);
                 return Ok(new { message = "Task deleted successfully" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        // PATCH /api/tasks/{id}/status
+        [HttpPatch("{id}/status")]
+        public async Task<IActionResult> UpdateTaskStatus(int id, [FromBody] UpdateTaskStatusDto dto)
+        {
+            try
+            {
+                dto.TaskId = id;
+                await _service.UpdateTaskStatusAsync(id, dto.Status);
+                return Ok(new { message = "Task status updated successfully" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        // PATCH /api/tasks/room-status
+        [HttpPatch("room-status")]
+        public async Task<IActionResult> UpdateRoomStatus([FromBody] UpdateRoomStatusDto dto)
+        {
+            try
+            {
+                await _service.UpdateRoomStatusAsync(dto.RoomId, dto.HousekeepingStatus);
+                return Ok(new { message = "Room status updated successfully" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        // POST /api/tasks/maintenance
+        [HttpPost("maintenance")]
+        public async Task<IActionResult> ReportMaintenance([FromBody] ReportMaintenanceDto dto)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            dto.ReportedById = int.Parse(
+                User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value ?? "0");
+
+            try
+            {
+                await _service.ReportMaintenanceAsync(dto);
+                return Ok(new { message = "Maintenance issue reported successfully" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        // GET /api/tasks/maintenance/staff/{staffId}
+        [HttpGet("maintenance/staff/{staffId}")]
+        public async Task<IActionResult> GetMaintenanceByStaff(int staffId)
+        {
+            var result = await _service.GetMaintenanceIssuesByStaffAsync(staffId);
+            return Ok(result);
+        }
+
+        // GET /api/tasks/maintenance — Lấy tất cả maintenance issues
+        [HttpGet("maintenance")]
+        public async Task<IActionResult> GetAllMaintenance()
+        {
+            var result = await _service.GetAllMaintenanceIssuesAsync();
+            return Ok(result);
+        }
+
+        // PATCH /api/tasks/maintenance/{id}/status — Cập nhật status
+        [HttpPatch("maintenance/{id}/status")]
+        public async Task<IActionResult> UpdateMaintenanceStatus(
+            int id, [FromBody] UpdateMaintenanceStatusDto dto)
+        {
+            try
+            {
+                await _service.UpdateMaintenanceStatusAsync(id, dto.Status);
+                return Ok(new { message = "Maintenance status updated successfully" });
             }
             catch (Exception ex)
             {

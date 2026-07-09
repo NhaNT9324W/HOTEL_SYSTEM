@@ -77,6 +77,34 @@ builder.Services.AddScoped<IReservationService, ReservationService>();
 
 builder.Services.AddScoped<IEmailService, EmailService>();
 
+builder.Services.AddScoped<IReportService, ReportService>();
+
+builder.Services.AddScoped<ICheckOutService, CheckOutService>();
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminOnly", policy =>
+        policy.RequireRole("Admin"));
+
+    options.AddPolicy("AdminOrManager", policy =>
+        policy.RequireRole("Admin", "HotelManager"));
+
+    options.AddPolicy("Receptionist", policy =>
+        policy.RequireRole("Admin", "HotelManager", "Receptionist"));
+
+    options.AddPolicy("RoomStaffOnly", policy =>
+        policy.RequireRole("RoomStaff"));
+
+    options.AddPolicy("AllStaff", policy =>
+        policy.RequireRole("Admin", "HotelManager", "Receptionist", "RoomStaff"));
+});
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Login";
+    options.AccessDeniedPath = "/AccessDenied";
+});
+
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())

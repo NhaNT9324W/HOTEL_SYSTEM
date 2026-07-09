@@ -21,47 +21,96 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+
+                    @{
+                        var role = Context.User.FindFirst(
+                        System.Security.Claims.ClaimTypes.Role)?.Value;
+                    }
+
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-page="/Admin/Accounts">
-                                <i class="bi bi-people"></i> Accounts
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-page="/Manager/RoomTypes">
-                                <i class="bi bi-door-closed"></i> Room Types
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-page="/Manager/Rooms">
-                                <i class="bi bi-door-open"></i> Rooms
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-page="/Admin/HotelInfo">
-                                <i class="bi bi-building-gear"></i> Hotel Info
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-page="/Manager/Services">
-                                <i class="bi bi-gear"></i> Services
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-page="/Receptionist/Reservations">
-                                <i class="bi bi-calendar-check"></i> Reservations
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-page="/Receptionist/Guests">
-                                <i class="bi bi-person-lines-fill"></i> Guests
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-page="/Manager/Tasks">
-                                <i class="bi bi-clipboard-check"></i> Tasks
-                            </a>
-                        </li>
+
+                        @if (role == "Admin")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-page="/Admin/Accounts">
+                                    <i class="bi bi-people"></i> Accounts
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-page="/Admin/HotelInfo">
+                                    <i class="bi bi-building-gear"></i> Hotel Info
+                                </a>
+                            </li>
+                        }
+
+                        @if (role == "Admin" || role == "HotelManager")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-page="/Manager/RoomTypes">
+                                    <i class="bi bi-door-closed"></i> Room Types
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-page="/Manager/Rooms">
+                                    <i class="bi bi-door-open"></i> Rooms
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-page="/Manager/Services">
+                                    <i class="bi bi-gear"></i> Services
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-page="/Manager/Tasks">
+                                    <i class="bi bi-clipboard-check"></i> Tasks
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-page="/Manager/Reports">
+                                    <i class="bi bi-bar-chart"></i> Reports
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white"
+                                   asp-page="/Manager/MaintenanceIssues">
+                                    <i class="bi bi-tools"></i> Maintenance
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-page="/Receptionist/Guests">
+                                    <i class="bi bi-person-lines-fill"></i> Guests
+                                </a>
+                            </li>
+                        }
+
+                        @if (role == "Admin" || role == "HotelManager" || role == "Receptionist")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-white"
+                                   asp-page="/Receptionist/Reservations">
+                                    <i class="bi bi-calendar-check"></i> Reservations
+                                </a>
+                            </li>
+                        }
+
+                        @if (role == "Receptionist")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-page="/Receptionist/Guests">
+                                    <i class="bi bi-person-lines-fill"></i> Guests
+                                </a>
+                            </li>
+                        }
+
+                        @if (role == "RoomStaff")
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-page="/RoomStaff/Tasks">
+                                    <i class="bi bi-clipboard-check"></i> My Tasks
+                                </a>
+                            </li>
+                        }
+
                     </ul>
 
                     <ul class="navbar-nav">
@@ -136,7 +185,8 @@
                                 <i class="bi bi-person-circle fs-1 text-primary me-3"></i>
                                 <div>
                                     <h6 class="mb-0" id="profile_display_name"></h6>
-                                    <small class="text-muted" id="profile_display_username"></small>
+                                    <small class="text-muted"
+                                           id="profile_display_username"></small>
                                 </div>
                             </div>
                             <hr class="my-2" />
@@ -158,12 +208,18 @@
                         <i class="bi bi-pencil"></i> Edit Information
                     </h6>
                     <div class="mb-3">
-                        <label class="form-label">Full Name <span class="text-danger">*</span></label>
+                        <label class="form-label">
+                            Full Name
+                            <span class="text-danger">*</span>
+                        </label>
                         <input type="text" id="profile_fullName" class="form-control" />
                         <div id="profile_fullName_error" class="text-danger small"></div>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Email <span class="text-danger">*</span></label>
+                        <label class="form-label">
+                            Email
+                            <span class="text-danger">*</span>
+                        </label>
                         <input type="email" id="profile_email" class="form-control" />
                         <div id="profile_email_error" class="text-danger small"></div>
                     </div>
@@ -196,18 +252,27 @@
                 <div class="modal-body">
                     <div id="changePassAlert" class="alert d-none"></div>
                     <div class="mb-3">
-                        <label class="form-label">Current Password <span class="text-danger">*</span></label>
+                        <label class="form-label">
+                            Current Password
+                            <span class="text-danger">*</span>
+                        </label>
                         <input type="password" id="cp_current" class="form-control" />
                         <div id="cp_current_error" class="text-danger small"></div>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">New Password <span class="text-danger">*</span></label>
+                        <label class="form-label">
+                            New Password
+                            <span class="text-danger">*</span>
+                        </label>
                         <input type="password" id="cp_new" class="form-control"
                                placeholder="Min 6 characters" />
                         <div id="cp_new_error" class="text-danger small"></div>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Confirm Password <span class="text-danger">*</span></label>
+                        <label class="form-label">
+                            Confirm Password
+                            <span class="text-danger">*</span>
+                        </label>
                         <input type="password" id="cp_confirm" class="form-control" />
                         <div id="cp_confirm_error" class="text-danger small"></div>
                     </div>
@@ -249,9 +314,9 @@
             const response = await fetch(`/api/accounts/${userId}`);
             const account = await response.json();
 
-            // Hiện thông tin
             document.getElementById('profile_display_name').textContent = account.fullName;
-            document.getElementById('profile_display_username').textContent = '@@' + account.username;
+            document.getElementById('profile_display_username').textContent =
+                '@@' + account.username;
             document.getElementById('profile_display_role').innerHTML =
                 `<span class="badge bg-info">${getRoleName(account.role)}</span>`;
             document.getElementById('profile_display_status').innerHTML =
@@ -259,7 +324,6 @@
                     ? '<span class="badge bg-success">Active</span>'
                     : '<span class="badge bg-secondary">Inactive</span>';
 
-            // Fill form
             document.getElementById('profile_fullName').value = account.fullName;
             document.getElementById('profile_email').value = account.email;
             document.getElementById('profile_phone').value = account.phone || '';
@@ -277,14 +341,16 @@
 
             let isValid = true;
             if (!fullName) {
-                document.getElementById('profile_fullName_error').textContent = 'Full name is required';
+                document.getElementById('profile_fullName_error').textContent =
+                    'Full name is required';
                 isValid = false;
             } else {
                 document.getElementById('profile_fullName_error').textContent = '';
             }
 
             if (!email) {
-                document.getElementById('profile_email_error').textContent = 'Email is required';
+                document.getElementById('profile_email_error').textContent =
+                    'Email is required';
                 isValid = false;
             } else {
                 document.getElementById('profile_email_error').textContent = '';
@@ -340,24 +406,28 @@
             let isValid = true;
 
             if (!currentPassword) {
-                document.getElementById('cp_current_error').textContent = 'Current password is required';
+                document.getElementById('cp_current_error').textContent =
+                    'Current password is required';
                 isValid = false;
             } else {
                 document.getElementById('cp_current_error').textContent = '';
             }
 
             if (!newPassword || newPassword.length < 6) {
-                document.getElementById('cp_new_error').textContent = 'Password must be at least 6 characters';
+                document.getElementById('cp_new_error').textContent =
+                    'Password must be at least 6 characters';
                 isValid = false;
             } else {
                 document.getElementById('cp_new_error').textContent = '';
             }
 
             if (!confirmPassword) {
-                document.getElementById('cp_confirm_error').textContent = 'Please confirm your password';
+                document.getElementById('cp_confirm_error').textContent =
+                    'Please confirm your password';
                 isValid = false;
             } else if (newPassword !== confirmPassword) {
-                document.getElementById('cp_confirm_error').textContent = 'Passwords do not match';
+                document.getElementById('cp_confirm_error').textContent =
+                    'Passwords do not match';
                 isValid = false;
             } else {
                 document.getElementById('cp_confirm_error').textContent = '';

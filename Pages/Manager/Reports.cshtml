@@ -1,0 +1,250 @@
+﻿@page
+@model Hotel_System.Pages.Manager.ReportsModel
+@{
+    ViewData["Title"] = "Reports";
+}
+
+<div class="container-fluid py-4">
+    <h4 class="mb-4">
+        <i class="bi bi-bar-chart"></i> Hotel Reports
+    </h4>
+
+    <!-- Filter -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <div class="row align-items-end">
+                <div class="col-md-3">
+                    <label class="form-label fw-semibold">From Date</label>
+                    <input type="date" id="fromDate" class="form-control" />
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label fw-semibold">To Date</label>
+                    <input type="date" id="toDate" class="form-control" />
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label fw-semibold">Report Type</label>
+                    <select id="reportType" class="form-select">
+                        <option value="occupancy">Occupancy Report</option>
+                        <option value="revenue">Revenue Report</option>
+                        <option value="financial">Financial Report</option>
+                        <option value="staffperformance">Staff Performance Report</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-primary w-100" onclick="generateReport()">
+                            <i class="bi bi-search"></i> Generate
+                        </button>
+                        <button class="btn btn-success w-100" onclick="exportReport()">
+                            <i class="bi bi-file-earmark-excel"></i> Export
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alert -->
+    <div id="alertBox" class="alert d-none" role="alert"></div>
+
+    <!-- Report Content -->
+    <div id="reportContent" class="d-none">
+
+        <!-- ===== OCCUPANCY REPORT ===== -->
+        <div id="occupancyReport" class="d-none">
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <div class="card text-center border-primary">
+                        <div class="card-body">
+                            <h2 class="text-primary" id="occ_totalRooms">0</h2>
+                            <p class="text-muted mb-0">Total Rooms</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center border-warning">
+                        <div class="card-body">
+                            <h2 class="text-warning" id="occ_occupiedRooms">0</h2>
+                            <p class="text-muted mb-0">Occupied Rooms</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center border-success">
+                        <div class="card-body">
+                            <h2 class="text-success" id="occ_rate">0%</h2>
+                            <p class="text-muted mb-0">Occupancy Rate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card shadow-sm">
+                <div class="card-header fw-bold">Occupancy Details</div>
+                <div class="card-body p-0">
+                    <table class="table table-hover table-bordered mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Room Number</th>
+                                <th>Room Type</th>
+                                <th>Total Nights</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="occ_tableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== REVENUE REPORT ===== -->
+        <div id="revenueReport" class="d-none">
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <div class="card text-center border-success">
+                        <div class="card-body">
+                            <h2 class="text-success" id="rev_totalRevenue">0</h2>
+                            <p class="text-muted mb-0">Total Revenue (VND)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center border-primary">
+                        <div class="card-body">
+                            <h2 class="text-primary" id="rev_totalReservations">0</h2>
+                            <p class="text-muted mb-0">Total Reservations</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center border-info">
+                        <div class="card-body">
+                            <h2 class="text-info" id="rev_avgRevenue">0</h2>
+                            <p class="text-muted mb-0">Avg Revenue/Reservation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card shadow-sm">
+                <div class="card-header fw-bold">Revenue Details</div>
+                <div class="card-body p-0">
+                    <table class="table table-hover table-bordered mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Guest Name</th>
+                                <th>Room</th>
+                                <th>Check-in</th>
+                                <th>Check-out</th>
+                                <th>Nights</th>
+                                <th>Revenue (VND)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="rev_tableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== FINANCIAL REPORT ===== -->
+        <div id="financialReport" class="d-none">
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <div class="card text-center border-success">
+                        <div class="card-body">
+                            <h2 class="text-success" id="fin_totalRevenue">0</h2>
+                            <p class="text-muted mb-0">Total Revenue (VND)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center border-primary">
+                        <div class="card-body">
+                            <h2 class="text-primary" id="fin_totalReservations">0</h2>
+                            <p class="text-muted mb-0">Total Reservations</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center border-danger">
+                        <div class="card-body">
+                            <h2 class="text-danger" id="fin_cancelledReservations">0</h2>
+                            <p class="text-muted mb-0">Cancelled</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center border-warning">
+                        <div class="card-body">
+                            <h2 class="text-warning" id="fin_roomRevenue">0</h2>
+                            <p class="text-muted mb-0">Room Revenue (VND)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card shadow-sm">
+                <div class="card-header fw-bold">Revenue by Room Type</div>
+                <div class="card-body p-0">
+                    <table class="table table-hover table-bordered mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Room Type</th>
+                                <th>Total Reservations</th>
+                                <th>Revenue (VND)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="fin_tableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== STAFF PERFORMANCE REPORT ===== -->
+        <div id="staffReport" class="d-none">
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <div class="card text-center border-primary">
+                        <div class="card-body">
+                            <h2 class="text-primary" id="staff_totalStaff">0</h2>
+                            <p class="text-muted mb-0">Total Staff</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card text-center border-success">
+                        <div class="card-body">
+                            <h2 class="text-success" id="staff_totalCompleted">0</h2>
+                            <p class="text-muted mb-0">Total Tasks Completed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card shadow-sm">
+                <div class="card-header fw-bold">Staff Performance Details</div>
+                <div class="card-body p-0">
+                    <table class="table table-hover table-bordered mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Staff Name</th>
+                                <th>Role</th>
+                                <th>Total Tasks</th>
+                                <th>Completed</th>
+                                <th>Pending</th>
+                                <th>In Progress</th>
+                                <th>Completion Rate</th>
+                            </tr>
+                        </thead>
+                        <tbody id="staff_tableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/report.js"></script>
+}

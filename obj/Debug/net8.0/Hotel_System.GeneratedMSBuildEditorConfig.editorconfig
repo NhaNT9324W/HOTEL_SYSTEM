@@ -20,6 +20,10 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
+[D:/Ky7/PRN222/Final Project/HOTEL_SYSTEM/Pages/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjZXNzRGVuaWVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Ky7/PRN222/Final Project/HOTEL_SYSTEM/Pages/Admin/Accounts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWNjb3VudHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -42,6 +46,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Ky7/PRN222/Final Project/HOTEL_SYSTEM/Pages/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Ky7/PRN222/Final Project/HOTEL_SYSTEM/Pages/Manager/MaintenanceIssues.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFuYWdlclxNYWludGVuYW5jZUlzc3Vlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Ky7/PRN222/Final Project/HOTEL_SYSTEM/Pages/Manager/Reports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFuYWdlclxSZXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Ky7/PRN222/Final Project/HOTEL_SYSTEM/Pages/Manager/Rooms.cshtml]
@@ -74,6 +86,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Ky7/PRN222/Final Project/HOTEL_SYSTEM/Pages/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzZXRQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Ky7/PRN222/Final Project/HOTEL_SYSTEM/Pages/RoomStaff/Tasks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9vbVN0YWZmXFRhc2tzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Ky7/PRN222/Final Project/HOTEL_SYSTEM/Pages/Shared/_ValidationScriptsPartial.cshtml]

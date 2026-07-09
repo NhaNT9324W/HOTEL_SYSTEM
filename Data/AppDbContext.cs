@@ -21,6 +21,11 @@ namespace Hotel_System.Data
 
         public DbSet<HousekeepingTask> HousekeepingTasks { get; set; }
 
+        public DbSet<MaintenanceIssue> MaintenanceIssues { get; set; }
+        public DbSet<ServiceUsage> ServiceUsages { get; set; }
+        public DbSet<Invoice> Invoices { get; set; }
+
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -92,6 +97,43 @@ namespace Hotel_System.Data
                 e.HasOne(t => t.CreatedBy)
                  .WithMany()
                  .HasForeignKey(t => t.CreatedById)
+                 .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            modelBuilder.Entity<MaintenanceIssue>(e => {
+                e.HasKey(m => m.Id);
+                e.HasOne(m => m.Room)
+                 .WithMany()
+                 .HasForeignKey(m => m.RoomId)
+                 .OnDelete(DeleteBehavior.Restrict);
+                e.HasOne(m => m.ReportedBy)
+                 .WithMany()
+                 .HasForeignKey(m => m.ReportedById)
+                 .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            modelBuilder.Entity<ServiceUsage>(e => {
+                e.HasKey(s => s.Id);
+                e.Property(s => s.UnitPrice).HasColumnType("decimal(18,2)");
+                e.Property(s => s.TotalPrice).HasColumnType("decimal(18,2)");
+                e.HasOne(s => s.Reservation)
+                 .WithMany()
+                 .HasForeignKey(s => s.ReservationId)
+                 .OnDelete(DeleteBehavior.Restrict);
+                e.HasOne(s => s.Service)
+                 .WithMany()
+                 .HasForeignKey(s => s.ServiceId)
+                 .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            modelBuilder.Entity<Invoice>(e => {
+                e.HasKey(i => i.Id);
+                e.Property(i => i.RoomCharge).HasColumnType("decimal(18,2)");
+                e.Property(i => i.ServiceCharge).HasColumnType("decimal(18,2)");
+                e.Property(i => i.TotalAmount).HasColumnType("decimal(18,2)");
+                e.HasOne(i => i.Reservation)
+                 .WithOne()
+                 .HasForeignKey<Invoice>(i => i.ReservationId)
                  .OnDelete(DeleteBehavior.Restrict);
             });
         }

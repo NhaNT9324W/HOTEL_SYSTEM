@@ -1,0 +1,255 @@
+﻿@page
+@model Hotel_System.Pages.RoomStaff.TasksModel
+@{
+    ViewData["Title"] = "My Tasks";
+}
+
+<div class="container-fluid py-4">
+    <h4 class="mb-4">
+        <i class="bi bi-clipboard-check"></i> My Tasks
+    </h4>
+
+    <!-- Alert -->
+    <div id="alertBox" class="alert d-none" role="alert"></div>
+
+    <!-- Tabs -->
+    <ul class="nav nav-tabs mb-4" id="staffTabs">
+        <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="#tasksTab">
+                <i class="bi bi-list-check"></i> Assigned Tasks
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#maintenanceTab">
+                <i class="bi bi-tools"></i> Maintenance Issues
+            </a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+
+        <!-- ===== TASKS TAB ===== -->
+        <div class="tab-pane fade show active" id="tasksTab">
+            <div class="card shadow-sm">
+                <div class="card-body p-0">
+                    <table class="table table-hover table-bordered mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Room</th>
+                                <th>Type</th>
+                                <th>Priority</th>
+                                <th>Status</th>
+                                <th>Due Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="taskTableBody">
+                            <tr>
+                                <td colspan="7" class="text-center">Loading...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== MAINTENANCE TAB ===== -->
+        <div class="tab-pane fade" id="maintenanceTab">
+            <div class="d-flex justify-content-end mb-3">
+                <button class="btn btn-danger" onclick="openReportModal()">
+                    <i class="bi bi-exclamation-triangle"></i> Report Issue
+                </button>
+            </div>
+            <div class="card shadow-sm">
+                <div class="card-body p-0">
+                    <table class="table table-hover table-bordered mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Room</th>
+                                <th>Issue Type</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                                <th>Reported At</th>
+                            </tr>
+                        </thead>
+                        <tbody id="maintenanceTableBody">
+                            <tr>
+                                <td colspan="6" class="text-center">Loading...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ===== TASK DETAIL MODAL ===== -->
+<div class="modal fade" id="detailModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-info text-white">
+                <h5 class="modal-title">
+                    <i class="bi bi-clipboard-check"></i> Task Detail
+                </h5>
+                <button type="button" class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-borderless mb-0">
+                    <tr>
+                        <th width="35%">Room</th>
+                        <td id="detail_room"></td>
+                    </tr>
+                    <tr>
+                        <th>Task Type</th>
+                        <td id="detail_taskType"></td>
+                    </tr>
+                    <tr>
+                        <th>Priority</th>
+                        <td id="detail_priority"></td>
+                    </tr>
+                    <tr>
+                        <th>Status</th>
+                        <td id="detail_status"></td>
+                    </tr>
+                    <tr>
+                        <th>Description</th>
+                        <td id="detail_description"></td>
+                    </tr>
+                    <tr>
+                        <th>Assigned By</th>
+                        <td id="detail_createdBy"></td>
+                    </tr>
+                    <tr>
+                        <th>Due Date</th>
+                        <td id="detail_dueDate"></td>
+                    </tr>
+                    <tr>
+                        <th>Completed At</th>
+                        <td id="detail_completedAt"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== UPDATE TASK STATUS MODAL ===== -->
+<div class="modal fade" id="updateTaskStatusModal" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">
+                    <i class="bi bi-arrow-repeat"></i> Update Task Status
+                </h5>
+                <button type="button" class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="taskStatus_id" />
+                <p>Update task for room <strong id="taskStatus_room"></strong></p>
+                <div class="mb-3">
+                    <label class="form-label">New Status</label>
+                    <select id="taskStatus_status" class="form-select">
+                        <option value="InProgress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-primary" onclick="submitUpdateTaskStatus()">
+                    Update
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== UPDATE ROOM STATUS MODAL ===== -->
+<div class="modal fade" id="updateRoomStatusModal" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title">
+                    <i class="bi bi-door-open"></i> Update Room Status
+                </h5>
+                <button type="button" class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="roomStatus_roomId" />
+                <p>Update status for <strong id="roomStatus_room"></strong></p>
+                <div class="mb-3">
+                    <label class="form-label">Housekeeping Status</label>
+                    <select id="roomStatus_status" class="form-select">
+                        <option value="DIRTY">Dirty</option>
+                        <option value="CLEAN">Clean</option>
+                        <option value="READY">Ready</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-success" onclick="submitUpdateRoomStatus()">
+                    Update
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== REPORT MAINTENANCE MODAL ===== -->
+<div class="modal fade" id="reportModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title">
+                    <i class="bi bi-exclamation-triangle"></i> Report Maintenance Issue
+                </h5>
+                <button type="button" class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label">Room <span class="text-danger">*</span></label>
+                    <select id="report_roomId" class="form-select">
+                        <option value="">-- Select Room --</option>
+                    </select>
+                    <div id="report_roomId_error" class="text-danger small"></div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Issue Type <span class="text-danger">*</span></label>
+                    <select id="report_issueType" class="form-select">
+                        <option value="Electrical">Electrical</option>
+                        <option value="Plumbing">Plumbing</option>
+                        <option value="Furniture">Furniture</option>
+                        <option value="Air Conditioning">Air Conditioning</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Description <span class="text-danger">*</span></label>
+                    <textarea id="report_description" class="form-control" rows="3"
+                              placeholder="Describe the issue in detail"></textarea>
+                    <div id="report_description_error" class="text-danger small"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-danger" onclick="submitReport()">Submit Report</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/roomstaff.js"></script>
+}

@@ -25,12 +25,24 @@
       "PackagePath": "staticwebassets\\js\\hotelinfo.js"
     },
     {
+      "Id": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\maintenance.js",
+      "PackagePath": "staticwebassets\\js\\maintenance.js"
+    },
+    {
+      "Id": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\report.js",
+      "PackagePath": "staticwebassets\\js\\report.js"
+    },
+    {
       "Id": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\reservation.js",
       "PackagePath": "staticwebassets\\js\\reservation.js"
     },
     {
       "Id": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\room.js",
       "PackagePath": "staticwebassets\\js\\room.js"
+    },
+    {
+      "Id": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\roomstaff.js",
+      "PackagePath": "staticwebassets\\js\\roomstaff.js"
     },
     {
       "Id": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\roomtype.js",
