@@ -133,19 +133,19 @@
             }
         }
 
-                function redirectByRole(role) {
+                        function redirectByRole(role) {
             switch (role) {
                 case 'Admin':
-                    window.location.href = '/Admin/Accounts';
+                    window.location.href = '/Admin/Dashboard';
                     break;
                 case 'HotelManager':
-                    window.location.href = '/Manager/Tasks';
+                    window.location.href = '/Manager/Dashboard';
                     break;
                 case 'Receptionist':
-                    window.location.href = '/Receptionist/Reservations';
+                    window.location.href = '/Receptionist/Dashboard';
                     break;
                 case 'RoomStaff':
-                    window.location.href = '/RoomStaff/Tasks';
+                    window.location.href = '/RoomStaff/Dashboard';
                     break;
                 default:
                     window.location.href = '/Login';

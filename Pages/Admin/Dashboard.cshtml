@@ -1,0 +1,197 @@
+﻿@page
+@model Hotel_System.Pages.Admin.DashboardModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="row g-4 mb-4">
+    <!-- KPI Cards -->
+    <div class="col-xl-3 col-md-6">
+        <div class="kpi-card">
+            <div class="d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="kpi-value" id="totalAccounts">--</div>
+                    <div class="kpi-label">Total Accounts</div>
+                    <div class="kpi-change text-success">
+                        <i class="bi bi-people"></i>
+                        <span id="activeAccounts">--</span> active
+                    </div>
+                </div>
+                <div class="kpi-icon" style="background:#e8f4fd;">
+                    <i class="bi bi-people" style="color:#0f3460;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="kpi-card">
+            <div class="d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="kpi-value" id="totalRooms">--</div>
+                    <div class="kpi-label">Total Rooms</div>
+                    <div class="kpi-change text-success">
+                        <i class="bi bi-door-open"></i>
+                        <span id="availableRooms">--</span> available
+                    </div>
+                </div>
+                <div class="kpi-icon" style="background:#e8fdf0;">
+                    <i class="bi bi-building" style="color:#28a745;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="kpi-card">
+            <div class="d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="kpi-value" id="totalReservations">--</div>
+                    <div class="kpi-label">Total Reservations</div>
+                    <div class="kpi-change text-primary">
+                        <i class="bi bi-calendar-check"></i>
+                        <span id="todayCheckIns">--</span> check-ins today
+                    </div>
+                </div>
+                <div class="kpi-icon" style="background:#fdf3e8;">
+                    <i class="bi bi-calendar-check" style="color:#fd7e14;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="kpi-card">
+            <div class="d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="kpi-value" id="pendingMaintenance">--</div>
+                    <div class="kpi-label">Pending Maintenance</div>
+                    <div class="kpi-change text-danger">
+                        <i class="bi bi-tools"></i> needs attention
+                    </div>
+                </div>
+                <div class="kpi-icon" style="background:#fde8e8;">
+                    <i class="bi bi-tools" style="color:#dc3545;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <!-- Quick Actions -->
+    <div class="col-md-4">
+        <div class="content-card">
+            <div class="card-header">
+                <i class="bi bi-lightning me-2"></i>Quick Actions
+            </div>
+            <div class="card-body">
+                <div class="d-grid gap-2">
+                    <a href="/Admin/Accounts" class="btn btn-outline-primary">
+                        <i class="bi bi-person-plus me-2"></i>Manage Accounts
+                    </a>
+                    <a href="/Admin/HotelInfo" class="btn btn-outline-secondary">
+                        <i class="bi bi-building-gear me-2"></i>Hotel Information
+                    </a>
+                    <a href="/Manager/Rooms" class="btn btn-outline-success">
+                        <i class="bi bi-door-open me-2"></i>Manage Rooms
+                    </a>
+                    <a href="/Manager/MaintenanceIssues" class="btn btn-outline-danger">
+                        <i class="bi bi-tools me-2"></i>Maintenance Issues
+                    </a>
+                    <a href="/Manager/Reports" class="btn btn-outline-info">
+                        <i class="bi bi-bar-chart me-2"></i>View Reports
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- System Overview -->
+    <div class="col-md-8">
+        <div class="content-card">
+            <div class="card-header d-flex justify-content-between">
+                <span><i class="bi bi-grid me-2"></i>System Overview</span>
+                <small class="text-muted" id="lastUpdated"></small>
+            </div>
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-6">
+                        <div class="p-3 rounded-3" style="background:#f8f9fa;">
+                            <div class="d-flex align-items-center gap-3">
+                                <i class="bi bi-box-arrow-in-right fs-3 text-success"></i>
+                                <div>
+                                    <div class="fw-bold fs-4" id="todayCheckIns2">--</div>
+                                    <small class="text-muted">Check-ins Today</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="p-3 rounded-3" style="background:#f8f9fa;">
+                            <div class="d-flex align-items-center gap-3">
+                                <i class="bi bi-box-arrow-right fs-3 text-danger"></i>
+                                <div>
+                                    <div class="fw-bold fs-4" id="todayCheckOuts">--</div>
+                                    <small class="text-muted">Check-outs Today</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="p-3 rounded-3" style="background:#f0f7ff;">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="fw-bold">Room Availability</div>
+                                    <small class="text-muted">
+                                        <span id="availableRooms2">--</span> of
+                                        <span id="totalRooms2">--</span> rooms available
+                                    </small>
+                                </div>
+                                <div class="text-end">
+                                    <div class="fw-bold text-primary"
+                                         id="availabilityRate">
+                                        --%
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress mt-2" style="height: 8px;">
+                                <div class="progress-bar bg-primary"
+                                     id="availabilityBar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        async function loadDashboard() {
+            const response = await fetch('/api/dashboard/admin');
+            if (!response.ok) return;
+            const data = await response.json();
+
+            document.getElementById('totalAccounts').textContent = data.totalAccounts;
+            document.getElementById('activeAccounts').textContent = data.activeAccounts;
+            document.getElementById('totalRooms').textContent = data.totalRooms;
+            document.getElementById('totalRooms2').textContent = data.totalRooms;
+            document.getElementById('availableRooms').textContent = data.availableRooms;
+            document.getElementById('availableRooms2').textContent = data.availableRooms;
+            document.getElementById('totalReservations').textContent = data.totalReservations;
+            document.getElementById('todayCheckIns').textContent = data.todayCheckIns;
+            document.getElementById('todayCheckIns2').textContent = data.todayCheckIns;
+            document.getElementById('todayCheckOuts').textContent = data.todayCheckOuts;
+            document.getElementById('pendingMaintenance').textContent = data.pendingMaintenance;
+
+            const rate = data.totalRooms > 0
+                ? Math.round(data.availableRooms / data.totalRooms * 100)
+                : 0;
+            document.getElementById('availabilityRate').textContent = `${rate}%`;
+            document.getElementById('availabilityBar').style.width = `${rate}%`;
+            document.getElementById('lastUpdated').textContent =
+                `Updated: ${new Date().toLocaleTimeString('vi-VN')}`;
+        }
+
+        document.addEventListener('DOMContentLoaded', loadDashboard);
+    </script>
+}

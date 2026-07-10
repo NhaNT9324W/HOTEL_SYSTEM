@@ -3,6 +3,70 @@
   "WorkspaceRootPath": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\pages\\roomstaff\\dashboard.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:pages\\roomstaff\\dashboard.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\pages\\roomstaff\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:pages\\roomstaff\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\pages\\receptionist\\dashboard.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:pages\\receptionist\\dashboard.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\pages\\receptionist\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:pages\\receptionist\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\pages\\manager\\dashboard.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:pages\\manager\\dashboard.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\pages\\manager\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:pages\\manager\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\pages\\admin\\dashboard.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:pages\\admin\\dashboard.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\pages\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:pages\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\services\\implementations\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:services\\implementations\\dashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\services\\interfaces\\idashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:services\\interfaces\\idashboardservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\dtos\\dashboarddtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:dtos\\dashboarddtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\controllers\\reservationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:controllers\\reservationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,10 +95,6 @@
       "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:pages\\receptionist\\reservations.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -59,20 +119,12 @@
       "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:controllers\\hotelinfocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\pages\\accessdenied.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:pages\\accessdenied.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\pages\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:pages\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|solutionrelative:pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{64E3B516-CC9C-41A4-9964-239D38A5B11B}|Hotel_System.csproj|d:\\ky7\\prn222\\final project\\hotel_system\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -388,7 +440,7 @@
         },
         {
           "DockedHeight": 78,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -396,7 +448,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 18,
               "Title": "ReservationService.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Services\\Implementations\\ReservationService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\ReservationService.cs",
@@ -405,8 +457,7 @@
               "ViewState": "AgIAANYAAAAAAAAAAAAiwPAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-05T13:05:17.709Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -423,19 +474,187 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "GuestsController.cs",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\GuestsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\GuestsController.cs",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\GuestsController.cs",
-              "RelativeToolTip": "Controllers\\GuestsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA6AAAAAAAAAA==",
+              "Title": "Dashboard.cshtml.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\RoomStaff\\Dashboard.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\RoomStaff\\Dashboard.cshtml.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\RoomStaff\\Dashboard.cshtml.cs",
+              "RelativeToolTip": "Pages\\RoomStaff\\Dashboard.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-09T01:49:08.747Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-10T08:39:38.354Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\RoomStaff\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "Pages\\RoomStaff\\Dashboard.cshtml",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\RoomStaff\\Dashboard.cshtml",
+              "RelativeToolTip": "Pages\\RoomStaff\\Dashboard.cshtml",
+              "ViewState": "AgIAALcAAAAAAAAAAAAiwNQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-10T08:39:24.152Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Login.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Login.cshtml",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Login.cshtml",
+              "RelativeToolTip": "Pages\\Login.cshtml",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAAAJcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-04T14:45:29.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dashboard.cshtml.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Receptionist\\Dashboard.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Receptionist\\Dashboard.cshtml.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Receptionist\\Dashboard.cshtml.cs",
+              "RelativeToolTip": "Pages\\Receptionist\\Dashboard.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-10T08:38:45.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Receptionist\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Receptionist\\Dashboard.cshtml",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Receptionist\\Dashboard.cshtml",
+              "RelativeToolTip": "Pages\\Receptionist\\Dashboard.cshtml",
+              "ViewState": "AgIAALoAAAAAAAAAAAAiwNcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-10T08:38:32.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Dashboard.cshtml.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Manager\\Dashboard.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Manager\\Dashboard.cshtml.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Manager\\Dashboard.cshtml.cs",
+              "RelativeToolTip": "Pages\\Manager\\Dashboard.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-10T08:38:14.455Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Manager\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Manager\\Dashboard.cshtml",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Manager\\Dashboard.cshtml",
+              "RelativeToolTip": "Pages\\Manager\\Dashboard.cshtml",
+              "ViewState": "AgIAALoAAAAAAAAAAAAiwNcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-10T08:38:00.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Dashboard.cshtml.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Admin\\Dashboard.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Dashboard.cshtml.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Admin\\Dashboard.cshtml.cs",
+              "RelativeToolTip": "Pages\\Admin\\Dashboard.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-10T08:37:42.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Admin\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Dashboard.cshtml",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Admin\\Dashboard.cshtml",
+              "RelativeToolTip": "Pages\\Admin\\Dashboard.cshtml",
+              "ViewState": "AgIAAKcAAAAAAAAAAAAiwMQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-10T08:37:24.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DashboardController.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "Controllers\\DashboardController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAiwDUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-10T08:36:47.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DashboardService.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Services\\Implementations\\DashboardService.cs",
+              "RelativeDocumentMoniker": "Services\\Implementations\\DashboardService.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Services\\Implementations\\DashboardService.cs",
+              "RelativeToolTip": "Services\\Implementations\\DashboardService.cs",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAiwL0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-10T08:36:21.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAiwFMAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T14:39:52.532Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IDashboardService.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Services\\Interfaces\\IDashboardService.cs",
+              "RelativeDocumentMoniker": "Services\\Interfaces\\IDashboardService.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Services\\Interfaces\\IDashboardService.cs",
+              "RelativeToolTip": "Services\\Interfaces\\IDashboardService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-10T08:36:06.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DashboardDTOs.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\DTOs\\DashboardDTOs.cs",
+              "RelativeDocumentMoniker": "DTOs\\DashboardDTOs.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\DTOs\\DashboardDTOs.cs",
+              "RelativeToolTip": "DTOs\\DashboardDTOs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-10T08:35:36.352Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAOEAAAAAAAAAAAAAwP8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-07-10T08:34:36.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "ReservationsController.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\ReservationsController.cs",
               "RelativeDocumentMoniker": "Controllers\\ReservationsController.cs",
@@ -443,151 +662,7 @@
               "RelativeToolTip": "Controllers\\ReservationsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-05T13:05:59.262Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Reservations.cshtml.cs",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Receptionist\\Reservations.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\Receptionist\\Reservations.cshtml.cs",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Receptionist\\Reservations.cshtml.cs",
-              "RelativeToolTip": "Pages\\Receptionist\\Reservations.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-09T01:43:47.284Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Guests.cshtml.cs",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Receptionist\\Guests.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\Receptionist\\Guests.cshtml.cs",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Receptionist\\Guests.cshtml.cs",
-              "RelativeToolTip": "Pages\\Receptionist\\Guests.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-09T01:44:13.81Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Guests.cshtml",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Receptionist\\Guests.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Receptionist\\Guests.cshtml",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Receptionist\\Guests.cshtml",
-              "RelativeToolTip": "Pages\\Receptionist\\Guests.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-09T01:44:09.587Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Reservations.cshtml",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Receptionist\\Reservations.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Receptionist\\Reservations.cshtml",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Receptionist\\Reservations.cshtml",
-              "RelativeToolTip": "Pages\\Receptionist\\Reservations.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAANcBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-05T13:26:49.11Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAiwGMAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-04T14:39:52.532Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AccountsController.cs",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\AccountsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AccountsController.cs",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\AccountsController.cs",
-              "RelativeToolTip": "Controllers\\AccountsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T15:46:00.045Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MaintenanceIssues.cshtml",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Manager\\MaintenanceIssues.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Manager\\MaintenanceIssues.cshtml",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Manager\\MaintenanceIssues.cshtml",
-              "RelativeToolTip": "Pages\\Manager\\MaintenanceIssues.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-07T23:57:39.462Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "HotelInfo.cshtml",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Admin\\HotelInfo.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Admin\\HotelInfo.cshtml",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Admin\\HotelInfo.cshtml",
-              "RelativeToolTip": "Pages\\Admin\\HotelInfo.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-09T01:58:27.022Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Accounts.cshtml",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Admin\\Accounts.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Admin\\Accounts.cshtml",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Admin\\Accounts.cshtml",
-              "RelativeToolTip": "Pages\\Admin\\Accounts.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAM8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-04T14:49:27.905Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ReportsController.cs",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\ReportsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ReportsController.cs",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\ReportsController.cs",
-              "RelativeToolTip": "Controllers\\ReportsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T10:57:49.807Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "HotelInfoController.cs",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\HotelInfoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HotelInfoController.cs",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\HotelInfoController.cs",
-              "RelativeToolTip": "Controllers\\HotelInfoController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-09T01:46:46.27Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-05T13:05:59.262Z"
             },
             {
               "$type": "Document",
@@ -597,14 +672,145 @@
               "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAALkBAAAAAAAAAADwv9QBAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAABoCAAAAAAAAAAAiwDcCAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-04T14:46:31.457Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-04T14:46:31.457Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
+              "Title": "GuestsController.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\GuestsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\GuestsController.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\GuestsController.cs",
+              "RelativeToolTip": "Controllers\\GuestsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T01:49:08.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Reservations.cshtml.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Receptionist\\Reservations.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Receptionist\\Reservations.cshtml.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Receptionist\\Reservations.cshtml.cs",
+              "RelativeToolTip": "Pages\\Receptionist\\Reservations.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T01:43:47.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Guests.cshtml.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Receptionist\\Guests.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Receptionist\\Guests.cshtml.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Receptionist\\Guests.cshtml.cs",
+              "RelativeToolTip": "Pages\\Receptionist\\Guests.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T01:44:13.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Guests.cshtml",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Receptionist\\Guests.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Receptionist\\Guests.cshtml",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Receptionist\\Guests.cshtml",
+              "RelativeToolTip": "Pages\\Receptionist\\Guests.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-09T01:44:09.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Reservations.cshtml",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Receptionist\\Reservations.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Receptionist\\Reservations.cshtml",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Receptionist\\Reservations.cshtml",
+              "RelativeToolTip": "Pages\\Receptionist\\Reservations.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANcBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-05T13:26:49.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AccountsController.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\AccountsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountsController.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\AccountsController.cs",
+              "RelativeToolTip": "Controllers\\AccountsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-07T15:46:00.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "MaintenanceIssues.cshtml",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Manager\\MaintenanceIssues.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Manager\\MaintenanceIssues.cshtml",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Manager\\MaintenanceIssues.cshtml",
+              "RelativeToolTip": "Pages\\Manager\\MaintenanceIssues.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-07T23:57:39.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "HotelInfo.cshtml",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Admin\\HotelInfo.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Admin\\HotelInfo.cshtml",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Admin\\HotelInfo.cshtml",
+              "RelativeToolTip": "Pages\\Admin\\HotelInfo.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-09T01:58:27.022Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Accounts.cshtml",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Admin\\Accounts.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Admin\\Accounts.cshtml",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Admin\\Accounts.cshtml",
+              "RelativeToolTip": "Pages\\Admin\\Accounts.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAM8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-04T14:49:27.905Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ReportsController.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\ReportsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReportsController.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\ReportsController.cs",
+              "RelativeToolTip": "Controllers\\ReportsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-07T10:57:49.807Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "HotelInfoController.cs",
+              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\HotelInfoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HotelInfoController.cs",
+              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\HotelInfoController.cs",
+              "RelativeToolTip": "Controllers\\HotelInfoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T01:46:46.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
               "Title": "AccessDenied.cshtml.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\AccessDenied.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\AccessDenied.cshtml.cs",
@@ -612,12 +818,11 @@
               "RelativeToolTip": "Pages\\AccessDenied.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-09T01:55:04.181Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-09T01:55:04.181Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 30,
               "Title": "AccessDenied.cshtml",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\AccessDenied.cshtml",
               "RelativeDocumentMoniker": "Pages\\AccessDenied.cshtml",
@@ -625,25 +830,11 @@
               "RelativeToolTip": "Pages\\AccessDenied.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-09T01:52:49.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-09T01:52:49.96Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Login.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Login.cshtml",
-              "ToolTip": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Login.cshtml",
-              "RelativeToolTip": "Pages\\Login.cshtml",
-              "ViewState": "AgIAAIQAAAAAAAAAAAAAAJgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-07-04T14:45:29.744Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 31,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
@@ -651,12 +842,11 @@
               "RelativeToolTip": "Controllers\\AuthController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-04T14:28:39.924Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-04T14:28:39.924Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 32,
               "Title": "CheckOutController.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\CheckOutController.cs",
               "RelativeDocumentMoniker": "Controllers\\CheckOutController.cs",
@@ -664,12 +854,11 @@
               "RelativeToolTip": "Controllers\\CheckOutController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T07:33:00.71Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-08T07:33:00.71Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 33,
               "Title": "TasksController.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\TasksController.cs",
               "RelativeDocumentMoniker": "Controllers\\TasksController.cs",
@@ -677,12 +866,11 @@
               "RelativeToolTip": "Controllers\\TasksController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T15:42:57.435Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-07T15:42:57.435Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 34,
               "Title": "ServicesController.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\ServicesController.cs",
               "RelativeDocumentMoniker": "Controllers\\ServicesController.cs",
@@ -690,12 +878,11 @@
               "RelativeToolTip": "Controllers\\ServicesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-09T01:47:24.511Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-09T01:47:24.511Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 35,
               "Title": "RoomsController.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\RoomsController.cs",
               "RelativeDocumentMoniker": "Controllers\\RoomsController.cs",
@@ -703,12 +890,11 @@
               "RelativeToolTip": "Controllers\\RoomsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-09T01:47:12.895Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-09T01:47:12.895Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 36,
               "Title": "RoomTypesController.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Controllers\\RoomTypesController.cs",
               "RelativeDocumentMoniker": "Controllers\\RoomTypesController.cs",
@@ -716,12 +902,11 @@
               "RelativeToolTip": "Controllers\\RoomTypesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-06T12:27:05.589Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-06T12:27:05.589Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 37,
               "Title": "Tasks.cshtml.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\RoomStaff\\Tasks.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\RoomStaff\\Tasks.cshtml.cs",
@@ -729,12 +914,11 @@
               "RelativeToolTip": "Pages\\RoomStaff\\Tasks.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-09T01:44:26.878Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-09T01:44:26.878Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 38,
               "Title": "MaintenanceIssues.cshtml.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Manager\\MaintenanceIssues.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Manager\\MaintenanceIssues.cshtml.cs",
@@ -742,12 +926,11 @@
               "RelativeToolTip": "Pages\\Manager\\MaintenanceIssues.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-09T01:43:29.663Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-09T01:43:29.663Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 39,
               "Title": "Reports.cshtml.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Manager\\Reports.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Manager\\Reports.cshtml.cs",
@@ -755,12 +938,11 @@
               "RelativeToolTip": "Pages\\Manager\\Reports.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-09T01:43:19.456Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-09T01:43:19.456Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 40,
               "Title": "Tasks.cshtml.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Manager\\Tasks.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Manager\\Tasks.cshtml.cs",
@@ -768,12 +950,11 @@
               "RelativeToolTip": "Pages\\Manager\\Tasks.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-09T01:43:10.749Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-09T01:43:10.749Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 41,
               "Title": "Services.cshtml.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Manager\\Services.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Manager\\Services.cshtml.cs",
@@ -781,12 +962,11 @@
               "RelativeToolTip": "Pages\\Manager\\Services.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-09T01:42:57.249Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-09T01:42:57.249Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 42,
               "Title": "Rooms.cshtml.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Manager\\Rooms.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Manager\\Rooms.cshtml.cs",
@@ -794,12 +974,11 @@
               "RelativeToolTip": "Pages\\Manager\\Rooms.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-09T01:42:46.009Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-09T01:42:46.009Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 43,
               "Title": "RoomTypes.cshtml.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Manager\\RoomTypes.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Manager\\RoomTypes.cshtml.cs",
@@ -807,12 +986,11 @@
               "RelativeToolTip": "Pages\\Manager\\RoomTypes.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-09T01:42:33.076Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-09T01:42:33.076Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 44,
               "Title": "HotelInfo.cshtml.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Admin\\HotelInfo.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Admin\\HotelInfo.cshtml.cs",
@@ -820,12 +998,11 @@
               "RelativeToolTip": "Pages\\Admin\\HotelInfo.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-09T01:42:16.728Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-09T01:42:16.728Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 45,
               "Title": "Accounts.cshtml.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Admin\\Accounts.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Admin\\Accounts.cshtml.cs",
@@ -833,12 +1010,11 @@
               "RelativeToolTip": "Pages\\Admin\\Accounts.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-09T01:42:02.475Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-09T01:42:02.475Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 46,
               "Title": "AuthService.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Services\\Implementations\\AuthService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\AuthService.cs",
@@ -850,7 +1026,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 48,
               "Title": "reservation.js",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\reservation.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\reservation.js",
@@ -862,7 +1038,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 47,
               "Title": "Role.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Entities\\Enums\\Role.cs",
               "RelativeDocumentMoniker": "Entities\\Enums\\Role.cs",
@@ -874,7 +1050,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 102,
               "Title": "20260708073325_AddServiceUsageAndInvoice.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Migrations\\20260708073325_AddServiceUsageAndInvoice.cs",
               "RelativeDocumentMoniker": "Migrations\\20260708073325_AddServiceUsageAndInvoice.cs",
@@ -886,7 +1062,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 49,
               "Title": "CheckOutService.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Services\\Implementations\\CheckOutService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\CheckOutService.cs",
@@ -898,7 +1074,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 50,
               "Title": "ICheckOutService.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Services\\Interfaces\\ICheckOutService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\ICheckOutService.cs",
@@ -910,7 +1086,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 52,
               "Title": "SeedData.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Data\\SeedData.cs",
               "RelativeDocumentMoniker": "Data\\SeedData.cs",
@@ -922,7 +1098,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 53,
               "Title": "ServiceUsageDTOs.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\DTOs\\ServiceUsageDTOs.cs",
               "RelativeDocumentMoniker": "DTOs\\ServiceUsageDTOs.cs",
@@ -934,7 +1110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 51,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
@@ -946,7 +1122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 54,
               "Title": "Invoice.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Entities\\Invoice.cs",
               "RelativeDocumentMoniker": "Entities\\Invoice.cs",
@@ -958,7 +1134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 55,
               "Title": "ServiceUsage.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Entities\\ServiceUsage.cs",
               "RelativeDocumentMoniker": "Entities\\ServiceUsage.cs",
@@ -970,7 +1146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 56,
               "Title": "IReservationService.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Services\\Interfaces\\IReservationService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IReservationService.cs",
@@ -982,7 +1158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 60,
               "Title": "TaskDTOs.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\DTOs\\TaskDTOs.cs",
               "RelativeDocumentMoniker": "DTOs\\TaskDTOs.cs",
@@ -994,7 +1170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 57,
               "Title": "maintenance.js",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\maintenance.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\maintenance.js",
@@ -1006,7 +1182,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 59,
               "Title": "ITaskService.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Services\\Interfaces\\ITaskService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\ITaskService.cs",
@@ -1018,7 +1194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 58,
               "Title": "TaskService.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Services\\Implementations\\TaskService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\TaskService.cs",
@@ -1030,7 +1206,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 62,
               "Title": "Tasks.cshtml",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\RoomStaff\\Tasks.cshtml",
               "RelativeDocumentMoniker": "Pages\\RoomStaff\\Tasks.cshtml",
@@ -1042,7 +1218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 61,
               "Title": "roomstaff.js",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\roomstaff.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\roomstaff.js",
@@ -1054,7 +1230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 101,
               "Title": "20260707234518_AddMaintenanceIssue.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Migrations\\20260707234518_AddMaintenanceIssue.cs",
               "RelativeDocumentMoniker": "Migrations\\20260707234518_AddMaintenanceIssue.cs",
@@ -1066,7 +1242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 63,
               "Title": "MaintenanceIssue.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Entities\\MaintenanceIssue.cs",
               "RelativeDocumentMoniker": "Entities\\MaintenanceIssue.cs",
@@ -1078,7 +1254,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 64,
               "Title": "ITaskRepository.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Repositories\\Interfaces\\ITaskRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Interfaces\\ITaskRepository.cs",
@@ -1090,7 +1266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 65,
               "Title": "TaskRepository.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Repositories\\Implementations\\TaskRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Implementations\\TaskRepository.cs",
@@ -1102,7 +1278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 66,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "Pages\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -1114,7 +1290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 68,
               "Title": "RoomHousekeepingStatus.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Entities\\Enums\\RoomHousekeepingStatus.cs",
               "RelativeDocumentMoniker": "Entities\\Enums\\RoomHousekeepingStatus.cs",
@@ -1126,7 +1302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 69,
               "Title": "HousekeepingTask.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Entities\\HousekeepingTask.cs",
               "RelativeDocumentMoniker": "Entities\\HousekeepingTask.cs",
@@ -1138,7 +1314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 67,
               "Title": "HousekeepingTaskStatus.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Entities\\Enums\\HousekeepingTaskStatus.cs",
               "RelativeDocumentMoniker": "Entities\\Enums\\HousekeepingTaskStatus.cs",
@@ -1150,7 +1326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 70,
               "Title": "report.js",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\report.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\report.js",
@@ -1162,7 +1338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 71,
               "Title": "Reports.cshtml",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\Manager\\Reports.cshtml",
               "RelativeDocumentMoniker": "Pages\\Manager\\Reports.cshtml",
@@ -1174,7 +1350,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 72,
               "Title": "ReportService.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Services\\Implementations\\ReportService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\ReportService.cs",
@@ -1186,7 +1362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 73,
               "Title": "IReportService.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Services\\Interfaces\\IReportService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IReportService.cs",
@@ -1198,7 +1374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 74,
               "Title": "ReservationStatus.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Entities\\Enums\\ReservationStatus.cs",
               "RelativeDocumentMoniker": "Entities\\Enums\\ReservationStatus.cs",
@@ -1210,7 +1386,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 75,
               "Title": "ReportDTOs.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\DTOs\\ReportDTOs.cs",
               "RelativeDocumentMoniker": "DTOs\\ReportDTOs.cs",
@@ -1222,7 +1398,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 76,
               "Title": "RoomTypeDTOs.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\DTOs\\RoomTypeDTOs.cs",
               "RelativeDocumentMoniker": "DTOs\\RoomTypeDTOs.cs",
@@ -1234,7 +1410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 77,
               "Title": "RoomType.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Entities\\RoomType.cs",
               "RelativeDocumentMoniker": "Entities\\RoomType.cs",
@@ -1246,7 +1422,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 78,
               "Title": "GuestRepository.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Repositories\\Implementations\\GuestRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Implementations\\GuestRepository.cs",
@@ -1258,7 +1434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 79,
               "Title": "IGuestRepository.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Repositories\\Interfaces\\IGuestRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Interfaces\\IGuestRepository.cs",
@@ -1270,7 +1446,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 81,
               "Title": "IReservationRepository.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Repositories\\Interfaces\\IReservationRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Interfaces\\IReservationRepository.cs",
@@ -1282,7 +1458,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 82,
               "Title": "IRoomRepository.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Repositories\\Interfaces\\IRoomRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Interfaces\\IRoomRepository.cs",
@@ -1294,7 +1470,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 80,
               "Title": "ReservationRepository.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Repositories\\Implementations\\ReservationRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Implementations\\ReservationRepository.cs",
@@ -1306,7 +1482,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 100,
               "Title": "20260705130114_AddGuestIdNumber.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Migrations\\20260705130114_AddGuestIdNumber.cs",
               "RelativeDocumentMoniker": "Migrations\\20260705130114_AddGuestIdNumber.cs",
@@ -1318,7 +1494,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 83,
               "Title": "ReservationDTOs.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\DTOs\\ReservationDTOs.cs",
               "RelativeDocumentMoniker": "DTOs\\ReservationDTOs.cs",
@@ -1330,7 +1506,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 85,
               "Title": "Reservation.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Entities\\Reservation.cs",
               "RelativeDocumentMoniker": "Entities\\Reservation.cs",
@@ -1342,7 +1518,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 84,
               "Title": "Guest.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Entities\\Guest.cs",
               "RelativeDocumentMoniker": "Entities\\Guest.cs",
@@ -1354,7 +1530,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 86,
               "Title": "Room.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Entities\\Room.cs",
               "RelativeDocumentMoniker": "Entities\\Room.cs",
@@ -1366,7 +1542,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 87,
               "Title": "account.js",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\js\\account.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\account.js",
@@ -1378,7 +1554,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 88,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Pages\\_ViewStart.cshtml",
@@ -1390,7 +1566,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 89,
               "Title": "ResetPassword.cshtml",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\ResetPassword.cshtml",
               "RelativeDocumentMoniker": "Pages\\ResetPassword.cshtml",
@@ -1402,7 +1578,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 90,
               "Title": "ForgotPassword.cshtml.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\ForgotPassword.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\ForgotPassword.cshtml.cs",
@@ -1414,7 +1590,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 91,
               "Title": "ForgotPassword.cshtml",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Pages\\ForgotPassword.cshtml",
               "RelativeDocumentMoniker": "Pages\\ForgotPassword.cshtml",
@@ -1426,7 +1602,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 99,
               "Title": "20260704144016_AddResetPasswordFields.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Migrations\\20260704144016_AddResetPasswordFields.cs",
               "RelativeDocumentMoniker": "Migrations\\20260704144016_AddResetPasswordFields.cs",
@@ -1438,7 +1614,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 92,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Services\\Interfaces\\IAuthService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IAuthService.cs",
@@ -1450,7 +1626,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 93,
               "Title": "AccountRepository.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Repositories\\Implementations\\AccountRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Implementations\\AccountRepository.cs",
@@ -1462,7 +1638,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 94,
               "Title": "IAccountRepository.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Repositories\\Interfaces\\IAccountRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\Interfaces\\IAccountRepository.cs",
@@ -1474,7 +1650,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 95,
               "Title": "EmailService.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Services\\Implementations\\EmailService.cs",
               "RelativeDocumentMoniker": "Services\\Implementations\\EmailService.cs",
@@ -1486,7 +1662,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 96,
               "Title": "IEmailService.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Services\\Interfaces\\IEmailService.cs",
               "RelativeDocumentMoniker": "Services\\Interfaces\\IEmailService.cs",
@@ -1498,7 +1674,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 97,
               "Title": "AuthDTOs.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\DTOs\\AuthDTOs.cs",
               "RelativeDocumentMoniker": "DTOs\\AuthDTOs.cs",
@@ -1510,7 +1686,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 98,
               "Title": "Account.cs",
               "DocumentMoniker": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\Entities\\Account.cs",
               "RelativeDocumentMoniker": "Entities\\Account.cs",

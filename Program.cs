@@ -81,6 +81,8 @@ builder.Services.AddScoped<IReportService, ReportService>();
 
 builder.Services.AddScoped<ICheckOutService, CheckOutService>();
 
+builder.Services.AddScoped<IDashboardService, DashboardService>();
+
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("AdminOnly", policy =>

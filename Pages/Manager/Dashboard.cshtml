@@ -1,0 +1,216 @@
+﻿@page
+@model Hotel_System.Pages.Manager.DashboardModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="row g-4 mb-4">
+    <div class="col-xl-3 col-md-6">
+        <div class="kpi-card">
+            <div class="d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="kpi-value" id="occupancyRate">--%</div>
+                    <div class="kpi-label">Occupancy Rate</div>
+                    <div class="kpi-change text-muted">
+                        <span id="occupiedRooms">--</span>/
+                        <span id="totalRooms">--</span> rooms
+                    </div>
+                </div>
+                <div class="kpi-icon" style="background:#e8f4fd;">
+                    <i class="bi bi-building" style="color:#0f3460;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="kpi-card">
+            <div class="d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="kpi-value" id="revenueToday">--</div>
+                    <div class="kpi-label">Revenue Today</div>
+                    <div class="kpi-change text-success">
+                        <i class="bi bi-graph-up"></i> This month:
+                        <span id="revenueMonth">--</span>
+                    </div>
+                </div>
+                <div class="kpi-icon" style="background:#e8fdf0;">
+                    <i class="bi bi-cash-stack" style="color:#28a745;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="kpi-card">
+            <div class="d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="kpi-value" id="pendingTasks">--</div>
+                    <div class="kpi-label">Pending Tasks</div>
+                    <div class="kpi-change text-warning">
+                        <i class="bi bi-clipboard-check"></i> needs assignment
+                    </div>
+                </div>
+                <div class="kpi-icon" style="background:#fdf3e8;">
+                    <i class="bi bi-clipboard-check" style="color:#fd7e14;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="kpi-card">
+            <div class="d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="kpi-value" id="pendingMaintenance">--</div>
+                    <div class="kpi-label">Maintenance Issues</div>
+                    <div class="kpi-change text-danger">
+                        <i class="bi bi-tools"></i> pending
+                    </div>
+                </div>
+                <div class="kpi-icon" style="background:#fde8e8;">
+                    <i class="bi bi-tools" style="color:#dc3545;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <!-- Occupancy Progress -->
+    <div class="col-md-4">
+        <div class="content-card h-100">
+            <div class="card-header">
+                <i class="bi bi-pie-chart me-2"></i>Room Status
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span class="small">Occupied</span>
+                        <span class="small fw-bold" id="occupiedPct">0%</span>
+                    </div>
+                    <div class="progress" style="height:8px;">
+                        <div class="progress-bar bg-danger"
+                             id="occupiedBar" style="width:0%"></div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span class="small">Available</span>
+                        <span class="small fw-bold" id="availablePct">0%</span>
+                    </div>
+                    <div class="progress" style="height:8px;">
+                        <div class="progress-bar bg-success"
+                             id="availableBar" style="width:0%"></div>
+                    </div>
+                </div>
+                <hr />
+                <div class="d-flex justify-content-between">
+                    <div class="text-center">
+                        <div class="fw-bold text-danger" id="occupiedCount">--</div>
+                        <small class="text-muted">Occupied</small>
+                    </div>
+                    <div class="text-center">
+                        <div class="fw-bold text-success" id="availableCount">--</div>
+                        <small class="text-muted">Available</small>
+                    </div>
+                    <div class="text-center">
+                        <div class="fw-bold" id="totalGuests">--</div>
+                        <small class="text-muted">Guests</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Reservations -->
+    <div class="col-md-8">
+        <div class="content-card">
+            <div class="card-header d-flex justify-content-between">
+                <span><i class="bi bi-calendar-check me-2"></i>Recent Reservations</span>
+                <a href="/Receptionist/Reservations"
+                   class="btn btn-sm btn-outline-primary">View All</a>
+            </div>
+            <div class="card-body p-0">
+                <table class="table table-hover mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Guest</th>
+                            <th>Room</th>
+                            <th>Check-in</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentReservations">
+                        <tr>
+                            <td colspan="4" class="text-center text-muted py-3">
+                                Loading...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function formatPrice(price) {
+            return new Intl.NumberFormat('vi-VN', {
+                style: 'currency', currency: 'VND'
+            }).format(price);
+        }
+
+        function getStatusBadge(status) {
+            const badges = {
+                'PENDING': '<span class="badge bg-warning text-dark">Pending</span>',
+                'CONFIRMED': '<span class="badge bg-primary">Confirmed</span>',
+                'CHECKED_IN': '<span class="badge bg-success">Checked In</span>',
+                'CHECKED_OUT': '<span class="badge bg-secondary">Checked Out</span>',
+                'CANCELLED': '<span class="badge bg-danger">Cancelled</span>'
+            };
+            return badges[status] || status;
+        }
+
+        async function loadDashboard() {
+            const response = await fetch('/api/dashboard/manager');
+            if (!response.ok) return;
+            const data = await response.json();
+
+            document.getElementById('occupancyRate').textContent = `${data.occupancyRate}%`;
+            document.getElementById('occupiedRooms').textContent = data.occupiedRooms;
+            document.getElementById('totalRooms').textContent = data.totalRooms;
+            document.getElementById('revenueToday').textContent = formatPrice(data.revenueToday);
+            document.getElementById('revenueMonth').textContent = formatPrice(data.revenueThisMonth);
+            document.getElementById('pendingTasks').textContent = data.pendingTasks;
+            document.getElementById('pendingMaintenance').textContent = data.pendingMaintenance;
+            document.getElementById('totalGuests').textContent = data.totalGuests;
+
+            const occupiedPct = data.totalRooms > 0
+                ? Math.round(data.occupiedRooms / data.totalRooms * 100) : 0;
+            const availablePct = 100 - occupiedPct;
+
+            document.getElementById('occupiedPct').textContent = `${occupiedPct}%`;
+            document.getElementById('availablePct').textContent = `${availablePct}%`;
+            document.getElementById('occupiedBar').style.width = `${occupiedPct}%`;
+            document.getElementById('availableBar').style.width = `${availablePct}%`;
+            document.getElementById('occupiedCount').textContent = data.occupiedRooms;
+            document.getElementById('availableCount').textContent = data.availableRooms;
+
+            const tbody = document.getElementById('recentReservations');
+            if (data.recentReservations.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="4" class="text-center text-muted py-3">
+                    No reservations</td></tr>`;
+            } else {
+                tbody.innerHTML = data.recentReservations.map(r => `
+                    <tr>
+                        <td>${r.guestName}</td>
+                        <td>Room ${r.roomNumber}</td>
+                        <td>${new Date(r.checkInDate).toLocaleDateString('vi-VN')}</td>
+                        <td>${getStatusBadge(r.status)}</td>
+                    </tr>
+                `).join('');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadDashboard);
+    </script>
+}

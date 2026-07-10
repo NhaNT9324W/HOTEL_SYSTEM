@@ -312,6 +312,46 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Hotel_System.Controllers.DashboardController",
+    "Method": "GetAdminDashboard",
+    "RelativePath": "api/dashboard/admin",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hotel_System.Controllers.DashboardController",
+    "Method": "GetManagerDashboard",
+    "RelativePath": "api/dashboard/manager",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hotel_System.Controllers.DashboardController",
+    "Method": "GetReceptionistDashboard",
+    "RelativePath": "api/dashboard/receptionist",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hotel_System.Controllers.DashboardController",
+    "Method": "GetRoomStaffDashboard",
+    "RelativePath": "api/dashboard/roomstaff",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Hotel_System.Controllers.GuestsController",
     "Method": "GetAll",
     "RelativePath": "api/guests",

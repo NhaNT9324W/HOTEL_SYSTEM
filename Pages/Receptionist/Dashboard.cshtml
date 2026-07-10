@@ -1,0 +1,216 @@
+﻿@page
+@model Hotel_System.Pages.Receptionist.DashboardModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="row g-4 mb-4">
+    <div class="col-xl-3 col-md-6">
+        <div class="kpi-card">
+            <div class="d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="kpi-value text-success" id="todayCheckIns">--</div>
+                    <div class="kpi-label">Check-ins Today</div>
+                    <div class="kpi-change text-success">
+                        <i class="bi bi-box-arrow-in-right"></i> arrivals
+                    </div>
+                </div>
+                <div class="kpi-icon" style="background:#e8fdf0;">
+                    <i class="bi bi-box-arrow-in-right" style="color:#28a745;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="kpi-card">
+            <div class="d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="kpi-value text-danger" id="todayCheckOuts">--</div>
+                    <div class="kpi-label">Check-outs Today</div>
+                    <div class="kpi-change text-danger">
+                        <i class="bi bi-box-arrow-right"></i> departures
+                    </div>
+                </div>
+                <div class="kpi-icon" style="background:#fde8e8;">
+                    <i class="bi bi-box-arrow-right" style="color:#dc3545;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="kpi-card">
+            <div class="d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="kpi-value text-primary" id="currentGuests">--</div>
+                    <div class="kpi-label">Current Guests</div>
+                    <div class="kpi-change text-primary">
+                        <i class="bi bi-people"></i> staying
+                    </div>
+                </div>
+                <div class="kpi-icon" style="background:#e8f4fd;">
+                    <i class="bi bi-people" style="color:#0f3460;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="kpi-card">
+            <div class="d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="kpi-value text-warning" id="availableRooms">--</div>
+                    <div class="kpi-label">Available Rooms</div>
+                    <div class="kpi-change text-warning">
+                        <i class="bi bi-door-open"></i> ready
+                    </div>
+                </div>
+                <div class="kpi-icon" style="background:#fdf3e8;">
+                    <i class="bi bi-door-open" style="color:#fd7e14;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <!-- Today Arrivals -->
+    <div class="col-md-6">
+        <div class="content-card">
+            <div class="card-header d-flex justify-content-between">
+                <span>
+                    <i class="bi bi-box-arrow-in-right text-success me-2"></i>
+                    Today's Arrivals
+                </span>
+                <span class="badge bg-success" id="arrivalCount">0</span>
+            </div>
+            <div class="card-body p-0">
+                <table class="table table-hover mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Guest</th>
+                            <th>Room</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="todayArrivals">
+                        <tr>
+                            <td colspan="3" class="text-center text-muted py-3">
+                                Loading...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Today Departures -->
+    <div class="col-md-6">
+        <div class="content-card">
+            <div class="card-header d-flex justify-content-between">
+                <span>
+                    <i class="bi bi-box-arrow-right text-danger me-2"></i>
+                    Today's Departures
+                </span>
+                <span class="badge bg-danger" id="departureCount">0</span>
+            </div>
+            <div class="card-body p-0">
+                <table class="table table-hover mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Guest</th>
+                            <th>Room</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="todayDepartures">
+                        <tr>
+                            <td colspan="3" class="text-center text-muted py-3">
+                                Loading...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="col-12">
+        <div class="content-card">
+            <div class="card-header">
+                <i class="bi bi-lightning me-2"></i>Quick Actions
+            </div>
+            <div class="card-body">
+                <div class="d-flex gap-3 flex-wrap">
+                    <a href="/Receptionist/Reservations"
+                       class="btn btn-primary">
+                        <i class="bi bi-plus-circle me-2"></i>New Reservation
+                    </a>
+                    <a href="/Receptionist/Guests"
+                       class="btn btn-outline-primary">
+                        <i class="bi bi-person-plus me-2"></i>Add Guest
+                    </a>
+                    <a href="/Receptionist/Reservations"
+                       class="btn btn-outline-success">
+                        <i class="bi bi-box-arrow-in-right me-2"></i>Process Check-in
+                    </a>
+                    <a href="/Receptionist/Reservations"
+                       class="btn btn-outline-danger">
+                        <i class="bi bi-box-arrow-right me-2"></i>Process Check-out
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function getStatusBadge(status) {
+            const badges = {
+                'CONFIRMED': '<span class="badge bg-primary">Confirmed</span>',
+                'CHECKED_IN': '<span class="badge bg-success">Checked In</span>',
+            };
+            return badges[status] || status;
+        }
+
+        async function loadDashboard() {
+            const response = await fetch('/api/dashboard/receptionist');
+            if (!response.ok) return;
+            const data = await response.json();
+
+            document.getElementById('todayCheckIns').textContent = data.todayCheckIns;
+            document.getElementById('todayCheckOuts').textContent = data.todayCheckOuts;
+            document.getElementById('currentGuests').textContent = data.currentGuests;
+            document.getElementById('availableRooms').textContent = data.availableRooms;
+            document.getElementById('arrivalCount').textContent = data.todayArrivals.length;
+            document.getElementById('departureCount').textContent = data.todayDepartures.length;
+
+            const arrivalsTbody = document.getElementById('todayArrivals');
+            arrivalsTbody.innerHTML = data.todayArrivals.length === 0
+                ? `<tr><td colspan="3" class="text-center text-muted py-3">
+                    No arrivals today</td></tr>`
+                : data.todayArrivals.map(r => `
+                    <tr>
+                        <td>${r.guestName}</td>
+                        <td>Room ${r.roomNumber}</td>
+                        <td>${getStatusBadge(r.status)}</td>
+                    </tr>
+                `).join('');
+
+            const departuresTbody = document.getElementById('todayDepartures');
+            departuresTbody.innerHTML = data.todayDepartures.length === 0
+                ? `<tr><td colspan="3" class="text-center text-muted py-3">
+                    No departures today</td></tr>`
+                : data.todayDepartures.map(r => `
+                    <tr>
+                        <td>${r.guestName}</td>
+                        <td>Room ${r.roomNumber}</td>
+                        <td>${getStatusBadge(r.status)}</td>
+                    </tr>
+                `).join('');
+        }
+
+        document.addEventListener('DOMContentLoaded', loadDashboard);
+    </script>
+}

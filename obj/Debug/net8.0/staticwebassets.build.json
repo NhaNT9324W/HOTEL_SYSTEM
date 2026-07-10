@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cBo/lQMAT8tjAlXhnbhck1wnIgwZE3veaTeQpNAnDj8=",
+  "Hash": "ZSX+3iFyseysKjtE79kLGtqE9mVC8NZZy57Y2Ozcbd4=",
   "Source": "Hotel_System",
   "BasePath": "_content/Hotel_System",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "c2tiyv64ts",
-      "Integrity": "pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=",
+      "Fingerprint": "5le0t1f447",
+      "Integrity": "2Rp9D6e8MaAAwI6N0SUgInSags0iZd8/WxclES4+5qY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1552,7 +1552,7 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.c2tiyv64ts.css",
+      "Route": "css/site.5le0t1f447.css",
       "AssetFile": "D:\\Ky7\\PRN222\\Final Project\\HOTEL_SYSTEM\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1562,7 +1562,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "5661"
         },
         {
           "Name": "Content-Type",
@@ -1570,11 +1570,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"2Rp9D6e8MaAAwI6N0SUgInSags0iZd8/WxclES4+5qY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 05 Jul 2026 12:25:56 GMT"
+          "Value": "Fri, 10 Jul 2026 08:34:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1584,7 +1584,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "c2tiyv64ts"
+          "Value": "5le0t1f447"
         },
         {
           "Name": "label",
@@ -1592,7 +1592,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-2Rp9D6e8MaAAwI6N0SUgInSags0iZd8/WxclES4+5qY="
         }
       ]
     },
@@ -1607,7 +1607,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "5661"
         },
         {
           "Name": "Content-Type",
@@ -1615,11 +1615,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"2Rp9D6e8MaAAwI6N0SUgInSags0iZd8/WxclES4+5qY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 05 Jul 2026 12:25:56 GMT"
+          "Value": "Fri, 10 Jul 2026 08:34:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1629,7 +1629,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-2Rp9D6e8MaAAwI6N0SUgInSags0iZd8/WxclES4+5qY="
         }
       ]
     },

@@ -28,6 +28,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQWNjb3VudHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Ky7/PRN222/Final Project/HOTEL_SYSTEM/Pages/Admin/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Ky7/PRN222/Final Project/HOTEL_SYSTEM/Pages/Admin/HotelInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSG90ZWxJbmZvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -46,6 +50,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Ky7/PRN222/Final Project/HOTEL_SYSTEM/Pages/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Ky7/PRN222/Final Project/HOTEL_SYSTEM/Pages/Manager/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFuYWdlclxEYXNoYm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Ky7/PRN222/Final Project/HOTEL_SYSTEM/Pages/Manager/MaintenanceIssues.cshtml]
@@ -76,6 +84,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Ky7/PRN222/Final Project/HOTEL_SYSTEM/Pages/Receptionist/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjZXB0aW9uaXN0XERhc2hib2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Ky7/PRN222/Final Project/HOTEL_SYSTEM/Pages/Receptionist/Guests.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjZXB0aW9uaXN0XEd1ZXN0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -86,6 +98,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Ky7/PRN222/Final Project/HOTEL_SYSTEM/Pages/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzZXRQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Ky7/PRN222/Final Project/HOTEL_SYSTEM/Pages/RoomStaff/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9vbVN0YWZmXERhc2hib2FyZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Ky7/PRN222/Final Project/HOTEL_SYSTEM/Pages/RoomStaff/Tasks.cshtml]

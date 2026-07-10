@@ -1,0 +1,213 @@
+﻿@page
+@model Hotel_System.Pages.RoomStaff.DashboardModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="row g-4 mb-4">
+    <div class="col-xl-3 col-md-6">
+        <div class="kpi-card">
+            <div class="d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="kpi-value" id="totalTasks">--</div>
+                    <div class="kpi-label">Total Assigned</div>
+                    <div class="kpi-change text-muted">
+                        <i class="bi bi-clipboard"></i> all tasks
+                    </div>
+                </div>
+                <div class="kpi-icon" style="background:#e8f4fd;">
+                    <i class="bi bi-clipboard" style="color:#0f3460;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="kpi-card">
+            <div class="d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="kpi-value text-warning" id="pendingTasks">--</div>
+                    <div class="kpi-label">Pending Tasks</div>
+                    <div class="kpi-change text-warning">
+                        <i class="bi bi-hourglass"></i> waiting
+                    </div>
+                </div>
+                <div class="kpi-icon" style="background:#fdf3e8;">
+                    <i class="bi bi-hourglass" style="color:#fd7e14;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="kpi-card">
+            <div class="d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="kpi-value text-primary" id="inProgressTasks">--</div>
+                    <div class="kpi-label">In Progress</div>
+                    <div class="kpi-change text-primary">
+                        <i class="bi bi-arrow-repeat"></i> working
+                    </div>
+                </div>
+                <div class="kpi-icon" style="background:#e8f0fd;">
+                    <i class="bi bi-arrow-repeat" style="color:#0d6efd;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <div class="kpi-card">
+            <div class="d-flex justify-content-between align-items-start">
+                <div>
+                    <div class="kpi-value text-success" id="completedToday">--</div>
+                    <div class="kpi-label">Completed Today</div>
+                    <div class="kpi-change text-success">
+                        <i class="bi bi-check-circle"></i> done
+                    </div>
+                </div>
+                <div class="kpi-icon" style="background:#e8fdf0;">
+                    <i class="bi bi-check-circle" style="color:#28a745;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    <!-- Recent Tasks -->
+    <div class="col-md-8">
+        <div class="content-card">
+            <div class="card-header d-flex justify-content-between">
+                <span><i class="bi bi-list-check me-2"></i>My Recent Tasks</span>
+                <a href="/RoomStaff/Tasks" class="btn btn-sm btn-outline-primary">
+                    View All
+                </a>
+            </div>
+            <div class="card-body p-0">
+                <table class="table table-hover mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Room</th>
+                            <th>Type</th>
+                            <th>Priority</th>
+                            <th>Status</th>
+                            <th>Due Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentTasks">
+                        <tr>
+                            <td colspan="5" class="text-center text-muted py-3">
+                                Loading...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="col-md-4">
+        <div class="content-card">
+            <div class="card-header">
+                <i class="bi bi-lightning me-2"></i>Quick Actions
+            </div>
+            <div class="card-body">
+                <div class="d-grid gap-2">
+                    <a href="/RoomStaff/Tasks" class="btn btn-primary">
+                        <i class="bi bi-clipboard-check me-2"></i>View My Tasks
+                    </a>
+                    <a href="/RoomStaff/Tasks#maintenanceTab"
+                       class="btn btn-outline-danger">
+                        <i class="bi bi-exclamation-triangle me-2"></i>Report Issue
+                    </a>
+                </div>
+
+                <!-- Progress -->
+                <div class="mt-4">
+                    <div class="d-flex justify-content-between mb-1">
+                        <span class="small fw-semibold">Today's Progress</span>
+                        <span class="small" id="progressPct">0%</span>
+                    </div>
+                    <div class="progress" style="height:10px;">
+                        <div class="progress-bar bg-success"
+                             id="progressBar" style="width:0%"></div>
+                    </div>
+                    <small class="text-muted mt-1 d-block">
+                        <span id="completedToday2">0</span> of
+                        <span id="totalTasks2">0</span> tasks completed
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function getTaskTypeBadge(type) {
+            const types = [
+                '<span class="badge bg-primary">Cleaning</span>',
+                '<span class="badge bg-warning text-dark">Maintenance</span>',
+                '<span class="badge bg-info text-dark">Inspection</span>'
+            ];
+            return types[type] || type;
+        }
+
+        function getPriorityBadge(priority) {
+            const priorities = [
+                '<span class="badge bg-secondary">Low</span>',
+                '<span class="badge bg-primary">Medium</span>',
+                '<span class="badge bg-danger">High</span>'
+            ];
+            return priorities[priority] || priority;
+        }
+
+        function getStatusBadge(status) {
+            const statuses = [
+                '<span class="badge bg-warning text-dark">Pending</span>',
+                '<span class="badge bg-primary">In Progress</span>',
+                '<span class="badge bg-success">Completed</span>'
+            ];
+            return statuses[status] || status;
+        }
+
+        async function loadDashboard() {
+            const response = await fetch('/api/dashboard/roomstaff');
+            if (!response.ok) return;
+            const data = await response.json();
+
+            document.getElementById('totalTasks').textContent = data.totalAssignedTasks;
+            document.getElementById('totalTasks2').textContent = data.totalAssignedTasks;
+            document.getElementById('pendingTasks').textContent = data.pendingTasks;
+            document.getElementById('inProgressTasks').textContent = data.inProgressTasks;
+            document.getElementById('completedToday').textContent = data.completedTasksToday;
+            document.getElementById('completedToday2').textContent = data.completedTasksToday;
+
+            const pct = data.totalAssignedTasks > 0
+                ? Math.round(data.completedTasksToday / data.totalAssignedTasks * 100)
+                : 0;
+            document.getElementById('progressPct').textContent = `${pct}%`;
+            document.getElementById('progressBar').style.width = `${pct}%`;
+
+            const tbody = document.getElementById('recentTasks');
+            tbody.innerHTML = data.recentTasks.length === 0
+                ? `<tr><td colspan="5" class="text-center text-muted py-3">
+                    No tasks assigned</td></tr>`
+                : data.recentTasks.map(t => `
+                    <tr>
+                        <td>Room ${t.roomNumber}</td>
+                        <td>${getTaskTypeBadge(t.taskType === 'Cleaning' ? 0
+                            : t.taskType === 'Maintenance' ? 1 : 2)}</td>
+                        <td>${getPriorityBadge(t.priority === 'Low' ? 0
+                            : t.priority === 'Medium' ? 1 : 2)}</td>
+                        <td>${getStatusBadge(t.status === 'Pending' ? 0
+                            : t.status === 'InProgress' ? 1 : 2)}</td>
+                        <td>${t.dueDate
+                            ? new Date(t.dueDate).toLocaleDateString('vi-VN')
+                            : '-'}</td>
+                    </tr>
+                `).join('');
+        }
+
+        document.addEventListener('DOMContentLoaded', loadDashboard);
+    </script>
+}
