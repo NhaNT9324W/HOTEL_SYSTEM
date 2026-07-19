@@ -14,6 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddControllers();
 
+// ===== CẤU HÌNH XÁC THỰC JWT TOKEN =====
 var jwtKey = builder.Configuration["Jwt:Key"]!;
 builder.Services.AddAuthentication(options =>
 {
@@ -33,7 +34,7 @@ builder.Services.AddAuthentication(options =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey))
     };
 
-    // Đọc token từ cookie
+    // Đọc token lưu trong cookie của trình duyệt
     options.Events = new JwtBearerEvents
     {
         OnMessageReceived = context =>
@@ -44,45 +45,38 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-builder.Services.AddDbContext<AppDbContext>(options =>options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+// ===== CẤU HÌNH CƠ SỞ DỮ LIỆU =====
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// ===== ĐĂNG KÝ CÁC PHÂN HỆ DI (DEPENDENCY INJECTION) =====
 builder.Services.AddScoped<IAccountRepository, AccountRepository>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
-
 builder.Services.AddScoped<IHotelInfoRepository, HotelInfoRepository>();
 builder.Services.AddScoped<IHotelInfoService, HotelInfoService>();
-
 builder.Services.AddScoped<IServiceRepository, ServiceRepository>();
 builder.Services.AddScoped<IServiceManager, ServiceManager>();
-
 builder.Services.AddScoped<IRoomTypeRepository, RoomTypeRepository>();
 builder.Services.AddScoped<IRoomTypeService, RoomTypeService>();
 
-// Room Management
+// Room & Reservation Management
 builder.Services.AddScoped<IRoomRepository, RoomRepository>();
 builder.Services.AddScoped<IRoomService, RoomService>();
-
-builder.Services.AddScoped<IReservationRepository, ReservationRepository>();
-builder.Services.AddScoped<IReservationService, ReservationService>();
-
 builder.Services.AddScoped<IGuestRepository, GuestRepository>();
 builder.Services.AddScoped<IGuestService, GuestService>();
-
-builder.Services.AddScoped<ITaskRepository, TaskRepository>();
-builder.Services.AddScoped<ITaskService, TaskService>();
-
 builder.Services.AddScoped<IReservationRepository, ReservationRepository>();
 builder.Services.AddScoped<IReservationService, ReservationService>();
 
+// Task & Infrastructure Services
+builder.Services.AddScoped<ITaskRepository, TaskRepository>();
+builder.Services.AddScoped<ITaskService, TaskService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
-
 builder.Services.AddScoped<IReportService, ReportService>();
-
 builder.Services.AddScoped<ICheckOutService, CheckOutService>();
-
 builder.Services.AddScoped<IDashboardService, DashboardService>();
 
+// ===== CẤU HÌNH PHÂN QUYỀN HỆ THỐNG =====
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("AdminOnly", policy =>
@@ -109,40 +103,39 @@ builder.Services.ConfigureApplicationCookie(options =>
 
 var app = builder.Build();
 
+// ===== TỰ ĐỘNG KHỞI TẠO MIGRATION & SEED DATA =====
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+
+    // 🔥 THÊM DUY NHẤT DÒNG NÀY VÀO ĐỂ ÉP XÓA DATABASE CŨ KHI CHẠY DỰ ÁN
+    await context.Database.EnsureDeletedAsync();
+
+
     await context.Database.MigrateAsync();
     await SeedData.SeedAsync(context);
-}
-
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Error");
-    app.UseHsts();
 }
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
 app.UseHttpsRedirection();
-
 app.UseStaticFiles();
-
 app.UseRouting();
 
+// ĐỒNG BỘ: Luôn luôn đặt Authentication đứng TRƯỚC Authorization
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapRazorPages();
-
 app.MapControllers();
 
+// Điều hướng mặc định về trang Login khi chạy dự án
 app.MapGet("/", () => Results.Redirect("/Login"));
 
-app.Run();
-
+app.Run();  

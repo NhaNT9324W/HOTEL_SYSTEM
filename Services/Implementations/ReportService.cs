@@ -4,16 +4,31 @@ using Hotel_System.DTOs;
 using Hotel_System.Entities.Enums;
 using Hotel_System.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Hotel_System.Services.Implementations
 {
+    /**
+     * [V.2.8 ReportService Implementation]
+     * Lớp xử lý nghiệp vụ tổng hợp dữ liệu, thống kê hiệu năng vận hành và phân tích tài chính (UC21).
+     * Tích hợp công cụ ClosedXML hỗ trợ kết xuất báo cáo định dạng Excel cấu hình động.
+     */
     public class ReportService : IReportService
     {
         private readonly AppDbContext _context;
 
+        /** Inject dependency AppDbContext để thực hiện các truy vấn gộp và thống kê nâng cao. */
         public ReportService(AppDbContext context) => _context = context;
 
         // ===== OCCUPANCY REPORT =====
+        /** 
+         * Thống kê công suất và mật độ sử dụng phòng vật lý (Occupancy Rate) trong một khoảng thời gian.
+         * Thuật toán lọc bỏ các đơn đặt phòng đã hủy (CANCELED) và tính toán khoảng thời gian giao thoa lịch lưu trú.
+         */
         public async Task<OccupancyReportDto> GetOccupancyReportAsync(
             DateTime fromDate, DateTime toDate)
         {
@@ -49,6 +64,10 @@ namespace Hotel_System.Services.Implementations
         }
 
         // ===== REVENUE REPORT =====
+        /** 
+         * Báo cáo chi tiết doanh thu phòng dựa trên danh sách các đơn đặt phòng đã hoàn tất quy trình Checkout (CHECKED_OUT).
+         * Hỗ trợ bộ phận Kế toán đối soát dòng tiền phòng thực tế phát sinh trong kỳ báo cáo.
+         */
         public async Task<RevenueReportDto> GetRevenueReportAsync(
             DateTime fromDate, DateTime toDate)
         {
@@ -89,6 +108,10 @@ namespace Hotel_System.Services.Implementations
         }
 
         // ===== FINANCIAL REPORT =====
+        /** 
+         * Phân tích tài chính chuyên sâu, gom nhóm doanh thu (GroupBy) theo từng hạng phòng (Room Type).
+         * Giúp nhà quản lý đánh giá hiệu quả kinh doanh của từng nhóm sản phẩm để điều chỉnh chiến lược giá.
+         */
         public async Task<FinancialReportDto> GetFinancialReportAsync(
             DateTime fromDate, DateTime toDate)
         {
@@ -130,6 +153,10 @@ namespace Hotel_System.Services.Implementations
         }
 
         // ===== STAFF PERFORMANCE REPORT =====
+        /** 
+         * Thống kê báo cáo KPIs hiệu năng làm việc của nhân viên buồng phòng (Room Staff).
+         * Tính toán tỷ lệ hoàn thành công việc (Completion Rate) dựa trên số lượng tác vụ dọn dẹp/bảo trì (UC19/UC20).
+         */
         public async Task<StaffPerformanceReportDto> GetStaffPerformanceReportAsync(
             DateTime fromDate, DateTime toDate)
         {
@@ -175,6 +202,10 @@ namespace Hotel_System.Services.Implementations
         }
 
         // ===== EXPORT EXCEL =====
+        /** 
+         * Điểm tập trung điều hướng yêu cầu xuất dữ liệu Excel sang mảng byte stream.
+         * Khởi tạo Workbook và gọi Helper tương ứng dựa trên tham số phân loại biểu mẫu (Report Type).
+         */
         public async Task<byte[]> ExportToExcelAsync(
             string reportType, DateTime fromDate, DateTime toDate)
         {
@@ -208,12 +239,14 @@ namespace Hotel_System.Services.Implementations
         }
 
         // ===== EXCEL HELPERS =====
+
+        /** Tạo trang tính mật độ sử dụng phòng, đổ dữ liệu meta-data và format bảng màu DarkBlue chuyên nghiệp. */
         private void ExportOccupancy(XLWorkbook wb, OccupancyReportDto data,
             DateTime from, DateTime to)
         {
             var ws = wb.Worksheets.Add("Occupancy Report");
 
-            // Header
+            // Meta Header
             ws.Cell(1, 1).Value = "OCCUPANCY REPORT";
             ws.Cell(1, 1).Style.Font.Bold = true;
             ws.Cell(1, 1).Style.Font.FontSize = 14;
@@ -222,7 +255,7 @@ namespace Hotel_System.Services.Implementations
             ws.Cell(4, 1).Value = $"Occupied Rooms: {data.OccupiedRooms}";
             ws.Cell(5, 1).Value = $"Occupancy Rate: {data.OccupancyRate}%";
 
-            // Table header
+            // Table Header Styling
             var headers = new[] { "Room Number", "Room Type", "Total Nights", "Status" };
             for (int i = 0; i < headers.Length; i++)
             {
@@ -232,7 +265,7 @@ namespace Hotel_System.Services.Implementations
                 ws.Cell(7, i + 1).Style.Font.FontColor = XLColor.White;
             }
 
-            // Data
+            // Đổ dữ liệu chi tiết danh sách phòng
             for (int i = 0; i < data.Details.Count; i++)
             {
                 var d = data.Details[i];
@@ -245,6 +278,7 @@ namespace Hotel_System.Services.Implementations
             ws.Columns().AdjustToContents();
         }
 
+        /** Tạo trang tính doanh thu chi tiết, hiển thị số liệu VNĐ kèm format màu DarkGreen kế toán. */
         private void ExportRevenue(XLWorkbook wb, RevenueReportDto data,
             DateTime from, DateTime to)
         {
@@ -281,6 +315,7 @@ namespace Hotel_System.Services.Implementations
             ws.Columns().AdjustToContents();
         }
 
+        /** Tạo trang tính tổng kết tài chính phân tích nhóm sản phẩm, format bảng màu DarkOrange. */
         private void ExportFinancial(XLWorkbook wb, FinancialReportDto data,
             DateTime from, DateTime to)
         {
@@ -314,6 +349,7 @@ namespace Hotel_System.Services.Implementations
             ws.Columns().AdjustToContents();
         }
 
+        /** Tạo trang tính hiệu suất nhân sự buồng phòng phục vụ đánh giá nhân viên, format bảng màu DarkViolet. */
         private void ExportStaffPerformance(XLWorkbook wb, StaffPerformanceReportDto data,
             DateTime from, DateTime to)
         {

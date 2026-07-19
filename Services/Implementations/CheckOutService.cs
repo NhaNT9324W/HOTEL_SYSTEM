@@ -4,16 +4,27 @@ using Hotel_System.Entities;
 using Hotel_System.Entities.Enums;
 using Hotel_System.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Hotel_System.Services.Implementations
 {
+    /**
+     * [V.2.3 CheckOutService Implementation]
+     * Lớp xử lý nghiệp vụ quản lý tiêu dùng tiện ích và quyết toán trả phòng.
+     * Điều phối phân hệ Ghi nhận dịch vụ (UC17) và quy trình Trả phòng xuất hóa đơn (UC18).
+     */
     public class CheckOutService : ICheckOutService
     {
         private readonly AppDbContext _context;
 
+        /** Inject dependency AppDbContext để thao tác trực tiếp trên các bảng liên quan đến hóa đơn. */
         public CheckOutService(AppDbContext context) => _context = context;
 
         // ===== GET SERVICE USAGES =====
+        /** Lấy danh sách chi tiết các dịch vụ mà khách hàng đã tiêu dùng trong thời gian lưu trú (UC17.1). */
         public async Task<IEnumerable<ServiceUsageDto>> GetServiceUsagesAsync(int reservationId)
         {
             return await _context.ServiceUsages
@@ -33,6 +44,10 @@ namespace Hotel_System.Services.Implementations
         }
 
         // ===== ADD SERVICE USAGE =====
+        /** 
+         * Ghi nhận một lượt tiêu dùng dịch vụ/mini-bar tại phòng hoặc tại quầy (UC17.2).
+         * Ràng buộc nghiệp vụ: Chỉ cho phép thêm dịch vụ khi đơn đặt phòng đang ở trạng thái CHECKED_IN.
+         */
         public async Task AddServiceUsageAsync(AddServiceUsageDto dto)
         {
             var reservation = await _context.Reservations.FindAsync(dto.ReservationId)
@@ -62,6 +77,7 @@ namespace Hotel_System.Services.Implementations
         }
 
         // ===== REMOVE SERVICE USAGE =====
+        /** Hủy ghi nhận dịch vụ đã sử dụng trong trường hợp Tiếp tân nhập sai thông tin trước khi chốt hóa đơn. */
         public async Task RemoveServiceUsageAsync(int serviceUsageId)
         {
             var usage = await _context.ServiceUsages
@@ -77,12 +93,21 @@ namespace Hotel_System.Services.Implementations
         }
 
         // ===== PREVIEW INVOICE =====
+        /** Cho phép Tiếp tân in hoặc hiển thị biểu mẫu xem trước tổng chi phí bill (UC18.1) để khách đối chiếu trước khi quẹt thẻ. */
         public async Task<InvoiceDto> PreviewInvoiceAsync(int reservationId)
         {
             return await BuildInvoiceDtoAsync(reservationId);
         }
 
         // ===== CHECK OUT =====
+        /** 
+         * Quy trình quyết toán trả phòng chính thức (UC18.2).
+         * Đồng thời thực hiện 4 tác vụ nguyên tử (Atomic Transaction):
+         * 1. Tạo bản ghi Hóa đơn tài chính (Invoice).
+         * 2. Chuyển trạng thái đơn đặt phòng sang CHECKED_OUT.
+         * 3. Giải phóng trạng thái kinh doanh của phòng vật lý về AVAILABLE.
+         * 4. Tự động chuyển trạng thái dọn dẹp của phòng thành DIRTY (cơ sở để hệ thống tự động sinh tác vụ dọn dẹp ở UC19).
+         */
         public async Task<InvoiceDto> CheckOutAsync(int reservationId)
         {
             var reservation = await _context.Reservations
@@ -95,10 +120,10 @@ namespace Hotel_System.Services.Implementations
             if (reservation.Status != ReservationStatus.CHECKED_IN)
                 throw new Exception("Only checked-in reservations can be checked out");
 
-            // Tính invoice
+            // Tính toán số liệu invoice
             var invoiceDto = await BuildInvoiceDtoAsync(reservationId);
 
-            // Lưu Invoice vào DB
+            // Lưu Invoice vào DB nếu chưa tồn tại
             var existingInvoice = await _context.Invoices
                 .FirstOrDefaultAsync(i => i.ReservationId == reservationId);
 
@@ -117,12 +142,12 @@ namespace Hotel_System.Services.Implementations
                 await _context.Invoices.AddAsync(invoice);
             }
 
-            // Cập nhật Reservation status
+            // Cập nhật trạng thái Reservation
             reservation.Status = ReservationStatus.CHECKED_OUT;
             reservation.UpdatedAt = DateTime.UtcNow;
             _context.Reservations.Update(reservation);
 
-            // Cập nhật Room status
+            // Chuyển đổi trạng thái phòng vật lý phục vụ luồng buồng phòng tiếp diễn
             var room = reservation.Room!;
             room.BookingStatus = RoomBookingStatus.AVAILABLE;
             room.HousekeepingStatus = RoomHousekeepingStatus.DIRTY;
@@ -134,6 +159,7 @@ namespace Hotel_System.Services.Implementations
         }
 
         // ===== BUILD INVOICE DTO =====
+        /** Thuật toán tổng hợp chi phí Folio: Tính tổng tiền phòng (Số đêm x Giá cấu hình) + Tổng tiền dịch vụ phát sinh. */
         private async Task<InvoiceDto> BuildInvoiceDtoAsync(int reservationId)
         {
             var reservation = await _context.Reservations

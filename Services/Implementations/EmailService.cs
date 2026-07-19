@@ -3,15 +3,27 @@ using MailKit.Net.Smtp;
 using MailKit.Security;
 using Microsoft.Extensions.Configuration;
 using MimeKit;
+using System;
+using System.Threading.Tasks;
 
 namespace Hotel_System.Services.Implementations
 {
+    /**
+     * [V.2.5 EmailService Implementation]
+     * Lớp xử lý nghiệp vụ cấu hình và gửi thư điện tử tự động của hệ thống.
+     * Phục vụ đắc lực cho công tác xác minh danh tính, truyền tải thông tin bảo mật và luồng Quên mật khẩu (UC03).
+     */
     public class EmailService : IEmailService
     {
         private readonly IConfiguration _config;
 
+        /** Inject cấu hình hệ thống để truy xuất thông tin tài khoản SMTP thông qua Constructor. */
         public EmailService(IConfiguration config) => _config = config;
 
+        /** 
+         * Khởi tạo và gửi email chứa liên kết đặt lại mật khẩu an toàn cho nhân sự (UC03).
+         * Biên dịch giao diện thư dạng HTML, đính kèm mã định danh Token và truyền tải qua giao thức SMTP bảo mật.
+         */
         public async Task SendResetPasswordEmailAsync(string toEmail, string toName, string resetLink)
         {
             var email = new MimeMessage();
@@ -22,6 +34,7 @@ namespace Hotel_System.Services.Implementations
             email.To.Add(new MailboxAddress(toName, toEmail));
             email.Subject = "Reset Your Password - Hotel System";
 
+            // Thiết lập cấu trúc giao diện phôi thư HTML gửi tới người dùng
             email.Body = new TextPart("html")
             {
                 Text = $@"
@@ -50,16 +63,19 @@ namespace Hotel_System.Services.Implementations
                 </div>"
             };
 
+            // Mở cổng kết nối MailKit SMTP Client, xác thực tài khoản và phát hành thư đi
             using var smtp = new SmtpClient();
             await smtp.ConnectAsync(
                 _config["Email:Host"],
                 int.Parse(_config["Email:Port"]!),
                 SecureSocketOptions.StartTls
             );
+
             await smtp.AuthenticateAsync(
                 _config["Email:Username"],
                 _config["Email:Password"]
             );
+
             await smtp.SendAsync(email);
             await smtp.DisconnectAsync(true);
         }

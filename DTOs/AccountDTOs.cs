@@ -3,6 +3,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Hotel_System.DTOs
 {
+    /**
+     * [UC05 - Manage Account]
+     * Đối tượng chuyển đổi dữ liệu (Data Transfer Object) dùng để hiển thị và truyền tải thông tin cấu trúc tài khoản người dùng giữa các tầng hệ thống mà không làm lộ dữ liệu nhạy cảm (như mật khẩu)[cite: 1].
+     */
     public class AccountDto
     {
         public int Id { get; set; }
@@ -15,6 +19,11 @@ namespace Hotel_System.DTOs
         public DateTime CreatedAt { get; set; }
     }
 
+    /**
+     * [UC5.1 - Create Account]
+     * DTO tiếp nhận và ràng buộc các điều kiện dữ liệu đầu vào khi Admin thực hiện tạo mới một tài khoản nhân viên[cite: 1].
+     * Sử dụng thuộc tính thuộc gói Data Annotations giúp tự động kiểm tra định dạng dữ liệu, độ dài và thuộc tính bắt buộc ngay tại form level[cite: 1].
+     */
     public class CreateAccountDto
     {
         [Required(ErrorMessage = "Full name is required")]
@@ -40,6 +49,10 @@ namespace Hotel_System.DTOs
         public Role Role { get; set; }
     }
 
+    /**
+     * [UC5.2 - Edit Account]
+     * DTO tiếp nhận dữ liệu cập nhật khi Admin thực hiện hiệu chỉnh thông tin hồ sơ của một tài khoản nhân viên đang tồn tại trên hệ thống khách sạn[cite: 1].
+     */
     public class UpdateAccountDto
     {
         public int Id { get; set; }
